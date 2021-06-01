@@ -1,3 +1,7 @@
+<link rel="stylesheet/less" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/career_less/all.less"/>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/less.js" type="text/javascript"></script>
+
+
 <div class="top-slider__loader">
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
          x="0px" y="0px"
@@ -34,17 +38,4 @@
     <div class="top-slider"></div>
 </div>
 
-
-
-
-
-
-
-
-
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
-<script type="text/javascript"
-        src="<?php echo get_stylesheet_directory_uri(); ?>/js/slick-1.8.1/slick/slick.min.js"></script>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/home-slider.js"></script>

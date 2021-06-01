@@ -1,38 +1,38 @@
 <?php get_header(); ?>
-<div class="slider">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="slider-image hidden-xs">
-<!--                    <a href="/bonus/"><img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/banner/banner_referral.svg" alt=""></a>-->
-                    <a href="/bonus/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/banner/banner_referral_new.svg" alt=""></a>
-                </div>
-                <div class="slider-image hidden-lg hidden-md hidden-sm">
-<!--                    <a href="/bonus/"><img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/banner/banner_referral_mobile.svg" alt=""></a>-->
-                    <a href="/bonus/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/banner/banner_referral_mobile_new.svg" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--
-<section class="slider">
-   <div class="main-slider">
-       <img src="{THEME}/images/main-slider.png" alt="">
-   </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5">
-                <div class="slider-header">
-                    <h1>Стань частью профессиональной команды Usetech!</h1>
-                    <a href="#" class="btn btn-success btn-top btn-pad">Присоединиться</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
--->
+<!--<div class="slider">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-lg-12">-->
+<!--                <div class="slider-image hidden-xs">-->
+<!--                    <a href="/bonus/"><img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/banner/banner_referral_new.svg" alt=""></a>-->
+<!--                </div>-->
+<!--                <div class="slider-image hidden-lg hidden-md hidden-sm">-->
+<!--                    <a href="/bonus/"><img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/banner/banner_referral_mobile_new.svg" alt=""></a>-->
+<!--                </div>-->
+<!---->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
+<!--<section class="slider">-->
+<!--   <div class="main-slider">-->
+<!--       <img src="{THEME}/images/main-slider.png" alt="">-->
+<!--   </div>-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-lg-5">-->
+<!--                <div class="slider-header">-->
+<!--                    <h1>Стань частью профессиональной команды Usetech!</h1>-->
+<!--                    <a href="#" class="btn btn-success btn-top btn-pad">Присоединиться</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+
+<?php include 'top_slider.php'?>
 
 
 
