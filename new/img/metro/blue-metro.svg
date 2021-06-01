@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Group 12 Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0.5" y="0.5" width="61" height="61"></rect>
+        <circle id="path-3" cx="28" cy="28" r="28"></circle>
+        <filter x="-13.4%" y="-13.4%" width="126.8%" height="126.8%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0504261364 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="java" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-12-Copy-2">
+            <g id="Group-12-Copy">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <g mask="url(#mask-2)">
+                    <g transform="translate(31.000000, 31.000000) rotate(-270.000000) translate(-31.000000, -31.000000) translate(3.000000, 3.000000)">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <g id="Oval" stroke="none" fill="none">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-3"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                        </g>
+                        <polygon id="Rectangle" stroke="none" fill="#0152A2" fill-rule="evenodd" mask="url(#mask-4)" transform="translate(28.000000, 28.000000) rotate(-315.000000) translate(-28.000000, -28.000000) " points="3 45.9411765 45.9411765 3 53 10.0588235 10.0588235 53"></polygon>
+                        <circle id="Oval" stroke="#FFFFFF" stroke-width="4" fill="#0152A2" fill-rule="evenodd" mask="url(#mask-4)" transform="translate(28.000000, 28.000000) rotate(-45.000000) translate(-28.000000, -28.000000) " cx="28" cy="28" r="10"></circle>
+                        <circle id="Oval" stroke="none" fill="#FFFFFF" fill-rule="evenodd" mask="url(#mask-4)" transform="translate(28.171573, 28.000000) rotate(-45.000000) translate(-28.171573, -28.000000) " cx="28.1715729" cy="28" r="4"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

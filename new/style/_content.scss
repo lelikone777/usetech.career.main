@@ -1,0 +1,45 @@
+.content {
+  padding: 0 0 315px;
+  &__box {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .content {
+    padding-bottom: 0;
+    &__box {
+      box-sizing: border-box;
+      padding: 0 $sp;
+      max-width: none;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .content {
+    padding-bottom: 0;
+    &__box {
+      box-sizing: border-box;
+      padding: 0 $sp;
+      max-width: none;
+    }
+  }
+}
+@media (max-width: 737px) {
+  .content {
+    padding-bottom: 0;
+    &__box {
+      box-sizing: border-box;
+      padding: $sp;
+      max-width: none;
+    }
+  }
+}
+@media (max-width: 374px) {
+  .content {
+    &__box {
+      padding: 0px 16px;
+    }
+  }
+}

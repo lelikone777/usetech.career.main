@@ -1,0 +1,26 @@
+.info-greenline {
+  display: flex;
+
+  &__left {
+    min-width: 600px;
+    max-width: 600px;
+    background: url('../../images/info-img/info-green-img.svg') no-repeat center bottom;
+    //background-size: 90% !important;
+    background-size: contain !important;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__right {
+    padding-top: @sp3;
+    padding-bottom: @sp3;
+    P {
+      //font-size: 22px;
+      strong {
+        color: #f1ea0a;
+      }
+    }
+  }
+}

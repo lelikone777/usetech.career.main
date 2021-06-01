@@ -1,0 +1,28 @@
+.form-mini {
+  &__line {
+    span {
+      display: block;
+      margin-bottom: 10px;
+    }
+    &-wrap {
+      display: flex;
+      margin-bottom: 10px;
+
+    }
+    &-left {
+
+    }
+    &-right {
+      flex: 1;
+    }
+  }
+  &__input {
+    input {
+      padding: 10px;
+      outline: none;
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}

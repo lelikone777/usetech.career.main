@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>hr</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Вакансия-HR-Usetech" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1048.000000, -506.000000)">
+        <g id="hr" transform="translate(1048.000000, 506.000000)" fill="#92B700" fill-rule="nonzero">
+            <path d="M11.6864909,11.6923327 C14.9082353,11.6923327 17.5282759,9.07083164 17.5282759,5.85054767 C17.5282759,2.63026369 14.9082353,0.00876267748 11.6864909,0.00876267748 C8.46474645,0.00876267748 5.84470588,2.63026369 5.84470588,5.85054767 C5.84470588,9.07083164 8.4662069,11.6923327 11.6864909,11.6923327 Z" id="Shape"></path>
+            <path d="M11.6864909,13.1527789 C4.80778905,13.1527789 0.0029208925,16.7556998 0.0029208925,21.9154564 L0.0029208925,23.3759026 L23.3700609,23.3759026 L23.3700609,21.9154564 C23.3700609,16.7556998 18.5666531,13.1527789 11.6864909,13.1527789 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 10</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M19.9997,0 C31.0277,0 39.9995,8.9719 39.9995,19.9997 C39.9995,31.0276 31.0276,39.9995 19.9997,39.9995 C8.9719,39.9995 0,31.0276 0,19.9997 C0,8.9719 8.9719,0 19.9997,0 Z M19.9997,37.8373 C29.8354,37.8373 37.8373,29.8354 37.8373,19.9997 C37.8373,17.2481 37.2107,14.6401 36.0931,12.3105 C35.1108,10.263 33.7485,8.4311 32.0988,6.9057 C28.9169,3.9632 24.665,2.1622 19.9997,2.1622 C10.1641,2.1622 2.1622,10.1641 2.1622,19.9997 C2.1622,22.9793 2.8976,25.7901 4.1949,28.2616 C5.0466,29.8846 6.1405,31.3614 7.4292,32.6427 C10.6561,35.8514 15.1003,37.8373 19.9997,37.8373 Z" id="path-1"></path>
+        <path d="M2.4684,4.7024 C1.2742,4.7024 0.3062,3.7344 0.3062,2.5403 C0.3062,1.3461 1.2742,0.3781 2.4684,0.3781 C3.6625,0.3781 4.6305,1.3461 4.6305,2.5403 C4.6305,3.7344 3.6625,4.7024 2.4684,4.7024 Z" id="path-3"></path>
+        <path d="M2.8468,4.7024 C1.6526,4.7024 0.6846,3.7344 0.6846,2.5403 C0.6846,1.3461 1.6526,0.3781 2.8468,0.3781 C4.0409,0.3781 5.0089,1.3461 5.0089,2.5403 C5.0089,3.7344 4.0409,4.7024 2.8468,4.7024 Z" id="path-5"></path>
+        <path d="M10.9615,7.0804 C10.4959,7.0804 10.0289,7.0541 9.5612,7.0001 C5.918,6.5799 2.5496,4.4826 0.5509,1.3895 L2.3669,0.2159 C4.0186,2.772 6.8007,4.5053 9.8091,4.8522 C13.6695,5.2976 17.5247,3.4774 19.6324,0.2159 L21.4485,1.3895 C19.1532,4.9412 15.1445,7.0804 10.9615,7.0804 Z" id="path-7"></path>
+    </defs>
+    <g id="Var2-(31-Jan-2019)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Главная-HR-Usetech(var.0.3_13_11_2017)-Copy" transform="translate(-418.000000, -1422.000000)">
+            <g id="Group-34" transform="translate(388.000000, 988.000000)">
+                <g id="Group-48" transform="translate(0.000000, 404.000000)">
+                    <g id="Group-10" transform="translate(30.000000, 30.000000)">
+                        <g id="Group-106">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-105"></g>
+                            <polygon id="Fill-104" fill="#FCBD01" mask="url(#mask-2)" points="-5 -5 44.9995 -5 44.9995 44.9995 -5 44.9995"></polygon>
+                        </g>
+                        <g id="Group-109" transform="translate(11.000000, 13.000000)">
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <g id="Clip-108"></g>
+                            <polygon id="Fill-107" fill="#FCBD01" mask="url(#mask-4)" points="-4.6938 -4.6219 9.6305 -4.6219 9.6305 9.7024 -4.6938 9.7024"></polygon>
+                        </g>
+                        <g id="Group-112" transform="translate(24.000000, 13.000000)">
+                            <mask id="mask-6" fill="white">
+                                <use xlink:href="#path-5"></use>
+                            </mask>
+                            <g id="Clip-111"></g>
+                            <polygon id="Fill-110" fill="#FCBD01" mask="url(#mask-6)" points="-4.3154 -4.6219 10.0089 -4.6219 10.0089 9.7024 -4.3154 9.7024"></polygon>
+                        </g>
+                        <g id="Group-115" transform="translate(9.000000, 24.000000)">
+                            <mask id="mask-8" fill="white">
+                                <use xlink:href="#path-7"></use>
+                            </mask>
+                            <g id="Clip-114"></g>
+                            <polygon id="Fill-113" fill="#FCBD01" mask="url(#mask-8)" points="-4.4491 -4.7841 26.4485 -4.7841 26.4485 12.0804 -4.4491 12.0804"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

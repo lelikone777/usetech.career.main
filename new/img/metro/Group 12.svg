@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="94px" height="96px" viewBox="0 0 94 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Group 12</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="28" cy="28" r="28"></circle>
+        <filter x="-53.6%" y="-53.6%" width="207.1%" height="207.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0504261364 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="java" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="java-home-2" transform="translate(-393.000000, -1378.000000)">
+            <g id="tile" transform="translate(388.000000, 1366.000000)">
+                <g id="Group-14" transform="translate(24.000000, 32.000000)">
+                    <g id="Group-12" transform="translate(28.000000, 28.000000) rotate(-270.000000) translate(-28.000000, -28.000000) ">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Oval">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                        <polygon id="Rectangle" fill="#0152A2" mask="url(#mask-2)" transform="translate(28.000000, 28.000000) rotate(-315.000000) translate(-28.000000, -28.000000) " points="3 45.9411765 45.9411765 3 53 10.0588235 10.0588235 53"></polygon>
+                        <circle id="Oval" stroke="#FFFFFF" stroke-width="4" fill="#0152A2" mask="url(#mask-2)" transform="translate(28.000000, 28.000000) rotate(-45.000000) translate(-28.000000, -28.000000) " cx="28" cy="28" r="10"></circle>
+                        <circle id="Oval" fill="#FFFFFF" mask="url(#mask-2)" transform="translate(28.171573, 28.000000) rotate(-45.000000) translate(-28.171573, -28.000000) " cx="28.1715729" cy="28" r="4"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

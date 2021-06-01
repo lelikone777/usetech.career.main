@@ -1,0 +1,31 @@
+.clareer-filter {
+  background: #F5F5F5;
+  //border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 32px;
+  display: none;
+  &.active {
+    display: block;
+    position: relative;
+    z-index: 1;
+    animation: vis 1.5s forwards;
+  }
+  &__label {
+    font-weight: normal;
+    font-size: 16px;
+    color: #333333;
+  }
+}
+@media (max-width: 1200px) {
+  .clareer-filter {
+    .row {
+      & > div {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+

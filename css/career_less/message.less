@@ -1,0 +1,50 @@
+.message {
+  margin: 0 24px;
+  display: flex;
+  flex-direction: column;
+  &.hidden {
+    display: none;
+  }
+  &__top {
+    font-size: 24px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    strong {
+      color: #92B700;
+    }
+  }
+  &__bottom {
+    font-size: 16px;
+    color: black;
+    display: flex;
+    margin-bottom: 24px;
+    &-wrap {
+      display: flex;
+    }
+    strong {
+      font-weight: bold;
+      display: inline-block;
+      margin-left: 4px;
+    }
+    &-reset {
+     color: #92B700;
+      margin-left: 32px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .message {
+    &__bottom {
+
+      &-wrap {
+        flex-wrap: wrap;
+      }
+      &-reset {
+        min-width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+}

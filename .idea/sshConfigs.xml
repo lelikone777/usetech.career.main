@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="usetech.design" id="afea14ee-bcf6-4022-a58d-4010d68a9b3f" port="22" nameFormat="DESCRIPTIVE" username="kalinin" />
+    </configs>
+  </component>
+</project>

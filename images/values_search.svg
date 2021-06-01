@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 84</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M39.65,37.9601 C40.111,38.4213 40.111,39.184 39.65,39.6452 C39.419,39.8847 39.109,40 38.807,40 C38.506,40 38.195,39.8758 37.965,39.6452 L28.244,29.9246 C25.246,32.5322 21.335,34.1109 17.06,34.1109 C7.659,34.1109 0.004,26.4568 0.004,17.0554 C0.004,7.6541 7.65,0 17.06,0 C26.461,0 34.115,7.6452 34.115,17.0554 C34.115,21.3304 32.537,25.2417 29.929,28.2395 L39.65,37.9601 Z M2.39,17.0554 C2.39,25.1441 8.971,31.7251 17.051,31.7251 C25.14,31.7251 31.712,25.1353 31.712,17.0554 C31.712,8.9756 25.14,2.3947 17.051,2.3947 C8.971,2.3947 2.39,8.9667 2.39,17.0554 Z" id="path-1"></path>
+    </defs>
+    <g id="Var2-(31-Jan-2019)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Главная-HR-Usetech(var.0.3_13_11_2017)-Copy" transform="translate(-1197.000000, -1165.000000)">
+            <g id="Group-34" transform="translate(388.000000, 988.000000)">
+                <g id="Group-52" transform="translate(779.000000, 147.000000)">
+                    <g id="Group-84" transform="translate(30.000000, 30.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-83"></g>
+                        <polygon id="Fill-82" fill="#25E8C8" mask="url(#mask-2)" points="-4.996 -5 44.996 -5 44.996 45 -4.996 45"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

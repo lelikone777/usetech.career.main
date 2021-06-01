@@ -1,0 +1,35 @@
+@import "settings.less";
+@import "variables.less";
+@import "select.less";
+@import "clareer-filter.less";
+@import "home-filter.less";
+@import "search-box.less";
+@import "message.less";
+@import "preloader-new.less";
+@import "../../js/slick-1.8.1/slick/slick.less";
+@import "top-slider.less";
+@import "home-filter-slider.less";
+@import "header-new.less";
+
+
+.titleitem {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.vacancy-item {
+  &.active {
+    animation: vis 1.5s forwards;
+    z-index: 1;
+  }
+}
+
+@keyframes vis {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

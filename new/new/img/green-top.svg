@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="6207px" height="685px" viewBox="0 0 6207 685" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>green copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="64.6520572%" cy="10.4321746%" fx="64.6520572%" fy="10.4321746%" r="183.037898%" gradientTransform="translate(0.646521,0.104322),scale(0.110359,1.000000),rotate(164.460962),translate(-0.646521,-0.104322)" id="radialGradient-1">
+            <stop stop-color="#FFF14B" stop-opacity="0.526879371" offset="0%"></stop>
+            <stop stop-color="#85A700" offset="100%"></stop>
+        </radialGradient>
+        <path d="M6207,0 C5617.2128,456.666667 4586.54613,685 3115,685 C1643.45387,685 605.120537,456.666667 0,0 L6207,0 Z" id="path-2"></path>
+    </defs>
+    <g id="java" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="green-copy">
+            <g id="Group-18">
+                <g id="Rectangle-4-Copy">
+                    <use fill="#FFFFFF" xlink:href="#path-2"></use>
+                    <use fill="#92B700" xlink:href="#path-2"></use>
+                    <use fill-opacity="0.84" fill="url(#radialGradient-1)" xlink:href="#path-2"></use>
+                </g>
+                <path d="M3252.22519,0 L3917.77481,0 C3921.86002,21.03701 3924,42.7685954 3924,65 C3924,252.22453 3772.22453,404 3585,404 C3397.77547,404 3246,252.22453 3246,65 C3246,42.7685954 3248.13998,21.03701 3252.22519,-6.75015599e-14 Z" id="Combined-Shape" fill="#333333"></path>
+            </g>
+        </g>
+    </g>
+</svg>

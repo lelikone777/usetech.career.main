@@ -1,0 +1,295 @@
+.usetechblock {
+  background: url("../img/gray-bg.svg") no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  z-index: 1;
+  margin-top: -5%;
+
+  &__wrap {
+    padding-top: 5%;
+    padding: 5% 0 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text {
+    margin: 90px 0 30px;
+    &_margin {
+      margin-top: 30px;
+    }
+
+    &-bold {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: $sp;
+      letter-spacing: 0.4px;
+      line-height: 1.3;
+    }
+
+    &-text {
+      font-size: 18px;
+      letter-spacing: 0.4px;
+      line-height: 1.3;
+      a {
+        color: $green;
+        font-weight: bold;
+        outline: none;
+        text-decoration: none;
+      }
+      &_quote {
+        font-style: italic;
+        margin-top: $sp;
+      }
+      &_cite {
+        font-weight: bold;
+      }
+
+      strong {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__left {
+    &-logo {
+      width: 265px;
+      height: 92px;
+      background: url("../img/logo-java.svg") no-repeat;
+      &_all {
+        background: url("../img/logo-green.svg") no-repeat;
+        background-position: left center;
+      }
+    }
+  }
+  &__right {
+    margin-left: 110px;
+    &-award {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      &-row {
+        display: flex;
+        align-items: center;
+        margin-right: 16px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      &-block {
+        border-radius: 8px;
+        box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.07);
+        background-color: #fafafa;
+        margin-right: $sp;
+        margin-bottom: $sp;
+        width: 186px;
+        height: 133px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        &:last-child {
+          margin-right: 0;
+        }
+        .logo {
+          width: 140px;
+          height: 70px;
+          margin: 10px 0;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          opacity: 0.7;
+          &__award {
+            background-image: url("../img/logo_tagline_awards.png");
+          }
+          &__magic {
+            background-image: url("../img/logo_magic.png");
+          }
+          &__cnews {
+            background-image: url("../img/logo_cnews.png");
+          }
+          &__hh {
+            background-image: url("../img/logo_hh.png");
+          }
+          &__wadline {
+            background-image: url("../img/wadline.svg");
+          }
+          &__tadviser {
+            background-image: url("../img/tadviser.svg");
+          }
+        }
+        .place {
+          font-size: 18px;
+          font-weight: bold;
+          font-style: normal;
+          color: #333333;
+          display: flex;
+          align-items: center;
+          span {
+            line-height: 30px;
+          }
+          &__cup {
+            background-position: 8px 4px;
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 28px;
+            margin-right: 3px;
+            background-size: 20px auto;
+            &_gold {
+              background-image: url("../img/cup-gold.png");
+            }
+            &_silver {
+              background-image: url("../img/cup-silver.png");
+            }
+          }
+          &__medal {
+            margin-right: 3px;
+            background-image: url("../img/medal_bw.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 24px auto;
+            width: 30px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .usetechblock {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      padding-bottom: 20px;
+      margin: 0;
+    }
+    &__text {
+      width: 792px;
+      text-align: center;
+    }
+    &__left {
+      margin-top: 20px;
+      margin-bottom: 40px;
+      display: none;
+    }
+    &__right {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .usetechblock {
+  }
+}
+@media (max-width: 860px) {
+  .usetechblock {
+    background: #fafafa;
+    &__wrap {
+      padding: 5% 0 1%;
+    }
+    &__text {
+      width: auto;
+    }
+    &__right {
+      &-award {
+        flex-direction: column;
+        &-row {
+          flex-direction: row;
+          margin-right: 0px;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        &-block {
+          margin-bottom: 20px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 737px) {
+  .usetechblock {
+    &__text {
+      margin-top: 0;
+      width: auto;
+    }
+    &__wrap {
+      padding-top: 80px;
+      margin-top: -100px;
+    }
+
+    &__content {
+      display: block;
+      padding: 0;
+      padding-bottom: 20px;
+      margin: 0;
+    }
+
+    &__left {
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    &__right {
+      padding: 0;
+      margin: 0;
+      &-award {
+        flex-wrap: wrap;
+        justify-content: center;
+        &-row {
+          margin-right: 0px;
+        }
+        &-block {
+          width: 150px;
+          margin: 4px;
+          &:last-child {
+            margin-right: 4px;
+          }
+          .logo {
+            width: 120px;
+            height: 60px;
+            margin: 15px 0 12px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 374px) {
+  .usetechblock {
+    &__text {
+      margin-bottom: 20px;
+      &-bold {
+        padding: 0 10px;
+        font-size: 18px;
+      }
+      &-text {
+        padding: 0 10px;
+        font-size: 16px;
+      }
+    }
+    &__right {
+      &-award {
+        &-block {
+          width: 135px;
+          .logo {
+            width: 100px;
+            height: 60px;
+            margin: 15px 0 12px;
+          }
+        }
+      }
+    }
+  }
+}

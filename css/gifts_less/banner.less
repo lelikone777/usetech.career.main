@@ -1,0 +1,78 @@
+.banner {
+  background: #434343;
+  padding: 80px 0;
+
+  &__content {
+    width: 1140px;
+    margin: 0 auto;
+    background: url("../../images/gifts/banner-gifts.svg") no-repeat;
+    background-size: contain;
+    background-position: right center;
+
+  }
+
+  &__title {
+    font-size: 68px;
+    text-transform: none;
+  }
+
+  &__text {
+    color: white;
+    max-width: 45%;
+    margin-bottom: 80px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+}
+
+@media (max-width: 1140px) {
+  .banner {
+
+    &__content {
+      width: 100%;
+      background-size: auto 70%;
+      background-position: right 100px center;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .banner {
+
+    &__content {
+      width: 100%;
+      background-size: 48% auto;
+      background-position: right 30px center;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+  }
+}
+
+
+@media (max-width: 720px) {
+  .banner {
+
+    &__content {
+      padding-top: calc(~'75vw - 60px');
+      width: 100%;
+      background-size: 75% auto;
+      background-position: center top;
+      //background: none;
+
+
+    }
+
+    &__title {
+      font-size: 60px;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+
+  }
+}

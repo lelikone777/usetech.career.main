@@ -1,0 +1,60 @@
+
+.top-slider {
+  position: relative;
+  .slick {
+    &-dots {
+      position: absolute;
+      top: 50%;
+      right: 18px;
+      transform: translateX(-50%);
+      background-color: transparent;
+      li {
+      background-color: transparent;
+      button {
+        font-size: 0;
+        background-color: #E0E0E0;
+        border: none;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+      }
+    }
+      .slick-active {
+        button {
+          background-color: #92B700;
+        }
+      }
+    }
+    &-arrow {
+      position: absolute;
+      right: 25px;
+      z-index: 10;
+      font-size: 0;
+      border: none;
+      width: 10px;
+      height: 5px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: transparent;
+    }
+    &-next {
+      top: 180px;
+      background-image: url("../../img/arrow-up-grey.svg");
+      &:hover, &:active, &:focus{
+        background-image: url("../../img/arrow-down-black.svg");
+        transform: rotate(180deg);
+      }
+    }
+    &-prev {
+      bottom: 140px;
+      background-image: url("../../img/arrow-up-grey.svg");
+      transform: rotate(180deg);
+      &:hover, &:active, &:focus {
+        transform: none;
+        background-image: url("../../img/arrow-down-black.svg");
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,85 @@
+.foot {
+  background-color: #FAFAFA;
+  padding-top: 70px;
+  padding-bottom: 24px;
+  position: relative;
+  //background-image: url("../images/footer_bg.svg");
+  //background-size: cover;
+  //background-position: center top;
+  &__logo {
+    margin-bottom: 32px;
+    display: inline-block;
+  }
+  &__contact,&__link {
+    list-style: none;
+    li {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 12px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        line-height: 24px;
+        color: #333;
+        &:focus,&:hover {
+          color: @green-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__link {
+    li {
+      &:first-child {
+        a {
+          &.blank {
+            &:after {
+              content: url("../images/ext-link.svg");
+              position: relative;
+              left: 5px;
+              top: -5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__copyright {
+    border-top: 1px solid #E1E1E1;
+    padding-top: 24px;
+    margin-top: 24px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    .recaptcha {
+      font-size: 6px;
+      a {
+        color: @green-primary;
+        &:focus,&:hover {
+          color: @green-secondary;
+          text-decoration: underline;
+        }
+      }
+    }
+    .agreement {
+      display: block;
+      a {
+        font-size: 12px;
+        &:focus,&:hover {
+          color: @green-secondary;
+          text-decoration: underline;
+        }
+      }
+    }
+    a {
+      line-height: 24px;
+      color: #333;
+      &:focus,&:hover {
+        color: @green-color;
+        text-decoration: none;
+      }
+    }
+  }
+}

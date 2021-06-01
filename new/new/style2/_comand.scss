@@ -1,0 +1,210 @@
+.comand {
+  margin: 70px 0;
+
+  &__content {
+    min-height: 300px;
+    margin-top: 20px;
+    padding-top: 20px;
+    background: url("../img/cofee-1.png") no-repeat;
+    background-size: auto;
+    background-position: center 0;
+
+    &-string {
+      display: flex;
+      height: 100px;
+      display: flex;
+      align-items: center;
+    }
+
+    &-left {
+      padding-right: 185px;
+      flex: 1;
+      text-align: right;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      &_center {
+        padding-right: 245px;
+      }
+    }
+
+    &-right {
+      padding-left: 185px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+
+      &_center {
+        padding-left: 245px;
+      }
+
+      .comand__content-text {
+        margin-right: 0;
+        margin-left: $sp;
+      }
+    }
+
+    &-text {
+      color: #616161;
+      font-weight: bold;
+      font-size: 18px;
+      margin-right: $sp;
+
+      &-icon {
+        height: 64px;
+        width: 64px;
+        min-width: 64px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &_1 {
+          background-image: url("../img/cofe/marker.svg");
+          background-size: 43px auto;
+        }
+        &_2 {
+          background-image: url("../img/cofe/pens.svg");
+        }
+        &_3 {
+          background-image: url("../img/cofe/palms.svg");
+        }
+        &_4 {
+          background-image: url("../img/cofe/tennis.png");
+          background-size: 50px auto;
+        }
+        &_5 {
+          background-image: url("../img/cofe/doc.svg");
+        }
+        &_6 {
+          background-image: url("../img/cofe/money.png");
+          background-size: 60px 60px;
+        }
+        &_7 {
+          background-image: url("../img/cofe/dms.svg");
+        }
+        &_8 {
+          background-image: url("../img/cofe/taxi.svg");
+        }
+        &_10 {
+          background-image: url("../img/cofe/frame.svg");
+        }
+        &_12 {
+          background-image: url("../img/cofe/alarm-clock.svg");
+        }
+      }
+    }
+  }
+
+  &__footer {
+    text-align: center;
+    margin: -20px 0 70px;
+    color: #616161;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .comand {
+  }
+}
+@media (max-width: 1000px) {
+  .comand {
+    .h2__text {
+      br {
+        display: none;
+      }
+    }
+    &__content {
+      background: none;
+      &-left {
+        text-align: left;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+        padding-right: 20px;
+        &_center {
+          padding-right: 20px;
+        }
+      }
+      &-text {
+        margin-right: 0;
+        margin-left: 16px;
+        flex: 1;
+        br {
+          display: none;
+        }
+      }
+      &-right {
+        padding-left: 0px;
+        .comand__content-text {
+          margin-right: 0;
+          margin-left: 16px;
+        }
+        &_center {
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 737px) {
+  .comand {
+    margin-top: $sp;
+
+    &__footer {
+      margin-top: -20px;
+      font-weight: normal;
+      font-size: 16px;
+      margin-bottom: $sp*2;
+    }
+
+    &__content {
+      background: none;
+      &-text {
+        margin-right: 0;
+        margin-left: 0 !important;
+        &-icon {
+          margin-right: $sp;
+          min-width: 64px;
+          background-position: center;
+        }
+      }
+
+      &-string {
+        display: block;
+        height: auto;
+      }
+
+      &-left, &-right {
+        margin-bottom: $sp;
+        padding: 0;
+        text-align: left;
+      }
+
+      &-left {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+@media (max-width: 374px) {
+  .comand {
+    .h2 {
+      font-size: 18px;
+    }
+    &__content {
+      &-text {
+        font-size: 15px;
+        &-icon {
+          background-size: contain;
+          height: 50px;
+          width: 45px;
+          min-width: 45px;
+        }
+      }
+    }
+    &__footer {
+      font-size: 14px;
+    }
+  }
+}

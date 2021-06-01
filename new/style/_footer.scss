@@ -1,0 +1,131 @@
+.footer-new {
+  margin: -315px auto 0;
+  min-width: 1000px;
+  height: 315px;
+  background: url("../img/footer-bg.svg") no-repeat;
+  background-position: center top;
+  position: relative;
+  &__content {
+    padding-top: 60px;
+  }
+  &__logo {
+    height: 60px;
+    background: url("../img/logo-green.svg") no-repeat;
+    background-size: contain;
+  }
+  &__wrap {
+    display: flex;
+  }
+  &__contact {
+    margin-top: 24px;
+    width: 400px;
+  }
+  &__links {
+    margin-top: 24px;
+    width: 400px;
+    a {
+      display: block;
+      text-decoration: none;
+      transition: color 0.2s;
+      &:hover {
+        color: $green;
+      }
+    }
+    .footer__string {
+      color: $black;
+    }
+  }
+  &__string {
+    font-weight: 200;
+    margin-bottom: $sp;
+    color: #8A8A8A;
+    strong {
+      font-weight: normal;
+      opacity: 1;
+      color: $black;
+    }
+    &-mail {
+      text-decoration: none;
+      font-weight: normal;
+      opacity: 1;
+      color: $black;
+      &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        color: $green;
+      }
+    }
+  }
+  &__soc {
+    display: flex;
+    align-items: center;
+    &-item {
+      color: $green;
+      margin-right: $sp;
+      font-size: 20px;
+    }
+  }
+  &__copyright {
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    color: $black;
+    a {
+      padding-bottom: $sp;
+      color: $black;
+      text-decoration: none;
+
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .footer-new {
+    min-width: auto;
+    margin: 0px auto 0;
+  }
+}
+@media (max-width: 1000px) {
+  .footer-new {
+    &__contact {
+      width: 520px;
+    }
+  }
+}
+@media (max-width: 737px) {
+  .footer-new {
+    min-width: auto;
+    height: auto;
+    min-height: auto;
+    margin: 0;
+    background: #FAFAFA;
+    &__logo {
+      background-size: 175px auto;
+    }
+    &__content {
+      padding-top: $sp*2;
+    }
+    &__wrap {
+      display: block;
+    }
+    &__contact, &__links {
+      margin-bottom: $sp*2;
+      width: auto;
+    }
+    &__copyright {
+      display: block;
+      padding-bottom: 16px;
+      span {
+        font-weight: bold;
+      }
+      a {
+        padding-bottom: 0px;
+      }
+    }
+  }
+}

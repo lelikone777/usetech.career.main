@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="dc55b7c1-a5cb-4517-b944-aa04f5e367b8" name="usetech.design/new_project/">
+        <fileTransfer rootFolder="/var/www/www-root/data/www/career.usetech.ru/wp-content/themes/usetech" accessType="SFTP" host="usetech.design" port="22" sshConfigId="afea14ee-bcf6-4022-a58d-4010d68a9b3f" sshConfig="kalinin@usetech.design:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,475 @@
+{
+  "title": "Награды компании",
+  "events": [
+    {
+      "title": "",
+      "desc": "Запуск полноценного корпоративного портала",
+      "icon": "green",
+      "height": 425,
+      "year": 2018
+    },
+    {
+      "title": "22 место",
+      "desc": "«Крупнейшие разработчики мобильных приложений для бизнеса и госструктур» по версии <a href='https://cnews.ru' target='_blank'>CNews</a>",
+      "icon": "cnews",
+      "height": 160,
+      "year": 2018
+    },
+    {
+      "title": "Золотой призер",
+      "desc": "в номинации «Лучшее приложение услуги» от <a href='https://tagline.ru' target='_blank'>Tagline</a> с проектом создания мобильного приложения для городского велопроката г. Москвы",
+      "icon": "tagline",
+      "height": 330,
+      "year": 2018
+    },
+    {
+      "title": "",
+      "desc": "Новый офис и новая команда в г. Томск",
+      "icon": "green",
+      "height": 425,
+      "year": 2018
+    },
+    {
+      "title": "Серебряный призер",
+      "desc": "в номинации «Лучший проект для индустрии» от <a href='https://tagline.ru' target='_blank'>Tagline</a> с проектом разработки системы онлайн трансляции FIDE WorldChess",
+      "icon": "tagline",
+      "height": 160,
+      "year": 2018
+    },
+    {
+      "title": "",
+      "desc": "Blockchain Usetech – первый в мире криптовалютный индекс «Crypto100»",
+      "icon": "green",
+      "height": 425,
+      "year": 2018
+    },
+    {
+
+      "title": "2 место",
+      "desc": "рейтинга «Лучшие разработчики программного обеспечения России» по версии <a href='https://wadline.ru' target='_blank'>Wadline</a>",
+      "icon": "wadline",
+      "height": 160,
+      "year": 2019
+    },
+    {
+      "title": "Серебряный призер",
+      "desc": "в номинации «Лучший проект для индустрии» от <a href='https://tagline.ru' target='_blank'>Tagline</a> с проектом разработки системы онлайн трансляции FIDE WorldChess",
+      "icon": "tagline",
+      "height": 330,
+      "year": 2019
+    },
+    {
+      "title": "",
+      "desc": "1500 + успешных проектов",
+      "icon": "green",
+      "height": 425,
+      "year": 2019
+    },
+    {
+      "title": "19 место",
+      "desc": "рейтинга «Крупнейшие игроки рынка ИТ для ритейла» по версии <a href='https://tadviser.ru' target='_blank'>Tadviser</a>",
+      "icon": "tadviser",
+      "height": 160,
+      "year": 2019
+    },
+    {
+      "title": "2 место",
+      "desc": "рейтинга «Узнаваемость и привлекательность IT-компаний в Ростовской области, QA» по версии <a href='https://rndtech.pro' target='_blank'>RndTech</a>",
+      "icon": "rndtech",
+      "height": 330,
+      "year": 2019
+    },
+    {
+      "title": "",
+      "desc": "Новый офис и новая команда в г. Барнаул",
+      "icon": "green",
+      "height": 425,
+      "year": 2019
+    },
+    {
+      "title": "10 место",
+      "desc": "рейтинга «Крупнейшие разработчики мобильных приложений для бизнеса и госструктур» по версии <a href='https://cnews.ru' target='_blank'>CNewsMobile</a>",
+      "icon": "cnews",
+      "height": 160,
+      "year": 2019
+    },
+    {
+      "title": "15 место",
+      "desc": "рейтинга «Самые вовлеченные сотрудники» по версии <a href='http://hh.ru' target='_blank'>HeadHunter</a>",
+      "icon": "hh",
+      "height": 330,
+      "year": 2019
+    },
+    {
+      "title": "",
+      "desc": "250+ экспертов",
+      "icon": "green",
+      "height": 425,
+      "year": 2019
+    },
+    {
+      "title": "15 место",
+      "desc": "рейтинга «Лидеры ИТ и Интернет индустрии» по версии <a href='https://rbc.ru' target='_blank'>РБК</a>",
+      "icon": "rbk",
+      "height": 160,
+      "year": 2019
+    },
+    {
+      "title": "Золотой призёр",
+      "desc": "от <a href='https://neufund.org' target='_blank'>Neufund</a> в номинации «Breavest heart»",
+      "icon": "neufund",
+      "height": 270,
+      "year": 2019
+    },
+    {
+      "title": "16 место",
+      "desc": "рейтинга «Крупнейшие поставщики услуг ИТ-аутсорсинга, 2019» по версии <a href='https://www.tadviser.ru/index.php/%D0%A1%D1%82%D0%B0%D1%82%D1%8C%D1%8F:%D0%98%D0%A2-%D0%B0%D1%83%D1%82%D1%81%D0%BE%D1%80%D1%81%D0%B8%D0%BD%D0%B3_(%D1%80%D1%8B%D0%BD%D0%BE%D0%BA_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8)#.D0.A1.D0.BE.D1.81.D1.82.D0.BE.D1.8F.D0.BD.D0.B8.D0.B5_.D1.80.D0.BE.D1.81.D1.81.D0.B8.D0.B9.D1.81.D0.BA.D0.BE.D0.B3.D0.BE_.D1.80.D1.8B.D0.BD.D0.BA.D0.B0_.D0.98.D0.A2-.D0.B0.D1.83.D1.82.D1.81.D0.BE.D1.80.D1.81.D0.B8.D0.BD.D0.B3.D0.B0' target='_blank'>Tadviser</a>",
+      "icon": "tadviser",
+      "height": 370,
+      "year": 2019
+    },
+    {
+      "title": "",
+      "desc": "1700 + успешных проектов",
+      "icon": "green",
+      "height": 425,
+      "year": 2019
+    },
+    {
+      "title": "1 место",
+      "desc": "в категории «Самые вовлеченные сотрудники» ежегодного рейтинга работодателей России от компании <a href='http://hh.ru' target='_blank'>HeadHunter</a>",
+      "icon": "hh",
+      "height": 160,
+      "year": 2020
+    },
+    {
+      "title": "7 место",
+      "desc": "рейтинга «Лучшие ИТ-работодатели России, качество компании» по версии <a href='https://career.habr.com' target='_blank'>Хабр Карьера</a>",
+      "icon": "habr",
+      "height": 330,
+      "year": 2020
+    },
+    {
+      "title": "",
+      "desc": "2000+ успешных проектов",
+      "icon": "green",
+      "height": 425,
+      "year": 2020
+    },
+    {
+      "title": "8 место",
+      "desc": "рейтинга «Лидеры ИТ и Интернет индустрии России» по версии <a href='https://rbc.ru' target='_blank'>РБК</a>",
+      "icon": "rbk",
+      "height": 160,
+      "year": 2020
+    },
+    {
+      "title": "56 место",
+      "desc": "рейтинга «Топ-100 лучших работодателей России» по версии <a href='http://hh.ru' target='_blank'>HeadHunter</a>",
+      "icon": "hh",
+      "height": 330,
+      "year": 2020
+    },
+    {
+      "title": "",
+      "desc": "Запуск геймификации",
+      "icon": "green",
+      "height": 425,
+      "year": 2020
+    },
+    {
+      "title": "1 место",
+      "desc": "международного рейтинга «Top 10+ Mobile App Developers & App Development Companies in Russia» по версии <a href='https://www.topdevelopers.co/directory/mobile-app-developers/country/russia' target='_blank'>TopDevelopers.co</a>",
+      "icon": "topb2b",
+      "height": 160,
+      "year": 2020
+    },
+    {
+      "title": "8 место",
+      "desc": "рейтинг «Лучшие ИТ-работодатели России 2019» по версии <a href='https://career.habr.com' target='_blank'>Хабр Карьера</a>",
+      "icon": "habr",
+      "height": 330,
+      "year": 2020
+    },
+    {
+      "title": "",
+      "desc": "300+ экспертов",
+      "icon": "green",
+      "height": 425,
+      "year": 2020
+    },
+    {
+      "title": "Золотой призер",
+      "desc": "в номинации «IT Products & Services for Media and Entertainment» престижной американской премии <a href='https://networkproductsguide.com/winners/2020-it-world-awards/' target='_blank'>IT World Award 2020</a>",
+      "icon": "itawards",
+      "height": 160,
+      "year": 2020
+    },
+    {
+      "title": "Победитель",
+      "desc": "международного хакатона <a href='https://devpost.com/software/unique-network' target='_blank'>«Hackusama - Hack on Polkadot's Wild Cousin»</a> с продуктом «Unique Network»",
+      "icon": "hackusama",
+      "height": 330,
+      "year": 2020
+    },
+    {
+      "title": "",
+      "desc": "На карте рынка «Информационные технологии 2020» по версии <a href='https://www.tadviser.ru/' target='_blank'>Tadviser</a>",
+      "icon": "green",
+      "height": 425,
+      "year": 2020
+    },
+    {
+      "title": "Победитель",
+      "desc": "в номинации «Community Choice» международного хакатона <a href='https://devpost.com/software/unique-network' target='_blank'>«Hackusama - Hack on Polkadot's Wild Cousin»</a> с продуктом «Unique Network»",
+      "icon": "hackusama",
+      "height": 160,
+      "year": 2020
+    },
+    {
+      "title": "Финалист",
+      "desc": "премии <a href='https://itstars-award.ru/' target='_blank'>IT Stars</a> имени Георгия Генса в номинации «Инновационный проект в бизнесе»",
+      "icon": "itstars",
+      "height": 330,
+      "year": 2020
+    },
+    {
+      "title": "",
+      "desc": "На карте рынка экосистемы <a href='#' target='_blank'>Polkadot</a>",
+      "icon": "green",
+      "height": 425,
+      "year": 2020
+    },
+    {
+      "title": "12 место",
+      "desc": "рейтинга «Крупнейшие разработчики мобильных приложений для бизнеса и госструктур» по версии <a href='https://www.cnews.ru/reviews/mobilnost_v_biznese_2020/review_table/4f66b8911b27e1ff43752e1ac889dc063c07fbea' target='_blank'>CNews</a>",
+      "icon": "cnews",
+      "height": 160,
+      "year": 2020
+    },
+    {
+      "title": "20 место",
+      "desc": "рейтинга «Крупнейшие поставщики BI-решений в России» по версии <a href='https://www.tadviser.ru/index.php/%D0%A1%D1%82%D0%B0%D1%82%D1%8C%D1%8F:Business_Intelligence_(%D1%80%D1%8B%D0%BD%D0%BE%D0%BA_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8)#.D0.9A.D1.80.D1.83.D0.BF.D0.BD.D0.B5.D0.B9.D1.88.D0.B8.D0.B5_.D0.BF.D0.BE.D1.81.D1.82.D0.B0.D0.B2.D1.89.D0.B8.D0.BA.D0.B8_BI-.D1.80.D0.B5.D1.88.D0.B5.D0.BD.D0.B8.D0.B9_.D0.B2_.D0.A0.D0.BE.D1.81.D1.81.D0.B8.D0.B8' target='_blank'>Tadviser</a>",
+      "icon": "tadviser",
+      "height": 330,
+      "year": 2020
+    },
+    {
+      "title": "",
+      "desc": "Новый офис и команда в г. Рязань",
+      "icon": "green",
+      "height": 425,
+      "year": 2020
+    },
+    {
+      "title": "14 место",
+      "desc": "рейтинга «Крупнейшие ИТ-аутсорсеры в России» по версии <a href='https://www.tadviser.ru/index.php/%D0%A1%D1%82%D0%B0%D1%82%D1%8C%D1%8F:%D0%98%D0%A2-%D0%B0%D1%83%D1%82%D1%81%D0%BE%D1%80%D1%81%D0%B8%D0%BD%D0%B3_(%D1%80%D1%8B%D0%BD%D0%BE%D0%BA_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8)#.D0.9A.D1.80.D1.83.D0.BF.D0.BD.D0.B5.D0.B9.D1.88.D0.B8.D0.B5_.D0.98.D0.A2-.D0.B0.D1.83.D1.82.D1.81.D0.BE.D1.80.D1.81.D0.B5.D1.80.D1.8B' target='_blank'>Tadviser</a>",
+      "icon": "tadviser",
+      "height": 160,
+      "year": 2020
+    },
+    {
+      "title": "Финалист",
+      "desc": "международной премии «<a href='https://dcsawards.com/vote' target='_blank'>Data Centre Solutions Awards</a>, 2020» в номинации «Managed Services Project of the Year»",
+      "icon": "dcs",
+      "height": 330,
+      "year": 2020
+    },
+    {
+      "title": "",
+      "desc": "Новый офис у московской команды Usetech",
+      "icon": "green",
+      "height": 425,
+      "year": 2020
+    },
+    {
+      "title": "2 место",
+      "desc": "международного рейтинга «Top Blockchain Development Companies | Top Blockchain Developers» по версии <a href='https://www.topdevelopers.co/directory/blockchain-developers?country=russia' target='_blank'>TopDevelopers.co</a>",
+      "icon": "topb2b",
+      "height": 160,
+      "year": 2020
+    },
+    {
+      "title": "",
+      "desc": "Экспертная статья А. Митровича «Как блокчейн поможет построить Web 3.0» для <a href='https://www.cnews.ru/articles/2020-12-07_ekspertiza_kak_blokchejn_pomozhet?fbclid=IwAR3pJwDroBbAhTDvn-0n9eKKCo-U8_b0j3pDBd4Zg8DMBy5Jw3jOo-BXJhE' target='_blank'>Cnews</a>",
+      "icon": "cnews",
+      "height": 330,
+      "year": 2020
+    },
+    {
+      "title": "",
+      "desc": "",
+      "icon": "green",
+      "height": 425,
+      "year": 2020
+    },
+    {
+      "title": "5 место",
+      "desc": "рейтинга «Лучшие разработчики программного обеспечения России 2020» по версии <a href='https://wadline.ru/mag/best-it-companies-russia-2020' target='_blank'>Wadline</a>",
+      "icon": "wadline",
+      "height": 160,
+      "year": 2020
+    },
+    {
+      "title": "",
+      "desc": "",
+      "icon": "",
+      "height": 330,
+      "year": 2020
+    },
+    {
+      "title": "",
+      "desc": "",
+      "icon": "green",
+      "height": 425,
+      "year": 2020
+    },
+    {
+      "title": "14 место",
+      "desc": "международного рейтинга Top Mobile App Development Companies of 2021 по версии <a href='https://www.topdevelopers.co/press-releases/leading-mobile-app-development-companies-march-2021' target='_blank'>TopDevelopers</a>",
+      "icon": "topb2b",
+      "height": 160,
+      "year": 2021
+    },
+    {
+      "title": "10 место",
+      "desc": "рейтинга «Отношение с коллегами» по версии <a href='https://career.habr.com/companies/ratings?q=usetech&sort=av&sz=3&y=2020' target='_blank'>Habr.ru</a>",
+      "icon": "habr",
+      "height": 330,
+      "year": 2021
+    },
+    {
+      "title": "",
+      "desc": "",
+      "icon": "green",
+      "height": 425,
+      "year": 2021
+    },
+    {
+      "title": "11 место",
+      "desc": "рейтинга «Современные технологии» по версии <a href='https://career.habr.com/companies/ratings?q=usetech&sort=av&sz=3&y=2020' target='_blank'>Habr.ru</a>",
+      "icon": "habr",
+      "height": 160,
+      "year": 2021
+    },
+    {
+      "title": "14 место",
+      "desc": "рейтинга «Комфортные условия труда» по версии <a href='https://career.habr.com/companies/ratings?q=usetech&sort=av&sz=3&y=2020' target='_blank'>Habr.ru</a>",
+      "icon": "habr",
+      "height": 330,
+      "year": 2021
+    },
+    {
+      "title": "",
+      "desc": "",
+      "icon": "green",
+      "height": 425,
+      "year": 2021
+    },
+    {
+      "title": "1 место",
+      "desc": "рейтинга «Самые вовлеченные сотрудники» ежегодного рейтинга работодателей России от компании <a href='https://rating.hh.ru/profile/rating2020/subrating/?tab=2' target='_blank'>«HeadHunter»</a>",
+      "icon": "hh",
+      "height": 160,
+      "year": 2021
+    },
+    {
+      "title": "23 место",
+      "desc": "в рейтинге «Топ-100 лучших работодателей среди компаний России 2020 (от 251 до 1000 человек)» по версии <a href='https://rating.hh.ru/profile/rating2020/subrating/?tab=2' target='_blank'>HeadHunter</a>",
+      "icon": "hh",
+      "height": 330,
+      "year": 2021
+    },
+    {
+      "title": "",
+      "desc": "",
+      "icon": "green",
+      "height": 425,
+      "year": 2021
+    },
+    {
+      "title": "7 место",
+      "desc": "рейтинга «Привлекательность IT-компаний в Ростовской области для тестировщиков» по версии <a href='https://devrel.rndtech.pro/' target='_blank'>RndTech</a>",
+      "icon": "rndtech",
+      "height": 160,
+      "year": 2021
+    },
+    {
+      "title": "15 место",
+      "desc": "рейтинга «Куда хотят гуру: специалисты уровня Senior» по версии <a href='https://devrel.rndtech.pro/' target='_blank'>RndTech</a>",
+      "icon": "rndtech",
+      "height": 330,
+      "year": 2021
+    },
+    {
+      "title": "",
+      "desc": "",
+      "icon": "green",
+      "height": 425,
+      "year": 2021
+    },
+    {
+      "title": "41 место",
+      "desc": "международного рейтинга «Top Mobile App Development Companies and App Developers» по версии <a href='https://www.itfirms.co/top-mobile-app-development-companies/3/' target='_blank'>ITForms</a>",
+      "icon": "itfirms",
+      "height": 160,
+      "year": 2021
+    },
+    {
+      "title": "48 место",
+      "desc": "международного рейтинга «Top Web Development Companies & Best Web Developers» по версии <a href='https://www.itfirms.co/top-web-development-companies/3/' target='_blank'>ITForms</a>",
+      "icon": "itfirms",
+      "height": 330,
+      "year": 2021
+    },
+    {
+      "title": "",
+      "desc": "",
+      "icon": "green",
+      "height": 425,
+      "year": 2021
+    },
+    {
+      "title": "На карте",
+      "desc": "рынка экосистемы <a href='https://twitter.com/polkaprojectcom/status/1358975660627087366?s=20' target='_blank'>Polkadot V 2021.02</a>",
+      "icon": "polkaproject",
+      "height": 160,
+      "year": 2021
+    },
+    {
+      "title": "7 место",
+      "desc": "рейтинга «Лидеры ИТ и Интернет индустрии России» по версии <a href='https://rating.hh.ru/profile/rating2020/summary?tab=regular&sphere=IT%20%D0%B8%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82' target='_blank'>HeadHunter</a>",
+      "icon": "hh",
+      "height": 330,
+      "year": 2021
+    },
+    {
+      "title": "",
+      "desc": "",
+      "icon": "green",
+      "height": 425,
+      "year": 2021
+    },
+    {
+      "title": "21 место",
+      "desc": "в рейтинге «Лучшие ИТ компании России (от 100 до 1000 человек)» по версии <a href='https://career.habr.com/companies/ratings?page=2&sort=av&sz=3&y=2020' target='_blank'>Хабр.Карьера</a>",
+      "icon": "habr",
+      "height": 160,
+      "year": 2021
+    },
+    {
+      "title": "Джейм Берк",
+      "desc": "Статья «Почему мы инвестировали в <a href='https://outlierventures.io/research/why-we-invested-in-unique-network/' target='_blank'>Unique Network</a>, продукт компании Usetech?»",
+      "icon": "unique",
+      "height": 330,
+      "year": 2021
+    },
+    {
+      "title": "",
+      "desc": "",
+      "icon": "green",
+      "height": 425,
+      "year": 2021
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="22px" viewBox="0 0 20 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>clock</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Вакансия-HR-Usetech" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-841.000000, -487.000000)">
+        <g id="clock" transform="translate(841.000000, 487.000000)" fill="#616161" fill-rule="nonzero">
+            <polygon id="Shape" points="8.41999969 6.31499977 8.41999969 12.6299995 12.6299995 12.6299995 12.6299995 10.5249996 10.5249996 10.5249996 10.5249996 6.31499977"></polygon>
+            <path d="M9.47249966,0 C6.61496226,0 3.97739736,1.14617246 2.03974493,3.09224489 L0,1.05249996 L0,7.36749973 L6.31499977,7.36749973 L3.52692737,4.57942733 C5.07725982,3.02172739 7.18646974,2.10499992 9.47249966,2.10499992 C14.115077,2.10499992 17.8924994,5.88242229 17.8924994,10.5249996 C17.8924994,15.167577 14.115077,18.9449993 9.47249966,18.9449993 L9.47249966,21.0499992 C15.2759844,21.0499992 19.9974993,16.3295369 19.9974993,10.5249996 C19.9974993,4.72046233 15.2759844,0 9.47249966,0 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
