@@ -6,16 +6,30 @@
 
             <ul class="header-new__menu">
                 <li class="header-new__menu-item"><a href="#" class="header-new__menu-item_link">Вакансии</a></li>
-                <li class="header-new__menu-item"><a href="#"
-                                                     class="header-new__menu-item_link
-                                                            header-new__menu-item_link--drop
-                                                            header-new__menu-item_link--about"
-                    >О компании</a></li>
-                <li class="header-new__menu-item"><a href="#"
-                                                     class="header-new__menu-item_link
-                                                            header-new__menu-item_link--drop
-                                                            header-new__menu-item_link--blog"
-                    >Блог компании</a></li>
+                <li class="header-new__menu-item">
+                    <div class="header-new__menu-item_link">О компании</div>
+                    <div class="header-new__menu-item_btn">вниз</div>
+                    <div class="header-new__submenu">
+                        <ul>
+                            <li>123</li>
+                            <li>123</li>
+                            <li>123</li>
+                            <li>123</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="header-new__menu-item">
+                    <a href="#" class="header-new__menu-item_link">Блог компании</a>
+                    <div class="header-new__menu-item_btn">вниз</div>
+                    <div class="header-new__submenu">
+                        <ul>
+                            <li>123</li>
+                            <li>123</li>
+                            <li>123</li>
+                            <li>123</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="header-new__menu-item"><a href="#" class="header-new__menu-item_link">Контакты</a></li>
             </ul>
             <!-- /.header-new__menu -->
@@ -32,3 +46,5 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/top_menu.js"></script>

@@ -16,6 +16,8 @@
   &__menu {
     display: flex;
     &-item {
+      position: relative;
+      display: flex;
       &:not(:last-child) {
         margin-right: 32px;
       }
@@ -47,6 +49,27 @@
         }
 
       }
+      &_btn {
+        margin-left: 5px;
+        transition: all 0.3s;
+        &.active {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &__submenu {
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    top: 100%;
+    &.active {
+      display: flex;
+      animation: menu .5s forwards;
+
     }
   }
   &__socials {
@@ -81,5 +104,18 @@
         background-image: url("@{path}/usetech-youtube-header.svg");
       }
     }
+  }
+}
+
+
+
+@keyframes menu {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
