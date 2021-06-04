@@ -1,9 +1,9 @@
 <?php wp_head(); ?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
-    <?php include 'header-new.php'?>
-    <?php include 'vacancy_filter.php'?>
-    <?php include 'news-block.php'?>
+    <?php include 'template-parts/header-new.php'?>
+    <?php include 'template-parts/vacancy_filter.php'?>
+    <?php include 'template-parts/news-block.php'?>
 </body>
 
 

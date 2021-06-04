@@ -5,8 +5,19 @@
   &__left {
     min-width: 280px;
     max-width: 280px;
+    input {
+      cursor: pointer;
+    }
     &-label {
       font-weight: normal;
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+
+      }
+      &.disabled {
+        opacity: 0.3;
+      }
     }
     &-block {
 
@@ -17,6 +28,14 @@
     }
     &-list {
       margin-bottom: 24px;
+      & > div {
+        &:hover {
+
+          .filter__left-label {
+            opacity: 0.8;
+          }
+        }
+      }
     }
   }
   &__right {

@@ -81,9 +81,6 @@ const convertCategory = (item, index) => {
     if (index === 1) {
         return vacancyProfileList.find(xx => xx.id === item.categories[index]).name;
     }
-    if (index === 2 && item.categories[index] && item.categories[index] === 12) {
-        return vacancyProfileList.find(xx => xx.id === item.categories[index]).name;
-    }
     return null;
 }
 
@@ -121,7 +118,11 @@ const setItemList = (list) => {
 
 
 filterBox.addEventListener("click", (event) => { // слушаем клики по чекбоксам
-    if (event.target.classList.contains('filter__left-cbox')) {
+    if (event.target.classList.contains('filter__left-cbox') || event.target.classList.contains('filter__left-label')) {
+        if (event.target.classList.contains('filter__left-label'))  {
+            event.target.previousElementSibling.checked = !event.target.previousElementSibling.checked;
+        }
+        console.log(123);
         resetCheckedList();
         allCbox.forEach(xx => {
             const category = xx.getAttribute('data-id');
@@ -136,20 +137,28 @@ filterBox.addEventListener("click", (event) => { // слушаем клики п
         if ( checkedList.work.includes('Удаленная работа')) {
             console.log('наш случай');
             locList.forEach(ff => {
-                ff.checked = false
-                ff.disabled = true
+                ff.checked = false;
+                ff.disabled = true;
+                ff.nextElementSibling.classList.add('disabled');
             });
             workList.forEach(ff => {
                 if (ff.value !== 'Удаленная работа') {
-                    ff.checked = false
-                    ff.disabled = true
+                    ff.checked = false;
+                    ff.disabled = true;
+                    ff.nextElementSibling.classList.add('disabled');
                 }
             });
             checkedList.work = ['Удаленная работа'];
             checkedList.location = [];
         } else {
-            locList.forEach(ff => ff.disabled = false);
-            workList.forEach(ff => ff.disabled = false);
+            locList.forEach(ff => {
+                ff.disabled = false;
+                ff.nextElementSibling.classList.remove('disabled');
+            });
+            workList.forEach(ff => {
+                ff.disabled = false;
+                ff.nextElementSibling.classList.remove('disabled');
+            });
         }
         if (checkedList.emp.length === 0 && checkedList.location.length === 0 &&
             checkedList.profile.length === 0 && checkedList.industry.length === 0 &&

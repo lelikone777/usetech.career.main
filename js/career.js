@@ -158,6 +158,7 @@ $(document).ready(function () {
 
         let items = allList.map(xx => xx.acf.city);
         items = new Set(items);
+        items = [...items].filter(xx => xx !== '');
 
         items.forEach(ff => {
             let itemselect = document.createElement('option');
@@ -204,15 +205,15 @@ $(document).ready(function () {
 
     // рендерим список
     const visibleitem = (list) => {
-        let hott = list.filter(dd => dd.categories.includes(12));
-        let unhott = list.filter(dd => !dd.categories.includes(12));
+        let hott = list.filter(dd => dd.acf.hot);
+        let unhott = list.filter(dd => !dd.acf.hot);
         list = [...hott, ...unhott];
 
         listbox.innerHTML = '';
         list.forEach(xx => {
 
             let hot = '';
-            const target = xx.categories.find(dd => dd === 12);
+            const target = xx.acf.hot;
             if (target) hot = `<img src='https://career.usetech.ru/wp-content/themes/usetech/images/flame.svg'>`;
 
 
