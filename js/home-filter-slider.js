@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 
     let arrowWrap = document.querySelector('.home-filter__right-title_buttons');

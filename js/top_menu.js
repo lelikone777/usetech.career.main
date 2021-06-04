@@ -15,4 +15,24 @@ const removeClassActive = (indexItem) => {
             item.classList.remove('active');
         }
     });
-}
+};
+
+let menu = document.querySelector(".header-new__mobile");
+let menuButton = document.querySelector(".header-new__button");
+
+
+menuButton.addEventListener("click", function () {
+    if (!menuButton.classList.contains("header-new__button--active")) {
+        menuButton.classList.add("header-new__button--active");
+    } else {
+        menuButton.classList.remove("header-new__button--active");
+    }
+    if (!menu.classList.contains("header-new__mobile--visible")) {
+        menu.classList.add("header-new__mobile--visible");
+        document.body.classList.toggle("lock");
+
+    } else {
+        menu.classList.remove("header-new__mobile--visible");
+        document.body.classList.remove("lock");
+    }
+});

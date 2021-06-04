@@ -8,6 +8,7 @@
                 $query = new WP_Query([
                     'posts_per_page' => 1,
                     'category_name' => 'news',
+                    'post__in'  => get_option( 'sticky_posts' )
                 ]);
                 if ($query->have_posts()) {
                     while ($query->have_posts()) {
@@ -24,7 +25,7 @@
 
                                 <?php trim_title_chars(100,'...') ?>
                             </h3>
-                            <h3 class="development__left-top_text--mobile development__left-card_text">
+                            <h3 class="development__left-top_text--mobile">
                                 <?php trim_title_chars(100,'...') ?>
                             </h3>
                         </a>
@@ -49,6 +50,9 @@
                         'offset' => 1,
                         'posts_per_page' => 4,
                         'category_name' => 'news',
+                       'post__not_in' => get_option( 'sticky_posts' ),
+
+
                     ]);
                     if ($query->have_posts()) {
                         while ($query->have_posts()) {

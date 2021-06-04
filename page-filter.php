@@ -15,7 +15,7 @@
                     </label>
                 </div>
             </div>
-            <div class="filter__left-block" id="emp">
+            <div class="filter__left-block" id="work">
                 <div class="filter__left-title">График</div>
                 <div class="filter__left-list"></div>
             </div>
@@ -33,6 +33,10 @@
             </div>
             <div class="filter__left-block" id="exp">
                 <div class="filter__left-title">Опыт работы</div>
+                <div class="filter__left-list"></div>
+            </div>
+            <div class="filter__left-block" id="emp">
+                <div class="filter__left-title">Тип занятости</div>
                 <div class="filter__left-list"></div>
             </div>
         </div>
