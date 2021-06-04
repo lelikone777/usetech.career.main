@@ -10,7 +10,7 @@
                 </li>
                 <li class="header-new__menu-item">
                     <div class="header-new__menu-item_link">О компании</div>
-                    <div class="header-new__menu-item_btn">вниз</div>
+                    <div class="header-new__menu-item_btn"></div>
                     <div class="header-new__submenu">
                         <ul>
                             <li>123</li>
@@ -22,7 +22,7 @@
                 </li>
                 <li class="header-new__menu-item">
                     <a href="#" class="header-new__menu-item_link">Блог компании</a>
-                    <div class="header-new__menu-item_btn">вниз</div>
+                    <div class="header-new__menu-item_btn"></div>
                     <div class="header-new__submenu">
                         <ul>
                             <li>123</li>
@@ -66,7 +66,7 @@
                             </li>
                             <li class="header-new__menu-item">
                                 <div class="header-new__menu-item_link">О компании</div>
-                                <div class="header-new__menu-item_btn header-new__menu-item_btn--mobile"></div>
+                                <div class="header-new__menu-item_btn--mobile"></div>
                                 <div class="header-new__submenu">
                                     <ul>
                                         <li>123</li>
@@ -76,8 +76,8 @@
                                 </div>
                             </li>
                             <li class="header-new__menu-item">
-                                <a href="#" class="header-new__menu-item_link">Блог компании</a>
-                                <div class="header-new__menu-item_btn header-new__menu-item_btn--mobile"></div>
+                                <a href="#" class="header-new__menu-item_link">Блог</a>
+                                <div class=" header-new__menu-item_btn--mobile"></div>
                                 <div class="header-new__submenu">
                                     <ul>
                                         <li>123</li>
@@ -91,8 +91,8 @@
                             </li>
                         </ul>
                         <div class="header-new__fb header-new__mobile-fb">
-                            <a href="#" class="header-new__mobile-fb_email">hr@usetech.ru</a>
-                            <a href="#" class="header-new__mobile-fb_tel">+7(495)660-50-48</a>
+                            <a href="mailto:hr@usetech.ru" class="header-new__mobile-fb_email">hr@usetech.ru</a>
+                            <a href="tel:+74956605048" class="header-new__mobile-fb_tel">+7(495)660-50-48</a>
                             <div class="header-new__mobile-fb_address"> Москва, Кожевническая улица, 10с1,
                                 БЦ "Спутник", 7 этаж</div>
                         </div>

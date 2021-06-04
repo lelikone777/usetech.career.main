@@ -21,6 +21,7 @@
   &__menu {
     display: flex;
     margin-right: auto;
+    margin-bottom: 0;
     &-item {
       position: relative;
       display: flex;
@@ -32,6 +33,7 @@
         font-weight: 500;
         font-size: @sp;
         line-height: 24px;
+        margin-right: 11px;
         &--drop {
           position: relative;
           padding-right: 22px;
@@ -51,8 +53,17 @@
       &_btn {
         margin-left: 5px;
         transition: all 0.3s;
+        background-image: url("@{path}/header-angle-right.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 11px;
+        height: 22px;
+        transform: rotate(90deg);
         &.active {
-          transform: rotate(90deg);
+          transform: rotate(-90deg);
+        }
+        &--mobile {
+
         }
       }
     }
@@ -158,7 +169,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: @lg) {
   .header-new {
     position: fixed;
     width: 100%;
@@ -180,7 +191,6 @@
     &__wrapper {
       position: relative;
       z-index: 10 ;
-      width: 720px;
     }
     &__mobile {
       &--visible {
@@ -234,17 +244,17 @@
       &-menu {
         display: block !important;
         width: 100%;
+        margin-top: @sp;
       }
       &-fb {
-        display: block !important;
-        padding-bottom: 32px;
+        padding-bottom: 29px;
         &_email {
           display: block;
           color: @green;
           font-style: normal;
           font-weight: bold;
           font-size: 16px;
-          margin-bottom: 8px;
+          margin-bottom: 11px;
         }
         &_tel {
           display: block;
@@ -253,6 +263,7 @@
           font-size: 22px;
           color: #000;
           margin-bottom: 8px;
+          margin-left: -5px;
         }
         &_address {
           display: block;
@@ -260,6 +271,7 @@
           font-weight: 500;
           font-size: 16px;
           color: #000;
+          letter-spacing: -0.7px;
         }
       }
       &-socials {
@@ -267,6 +279,64 @@
         background: #FFFFFF;
         box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.1);
         height: 10%;
+        .header-new__mobile-container {
+          align-items: center;
+        }
+        &-link {
+
+          &:not(:last-child) {
+
+          }
+          &--facebook {
+            background-image: url("@{path}/usetech-facebook-header.svg");
+            width: 24px;
+            height: 24px;
+            &:hover {
+              background-image: url("@{path}/hFacebookLogo.svg");
+            }
+          }
+          &--instagram {
+            background-image: url("@{path}/usetech-instafram-header.svg");
+            width: 17px;
+            height: 17px;
+            &:hover {
+              background-image: url("@{path}/hInstagramLogo.svg");
+            }
+          }
+          &--linkedin {
+            background-image: url("@{path}/usetech-linkedin-header.svg");
+            width: @sp;
+            height: @sp;
+            &:hover {
+              background-image: url("@{path}/hLinkedinLogo.svg");
+            }
+          }
+          &--twitter {
+            background-image: url("@{path}/usetech-twitter-header.svg");
+            width: 20px;
+            height: @sp;
+            &:hover {
+              background-image: url("@{path}/hTwitter.svg");
+            }
+          }
+
+          &--vk {
+            background-image: url("@{path}/usetech-vk-header.svg");
+            width: 18px;
+            height: 11px;
+            &:hover {
+              background-image: url("@{path}/hVk.svg");
+            }
+          }
+          &--youtube {
+            background-image: url("@{path}/usetech-youtube-header.svg");
+            width: 18px;
+            height: 15px;
+            &:hover {
+              background-image: url("@{path}/hYoutubeLogo.svg");
+            }
+          }
+        }
       }
     }
     &__menu {
@@ -274,6 +344,14 @@
       &-item {
         &:not(:last-child) {
           margin-bottom: 32px;
+        }
+        &_btn {
+          &--mobile {
+            &.active {
+              transform: rotate(90deg);
+              transition: all 0.3s ease 0s;
+            }
+          }
         }
       }
       //&--visible {
@@ -292,6 +370,44 @@
     }
     &__socials {
       display: none;
+      &-link {
+        &:first-child {
+          margin-right: 22px;
+        }
+        &:nth-child(2) {
+          margin-right: 27px;
+        }
+        &:nth-child(3) {
+
+        }
+        &:nth-child(4) {
+
+        }
+        &--facebook {
+          width: 27px;
+          height: 28px;
+        }
+        &--instagram {
+          width: 27px;
+          height: 28px;
+        }
+        &--linkedin {
+          width: 30px;
+          height: 30px;
+        }
+        &--twitter {
+          width: 35px;
+          height: 30px;
+        }
+        &--vk {
+          width: 30px;
+          height: 30px;
+        }
+        &--youtube {
+          width: 30px;
+          height: 30px;
+        }
+      }
     }
     &__button {
       display: flex;
@@ -304,41 +420,55 @@
       background-color: transparent;
       border: 1px solid transparent;
       border-radius: 4px;
-      border: none;
+      //border: none;
       cursor: pointer;
       &-line {
         display: block;
         background-color: @text;
-        width: 22px;
+        width: 25px;
         height: 2px;
         border-radius: 1px;
+        transition: all ease 0.3s 0s;
       }
       &--active {
         position: relative;
         .header-new__button-line_top {
           transform: rotate(45deg);
-          transition-duration: 0.3s;
+          transition: all ease 0.3s 0s;
           position: absolute;
-          top: @sp;
+          top: 15px;
         }
         .header-new__button-line_middle {
           display: none;
+          transition: all ease 0.3s 0s;
         }
         .header-new__button-line_bottom {
           position: absolute;
           transform: rotate(-45deg);
-          transition-duration: 0.3s;
-          bottom: @sp;
+          transition: all ease 0.3s 0s;
+          bottom: 15px;
         }
       }
     }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: @md) {
   .header-new {
     &__wrapper {
-      max-width: 90%;
+      max-width: 100%;
+    }
+    &__logo {
+      margin-left: 7px;
+    }
+    &__menu {
+      &-item {
+        &_link {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+        }
+      }
     }
     &__mobile {
       &-wrap {
@@ -348,6 +478,12 @@
       }
       &-container {
         width: 90%;
+      }
+      &-menu {
+
+      }
+      &-fb {
+
       }
     }
   }

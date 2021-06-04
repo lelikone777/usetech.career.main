@@ -1,12 +1,20 @@
-$(document).ready(function(){
+
 
     let arrowWrap = document.querySelector('.home-filter__right-title_buttons');
+    const hfs = $(`.home-filter__slider`);
 
-    $('.home-filter__slider').slick({
-        infinite: true,
-        dots: true,
-        appendArrows: arrowWrap,
-        appendDots: arrowWrap
-    });
-});
+
+
+    const ititHotSlider = () => {
+        hfs.slick({
+            infinite: true,
+            dots: true,
+            appendArrows: arrowWrap,
+            appendDots: arrowWrap
+        });
+    }
+
+    setTimeout(() => {
+        ititHotSlider();
+    }, 100);
 

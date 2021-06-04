@@ -7,17 +7,22 @@
 
     <div class="filter">
         <div class="filter__left">
-            <div class="filter__left-block">
+            <div class="filter__left-block" id="hot">
                 <div class="filter__left-list">
-                    <input type="checkbox" name="hot" value="1">
-                    <label class="filter__left-label">
-                        Горящая вакансия
-                    </label>
+                    <div>
+                        <input class="filter__left-cbox" data-id="hot" type="checkbox" name="hot" value="hot">
+                        <label class="filter__left-label">Горячая вакансия</label>
+                    </div>
                 </div>
             </div>
             <div class="filter__left-block" id="work">
                 <div class="filter__left-title">График</div>
-                <div class="filter__left-list"></div>
+                <div class="filter__left-list">
+                    <div>
+                        <input class="filter__left-cbox" data-id="work" type="checkbox" name="Удаленная работа" value="Удаленная работа">
+                        <label class="filter__left-label">Удаленная работа</label>
+                    </div>
+                </div>
             </div>
             <div class="filter__left-block" id="location">
                 <div class="filter__left-title">Локация</div>

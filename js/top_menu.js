@@ -1,4 +1,22 @@
 const btnList = document.querySelectorAll('.header-new__menu-item_btn');
+const btnListMobile = document.querySelectorAll('.header-new__menu-item_btn--mobile')
+
+btnListMobile.forEach((item, index) => {
+    item.onclick = () => {
+        removeClassActiveMobile(index);
+        item.parentElement.lastElementChild.classList.toggle('active');
+        item.classList.toggle('active');
+    }
+});
+
+const removeClassActiveMobile = (indexItem) => {
+    btnListMobile.forEach((item, index) => {
+        if (indexItem !== index) {
+            item.parentElement.lastElementChild.classList.remove('active');
+            item.classList.remove('active');
+        }
+    });
+};
 
 btnList.forEach((item, index) => {
     item.onclick = () => {

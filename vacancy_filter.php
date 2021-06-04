@@ -87,7 +87,11 @@
                                             <div class="home-filter__slide-exp">Опыт: <span>от 3 до 6 лет</span></div>
                                             <div class="home-filter__slide-card_bottom">
                                                 <div class="home-filter__slide-card_location">Рязань, офис</div>
-                                                <div class="home-filter__slide-card_offer"><?php echo get_field('industry') ?></div>
+                                                <?
+                                                    $industry = get_field('industry');
+                                                    if($industry)
+                                                        echo '<div class="home-filter__slide-card_offer">'.$industry.'</div>';
+                                                ?>
                                             </div>
                                         </a>
                                     </div>

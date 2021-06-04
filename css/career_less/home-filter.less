@@ -3,7 +3,7 @@
 .home-filter {
   max-width: 1312px;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 200px;
   h2 {
     padding: 0 0 24px;
     font-family: "Raleway", sans-serif;
@@ -295,6 +295,50 @@
     }
     &__right {
       width: 100%;
+    }
+  }
+}
+
+@media (max-width: @sm) {
+  .home-filter {
+    &__left {
+      &-box {
+        flex-direction: column;
+      }
+      &-left {
+        margin-right: 0;
+      }
+      &-right {
+        margin-left: 0;
+      }
+    }
+    &__right {
+      &-title {
+        flex-direction: column;
+        &_title {
+          margin: 0;
+        }
+        &_wrap {
+          margin-bottom: @sp;
+        }
+        &_buttons {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @xs) {
+  .home-filter {
+    &__footer {
+      flex-direction: column;
+      &-info {
+        margin-left: 0;
+      }
+    }
+    &__button {
+      margin: 0 auto @sp;
     }
   }
 }
