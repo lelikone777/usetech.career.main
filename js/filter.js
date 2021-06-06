@@ -3,7 +3,6 @@ const filterBox = document.querySelector('.filter__left');
 let allCbox = null;
 
 
-const hotBox = document.getElementById('hot'); // горящая вакансия
 const locationBox = document.getElementById('location'); // box локация
 const profileBox = document.getElementById('profile'); // box профиль
 const experienceBox = document.getElementById('exp'); // box профиль
@@ -21,7 +20,9 @@ let workFormatList = []; // список занятости
 
 let allVacList = [] // все вакансии
 
+let chListNum = {}; //
 let checkedList = {} // прочеканные чекбоксы
+
 const resetCheckedList = () => {
     checkedList = {
         emp: [],
@@ -33,7 +34,20 @@ const resetCheckedList = () => {
         hot: []
     }
 }
+const resetChListNum = () => {
+    chListNum = {
+        hot: [],
+        work: [],
+        location: [],
+        profile: [],
+        industry: [],
+        exp: [],
+        emp: []
+    };
+};
+
 resetCheckedList();
+resetChListNum();
 
 // получаем посты
 let getPosition = {
@@ -62,35 +76,28 @@ $.ajax(getPosition).done((rest) => {  // получаем все списки
         xx.acf.employment && (typeEmploymentList = [...new Set([...typeEmploymentList, xx.acf.employment])]);
         xx.acf.work_format && (workFormatList = [...new Set([...workFormatList, xx.acf.work_format])]);
         xx.acf.industry && (industryList = [...new Set([...industryList, xx.acf.industry])]);
-        xx.cat = convertCategory(xx, 1);
+        xx.cat = vacancyProfileList.find(dd => dd.id === xx.categories[1]).name;
     });
 
     setCboxList(cityList, locationBox);
     setCboxList(experienceList, experienceBox);
     setCboxList(typeEmploymentList, employmentBox);
     setCboxList(workFormatList, workFormatBox);
-
-
     setCboxList(industryList, industryBox);
 
     setItemList(allVacList); // рендерим плашки вакансий
     allCbox = document.querySelectorAll('.filter__left-cbox'); // находим все чекбоксы
+    getUrlQuery(); // получаем данные из строки
 });
 
-const convertCategory = (item, index) => {
-    if (index === 1) {
-        return vacancyProfileList.find(xx => xx.id === item.categories[index]).name;
-    }
-    return null;
-}
-
-
 const setCboxList = (list, box) => {
-    list.forEach(ff => {
+    list.forEach((ff, index) => {
         let itemSelect = document.createElement('div');
         itemSelect.innerHTML = `
-            <input class="filter__left-cbox" data-id="${box.id}"  type="checkbox" name="${ff}" value="${ff}">
-            <label class="filter__left-label">${ff}</label>    
+            <div class="filter__left-cbox-wrap"> 
+                <input class="filter__left-cbox" data-id="${box.id}" id="${box.id}_${index}" type="checkbox"  value="${ff}">
+                <label class="filter__left-label" for="${box.id}_${index}">${ff}</label>  
+            </div>  
         `;
         box.lastElementChild.appendChild(itemSelect)
     });
@@ -116,64 +123,61 @@ const setItemList = (list) => {
     })
 }
 
-
-filterBox.addEventListener("click", (event) => { // слушаем клики по чекбоксам
-    if (event.target.classList.contains('filter__left-cbox') || event.target.classList.contains('filter__left-label')) {
-        if (event.target.classList.contains('filter__left-label'))  {
-            event.target.previousElementSibling.checked = !event.target.previousElementSibling.checked;
-        }
-        console.log(123);
-        resetCheckedList();
-        allCbox.forEach(xx => {
-            const category = xx.getAttribute('data-id');
-            if (xx.checked) {
-                checkedList[category] = [...checkedList[category], xx.value];
-            }
-        });
-
-
-        const locList = document.querySelectorAll('[data-id="location"]');
-        const workList = document.querySelectorAll('[data-id="work"]');
-        if ( checkedList.work.includes('Удаленная работа')) {
-            console.log('наш случай');
-            locList.forEach(ff => {
-                ff.checked = false;
-                ff.disabled = true;
-                ff.nextElementSibling.classList.add('disabled');
-            });
-            workList.forEach(ff => {
-                if (ff.value !== 'Удаленная работа') {
-                    ff.checked = false;
-                    ff.disabled = true;
-                    ff.nextElementSibling.classList.add('disabled');
-                }
-            });
-            checkedList.work = ['Удаленная работа'];
-            checkedList.location = [];
-        } else {
-            locList.forEach(ff => {
-                ff.disabled = false;
-                ff.nextElementSibling.classList.remove('disabled');
-            });
-            workList.forEach(ff => {
-                ff.disabled = false;
-                ff.nextElementSibling.classList.remove('disabled');
-            });
-        }
-        if (checkedList.emp.length === 0 && checkedList.location.length === 0 &&
-            checkedList.profile.length === 0 && checkedList.industry.length === 0 &&
-            checkedList.exp.length === 0 && checkedList.work.length === 0 && checkedList.hot.length === 0
-        ) {
-            setItemList(allVacList); // показываем все вакансии
-            locationBox.classList.remove('hidden');
-        } else {
-            getFilteredList(); // фильтруем
-        }
+// слушаем клики по чекбоксам
+filterBox.addEventListener("click", (event) => {
+    if (event.target.classList.contains('filter__left-cbox')) {
+        startFilter();
     }
 });
 
+const startFilter = () => {
+    resetCheckedList();
+    allCbox.forEach(xx => {
+        const category = xx.getAttribute('data-id');
+        if (xx.checked) {
+            checkedList[category] = [...checkedList[category], xx.value];
+        }
+    });
+
+    const locList = document.querySelectorAll('[data-id="location"]');
+    const workList = document.querySelectorAll('[data-id="work"]');
+    if (checkedList.work.includes('Удаленная работа')) {
+        console.log('наш случай');
+        locList.forEach(ff => {
+            ff.checked = false;
+            ff.disabled = true;
+        });
+        workList.forEach(ff => {
+            if (ff.value !== 'Удаленная работа') {
+                ff.checked = false;
+                ff.disabled = true;
+            }
+        });
+        checkedList.work = ['Удаленная работа'];
+        checkedList.location = [];
+    } else {
+        locList.forEach(ff => {
+            ff.disabled = false;
+        });
+        workList.forEach(ff => {
+            ff.disabled = false;
+        });
+    }
+    if (checkedList.emp.length === 0 && checkedList.location.length === 0 &&
+        checkedList.profile.length === 0 && checkedList.industry.length === 0 &&
+        checkedList.exp.length === 0 && checkedList.work.length === 0 && checkedList.hot.length === 0
+    ) {
+        setItemList(allVacList); // показываем все вакансии
+        history.pushState({}, '', ' ');
+    } else {
+        getFilteredList(); // фильтруем
+        setQueryUrl();
+    }
+}
+
 const getFilteredList = () => {
     let newVacList = allVacList; // отфильтрованный список
+
     if (checkedList.hot.length) {
         let res = [];
         checkedList.hot.forEach(xx => {
@@ -184,7 +188,6 @@ const getFilteredList = () => {
         });
         newVacList = res;
     }
-
     if (checkedList.location.length) {
         let res = [];
         checkedList.location.forEach(xx => {
@@ -259,7 +262,52 @@ const getFilteredList = () => {
         newVacList = res;
     }
 
-
-    // console.log(newVacList)
     setItemList(newVacList);
+}
+
+const getChList = () => {
+    allCbox.forEach(xx => {
+        const category = xx.getAttribute('data-id');
+        let val = {
+            name: xx.value,
+            value: xx.checked
+        };
+        chListNum[category].push(val);
+    });
+}
+
+// сетим в строку запроса значения
+const setQueryUrl = () => {
+    resetChListNum();
+    getChList();
+    let url = [];
+    history.pushState({}, '', ' '); // сбрасываем строку
+    const keys = Object.keys(checkedList); // список имен разделов
+    keys.forEach((key) => {
+        const list = [];
+        chListNum[key].forEach((item, index) => {
+            item.value && list.push(index);
+        })
+        list.length && (url = [...url, `#${key}=${list}`]);
+    });
+    history.pushState({}, '', url.join(''));
+}
+
+// данные из адресной строки при загрузке стр
+const getUrlQuery = () => {
+    let query = String(document.location.href).split('#');
+    query.forEach(xx => {
+        let target = xx.split('=');
+        if (target.length === 2) {
+            const valueList = target[1].split(',');
+            const tt = [...allCbox].filter(ff => { // чекбоксы в групаах
+                const atr = ff.getAttribute('data-id');
+                 return atr === target[0];
+            });
+            valueList.forEach(cc => {
+                tt[cc].checked = true;
+            })
+        }
+    });
+    startFilter();
 }

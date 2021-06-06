@@ -135,8 +135,14 @@ $(document).ready(function () {
         if (selectIndex1) url = [...url, `#sity=${selectIndex1}`];
         if (selectIndex2) url = [...url, `#vac=${selectIndex2}`];
         url = url.join('');
+
         history.pushState({}, '', url);
 
+        if ((selectIndex1 === 0 && selectIndex2 === 0) ||
+            (selectIndex1 === 0 && !selectIndex2) ||
+            (selectIndex2 === 0 && !selectIndex1)) {
+            history.pushState({}, '', ' ');
+        }
     }
 
 
@@ -159,6 +165,9 @@ $(document).ready(function () {
         let items = allList.map(xx => xx.acf.city);
         items = new Set(items);
         items = [...items].filter(xx => xx !== '');
+        items = [...items].filter(xx => xx !== undefined);
+
+
 
         items.forEach(ff => {
             let itemselect = document.createElement('option');
@@ -217,9 +226,14 @@ $(document).ready(function () {
             if (target) hot = `<img src='https://career.usetech.ru/wp-content/themes/usetech/images/flame.svg'>`;
 
 
+            let city = '';
+            if (xx.acf.city || xx.acf.city !== undefined) {
+                city = `<div class="vacancy-city">${xx.acf.city}</div>`
+            }
+
+
             let item = document.createElement('div');
             item.classList.add('col-lg-4');
-
             item.innerHTML = `
 
                     <a href="${xx.link}" class="${target ? 'hott' : 'normal'}">
@@ -232,9 +246,7 @@ $(document).ready(function () {
                                 <strong>Опыт:</strong>
                                 ${xx.acf.experience}
                             </div>
-                            <div class="vacancy-city">
-                              ${xx.acf.city} 
-                            </div>
+                            ${city}
                             ${hot}
                         </div>
                     </a>

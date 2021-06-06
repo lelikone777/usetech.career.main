@@ -2,45 +2,106 @@
   max-width: 700px;
   margin: 100px auto;
   display: flex;
+
   &__left {
     min-width: 280px;
     max-width: 280px;
-    input {
-      cursor: pointer;
-    }
+
     &-label {
       font-weight: normal;
       cursor: pointer;
       transition: all 0.3s;
-      &:hover {
+      margin-left: 0px;
+      margin-bottom: 0;
+      white-space: nowrap;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: #212121;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: green;
+        background: url("../../images/checkbox-o.svg") no-repeat center;
+        margin-right: 8px;
+        position: relative;
+        top: -2px;
 
       }
-      &.disabled {
-        opacity: 0.3;
-      }
     }
+
     &-block {
 
     }
+
     &-title {
       font-weight: bold;
       margin-bottom: 10px;
     }
+
     &-list {
       margin-bottom: 24px;
-      & > div {
-        &:hover {
 
+      & > div {
+        display: flex;
+      }
+    }
+
+    &-cbox {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+
+      &:checked + .filter__left-label {
+        &:before {
+          background: url("../../images/checkbox.svg") no-repeat center;
+        }
+      }
+
+      &:disabled + .filter__left-label {
+        color: #c5c5c5;
+
+        &:before {
+          background: url("../../images/checkbox-d.svg") no-repeat center;
+        }
+      }
+
+      &:disabled {
+        &:hover {
+          & + .filter__left-label {
+            color: #c5c5c5;
+          }
+        }
+      }
+
+      &-wrap {
+        display: flex;
+        align-items: center;
+        flex: 0;
+        cursor: pointer;
+        transition: all 0.3s;
+        padding: 4px 0;
+
+        input {
+          cursor: pointer;
+        }
+
+        &:hover {
           .filter__left-label {
-            opacity: 0.8;
+            color: darken(#92B700, 10%);
           }
         }
       }
     }
   }
+
   &__right {
     flex: 1;
   }
+
   &__item {
     background: #FAFAFA;
     border: 1px solid #FAFAFA;

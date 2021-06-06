@@ -1,7 +1,5 @@
-@import "settings.less";
 @import "variables.less";
 @import "select.less";
-@import "development";
 @import "clareer-filter.less";
 @import "home-filter.less";
 @import "search-box.less";
@@ -9,6 +7,7 @@
 @import "preloader-new.less";
 @import "../../js/slick-1.8.1/slick/slick.less";
 @import "top-slider.less";
+@import "home-filter-slider.less";
 @import "header-new.less";
 
 
@@ -18,10 +17,14 @@
   overflow: hidden;
 }
 
+
 .vacancy-item {
   &.active {
     animation: vis 1.5s forwards;
     z-index: 1;
+  }
+  & a {
+    min-height: 103px !important;
   }
 }
 
@@ -33,8 +36,3 @@
     opacity: 1;
   }
 }
-
-.lock {
-  overflow: hidden !important;
-}
-

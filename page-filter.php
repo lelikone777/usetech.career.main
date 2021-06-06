@@ -10,8 +10,10 @@
             <div class="filter__left-block" id="hot">
                 <div class="filter__left-list">
                     <div>
-                        <input class="filter__left-cbox" data-id="hot" type="checkbox" name="hot" value="hot">
-                        <label class="filter__left-label">Горячая вакансия</label>
+                        <div class="filter__left-cbox-wrap">
+                            <input class="filter__left-cbox" data-id="hot" type="checkbox" id="hot_vac" value="hot">
+                            <label class="filter__left-label" for="hot_vac">Горячая вакансия</label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -19,8 +21,10 @@
                 <div class="filter__left-title">График</div>
                 <div class="filter__left-list">
                     <div>
-                        <input class="filter__left-cbox" data-id="work" type="checkbox" name="Удаленная работа" value="Удаленная работа">
-                        <label class="filter__left-label">Удаленная работа</label>
+                        <div class="filter__left-cbox-wrap">
+                            <input class="filter__left-cbox" data-id="work" type="checkbox" id="distant_work" value="Удаленная работа">
+                            <label class="filter__left-label" for="distant_work">Удаленная работа</label>
+                        </div>
                     </div>
                 </div>
             </div>
