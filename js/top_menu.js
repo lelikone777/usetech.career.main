@@ -15,6 +15,7 @@ btnList.forEach((item, index) => {
         item.classList.toggle('active');
         item.lastElementChild.classList.toggle('active');
         item.firstElementChild.removeAttribute("href");
+        item.firstElementChild.classList.toggle('active');
     }
 });
 const removeClassActive = (indexItem) => {

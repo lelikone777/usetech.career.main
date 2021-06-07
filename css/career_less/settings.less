@@ -32,6 +32,29 @@ button {
   overflow: hidden !important;
 }
 
+.site__container {
+  max-width: 1312px;
+  margin: 0 auto;
+  @media (max-width: @xxl) {
+    max-width: 1208px;
+  }
+  @media (max-width: @xl) {
+    max-width: 992px;
+  }
+  @media (max-width: @lg) {
+    max-width: 720px;
+  }
+  @media (max-width: @md) {
+    max-width: 90%;
+  }
+  @media (max-width: @sm) {
+    max-width: 90%;
+  }
+  @media (max-width: @xs) {
+    max-width: 90%;
+  }
+}
+
 @keyframes menu {
   from {
     opacity: 0;
@@ -80,23 +103,68 @@ button {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @media (max-width: @lg) {
+    font-size: 27px !important;
+  }
 }
 
 .icon-facebook:before {
   content: "\61";
 }
+.icon-facebook {
+  color: #212121;
+  &:hover {
+    color: #3B5998;
+  }
+}
+
 .icon-instagram:before {
   content: "\62";
 }
+.icon-instagram {
+  color: #212121;
+  &:hover {
+    color: #C13584;
+  }
+}
+
 .icon-linkedin:before {
   content: "\63";
 }
+.icon-linkedin {
+  color: #212121;
+  &:hover {
+    color: #2867B2;
+  }
+}
+
 .icon-twitter:before {
   content: "\64";
 }
+.icon-twitter {
+  color: #212121;
+  &:hover {
+    color: #1DA1F2;
+  }
+}
+
 .icon-youtube:before {
   content: "\66";
 }
+.icon-youtube {
+  color: #212121;
+  &:hover {
+    color: #FF0000;
+  }
+}
+
 .icon-vk:before {
   content: "\67";
 }
+.icon-vk {
+  color: #212121;
+  &:hover {
+    color: #2787F5;
+  }
+}
+
