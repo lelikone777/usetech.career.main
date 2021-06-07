@@ -11,8 +11,6 @@ let experienceList = []; // список опыта
 let typeEmploymentList = []; // список типа занятости
 
 
-
-
 // получаем посты
 let getPosition = {
     "url": "https://career.usetech.ru//wp-json/wp/v2/posts?categories=3&per_page=100&_fields=acf,link,title, categories",
@@ -38,7 +36,7 @@ $.ajax(getCategory).done((resp) => { // получаем профиль вака
     vacancyProfileList = resp;
     vacancyProfileList.forEach((ff, index) => {
         let itemSelect = document.createElement('option');
-        itemSelect.value = index + 1;
+        itemSelect.value = index;
         itemSelect.innerHTML = `${ff.name}`;
         selectProfile.appendChild(itemSelect);
     });
@@ -48,6 +46,8 @@ $.ajax(getCategory).done((resp) => { // получаем профиль вака
 const getListForSelect = (list) => {
     list.forEach(xx => {
         cityList = [...new Set([...cityList, xx.acf.city])];
+        cityList = [...cityList].filter(xx => xx !== undefined);
+        cityList = [...cityList].filter(xx => xx !== '');
         experienceList = [...new Set([...experienceList, xx.acf.experience])];
         typeEmploymentList = [...new Set([...typeEmploymentList, xx.acf.employment])];
     });
@@ -55,7 +55,7 @@ const getListForSelect = (list) => {
 const setSelect = (idName, list, select) => {
     list.forEach((ff, index) => {
         let itemSelect = document.createElement('option');
-        itemSelect.value = index + 1;
+        itemSelect.value = index;
         itemSelect.innerHTML = `${ff}`;
         select.appendChild(itemSelect);
     });
@@ -72,10 +72,10 @@ $('select').on('selectric-select', function (selectric) { // парсим изм
 sendBtn.onclick = () => { // переход с поисковым запросом
     let link = '';
     if (selectCity.value !== 'all') {
-        link = link + `#sity=${selectCity.value}`;
+        link = link + `#location=${selectCity.value}`;
     }
     if (selectProfile.value !== 'all') {
-        link = link + `#vac=${selectProfile.value}`;
+        link = link + `#profile=${selectProfile.value}`;
     }
     if (selectExperience.value !== 'all') {
         link = link + `#exp=${selectExperience.value}`;
@@ -84,25 +84,12 @@ sendBtn.onclick = () => { // переход с поисковым запросо
         link = link + `#emp=${selectTypeEmployment.value}`;
     }
 
-    console.log(link)
-    // link ? location.href = `https://career.usetech.ru/vacancy${link}` : null;
+    link ? location.href = `https://career.usetech.ru/filter${link}` : null;
+
+    selectCity.value = 'all';
+    selectProfile.value = 'all';
+    selectExperience.value = 'all';
+    selectTypeEmployment.value = 'all';
+
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
