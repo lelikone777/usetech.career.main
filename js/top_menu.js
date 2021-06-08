@@ -11,39 +11,20 @@ btnList.forEach((item, index) => {
     item.onclick = () => {
         removeClassActive(index);
         item.classList.toggle('active');
-        item.lastElementChild.classList.toggle('active');
         item.firstElementChild.removeAttribute("href");
         item.firstElementChild.classList.toggle('active');
+        item.lastElementChild.classList.toggle('active');
     }
 });
 const removeClassActive = (indexItem) => {
     btnList.forEach((item, index) => {
         if (indexItem !== index) {
             item.classList.remove('active');
+            item.firstElementChild.classList.remove('active');
             item.lastElementChild.classList.remove('active');
         }
     });
 };
-
-// itemList.forEach((item, index) => {
-//     item.onclick = () => {
-//         if (item.classList.contains('menu-item-has-children')) {
-//             item.removeAttribute("href");
-//         }
-//         removeClassActiveItems(index);
-//         item.classList.add('focused');
-//     }
-// });
-// const removeClassActiveItems = (indexItem) => {
-//     itemList.forEach((item, index) => {
-//         if (indexItem !== index) {
-//             item.classList.remove('focused');
-//         }
-//     });
-// };
-
-
-
 
 menuButton.addEventListener("click", function () {
     if (!menuButton.classList.contains("active")) {

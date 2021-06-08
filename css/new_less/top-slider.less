@@ -1,60 +1,167 @@
-
 .top-slider {
-  position: relative;
-  .slick {
-    &-dots {
-      position: absolute;
-      top: 50%;
-      right: 18px;
-      transform: translateX(-50%);
-      background-color: transparent;
-      li {
-      background-color: transparent;
-      button {
-        font-size: 0;
-        background-color: #E0E0E0;
-        border: none;
-        border-radius: 50%;
-        width: 12px;
-        height: 12px;
+  &__wrap {
+    max-width: 1312px;
+    margin: 0 auto 64px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+  &__arrows {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .slick-arrow {
+      background: url("../../img/arrow-down-black.svg") no-repeat center;
+      width: 30px;
+      height: 30px;
+      display: block;
+      transition: all 0.3s;
+      &:hover, &:active, &:focus{
+        opacity: 0.5;
       }
     }
+    .slick-prev {
+      order: 0;
+      border: none !important;
+      font-size: 0;
+      transform: rotate(180deg);
+    }
+    .slick-dots {
+      order: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      li {
+        font-size: 0;
+        display: flex;
+        margin: 3px 0;
+
+        button {
+          font-size: 0;
+          background-color: #E0E0E0;
+          border: none;
+          border-radius: 50%;
+          width: 12px;
+          height: 12px;
+        }
+      }
       .slick-active {
         button {
           background-color: #92B700;
         }
       }
     }
-    &-arrow {
-      position: absolute;
-      right: 25px;
-      z-index: 10;
+    .slick-next {
+      order: 2;
+      border: none !important;
+
       font-size: 0;
-      border: none;
-      width: 10px;
-      height: 5px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-color: transparent;
     }
-    &-next {
-      top: 180px;
-      background-image: url("../../img/arrow-up-grey.svg");
-      &:hover, &:active, &:focus{
-        background-image: url("../../img/arrow-down-black.svg");
-        transform: rotate(180deg);
-      }
+  }
+
+
+
+
+  &__img {
+    width: 100%;
+    padding-bottom: 31.25%;
+    background-size: cover !important;
+    &-mobil {
+      display: none !important;
     }
-    &-prev {
-      bottom: 140px;
-      background-image: url("../../img/arrow-up-grey.svg");
-      transform: rotate(180deg);
-      &:hover, &:active, &:focus {
-        transform: none;
-        background-image: url("../../img/arrow-down-black.svg");
+
+    &-wrap {
+      display: block;
+      outline: none !important;
+      position: relative;
+    }
+    &-link {
+      opacity: 0;
+      width: calc(~'100% - 60px');
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+  }
+  &__loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 410px;
+    width: 1312px;
+    margin: 0 auto 64px;
+  }
+}
+
+
+@media (max-width: 1440px) {
+  .top-slider {
+    &__wrap {
+      max-width: 1200px;
+    }
+    &__loader {
+      width: 1198px;
+      height: 374px;
+    }
+  }
+
+}
+
+
+@media (max-width: 1250px) {
+  .top-slider {
+    &__wrap {
+      max-width: 992px;
+    }
+    &__loader {
+      width: 990px;
+      height: 309px;
+    }
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .top-slider {
+    &__wrap {
+      max-width: 720px;
+    }
+    &__loader {
+      width: 718px;
+      height: 224px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .top-slider {
+    &__wrap {
+      max-width: 90%;
+    }
+
+    &__loader {
+      display: none;
+    }
+    &__img {
+      display: none !important;
+      &-mobil {
+        display: block !important;
+        width: 100%;
+        padding-bottom: 118.35%;
+        background-size: cover !important;
       }
     }
   }
 }
 
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: none !important;
+}
 

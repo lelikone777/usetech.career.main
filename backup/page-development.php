@@ -26,12 +26,14 @@
 
 </head>
 <body>
-    <?php include 'header-new.php'?>
+    <?php include 'header-new.php' ?>
     <div style="height: 64px"></div>
 
-    <?php include 'top_slider.php'?>
-    <?php include 'vacancy_filter.php'?>
-    <?php include 'news-block.php'?>
+    <?php include 'top_slider.php' ?>
+    <?php include 'vacancy_filter.php' ?>
+    <?php include 'news-block.php' ?>
+    <?php include 'news-block.php' ?>
+
 
 
 </body>
