@@ -1,13 +1,11 @@
 const btnList = document.querySelectorAll('.menu-item-has-children'),
+    itemList = document.querySelectorAll('.menu-item'),
     menuWrap = document.querySelector(".header-new__wrap"),
     menu = document.querySelector(".header-new__menu"),
     socials = document.querySelector(".header-new__socials"),
     feedback = document.querySelector(".header-new__feedback"),
     menuItem = document.querySelector(".menu-item"),
     menuButton = document.querySelector(".header-new__button");
-
-
-
 
 btnList.forEach((item, index) => {
     item.onclick = () => {
@@ -26,6 +24,25 @@ const removeClassActive = (indexItem) => {
         }
     });
 };
+
+// itemList.forEach((item, index) => {
+//     item.onclick = () => {
+//         if (item.classList.contains('menu-item-has-children')) {
+//             item.removeAttribute("href");
+//         }
+//         removeClassActiveItems(index);
+//         item.classList.add('focused');
+//     }
+// });
+// const removeClassActiveItems = (indexItem) => {
+//     itemList.forEach((item, index) => {
+//         if (indexItem !== index) {
+//             item.classList.remove('focused');
+//         }
+//     });
+// };
+
+
 
 
 menuButton.addEventListener("click", function () {

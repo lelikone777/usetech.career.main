@@ -274,3 +274,6 @@ add_theme_support('post-thumbnails');
 set_post_thumbnail_size(320,180);
 
 
+//remove_filter('the_excerpt', 'wpautop');
+
+

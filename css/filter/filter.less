@@ -1,23 +1,33 @@
 .filter {
-  max-width: 700px;
+  * {
+    font-family: 'Raleway', sans-serif !important;
+  }
+
+  bold {
+    font-weight: bold;
+  }
+
+  max-width: 1312px;
   margin: 100px auto;
   display: flex;
 
   &__left {
     min-width: 280px;
     max-width: 280px;
+    margin-right: @sp;
 
     &-label {
       font-weight: normal;
       cursor: pointer;
       transition: all 0.3s;
-      margin-left: 0px;
+      margin-left: 0;
       margin-bottom: 0;
       white-space: nowrap;
       position: relative;
       display: flex;
       align-items: center;
       color: #212121;
+      font-size: 16px;
 
       &:before {
         content: '';
@@ -28,7 +38,7 @@
         background: url("../../images/checkbox-o.svg") no-repeat center;
         margin-right: 8px;
         position: relative;
-        top: -2px;
+        top: -1px;
 
       }
     }
@@ -103,10 +113,167 @@
   }
 
   &__item {
+    * {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: inherit;
+      letter-spacing: inherit;
+    }
+
     background: #FAFAFA;
     border: 1px solid #FAFAFA;
     border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 4px;
+    padding: @sp;
+    margin-bottom: 12px;
+    position: relative;
+
+    &-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    &-info {
+      display: flex;
+      * {
+        font-size: 15px;
+      }
+    }
+    &-str {
+      margin-right: 16px;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      span {
+        padding-right: 4px;
+      }
+
+    }
+    &-icon {
+      width: 16px;
+      height: 16px;
+      display: block;
+      margin-right: 4px;
+      &_calendar {
+        background: url('../../images/icon/calendar.svg') no-repeat center;
+      }
+      &_pin {
+        background: url('../../images/icon/mapPin.svg') no-repeat center;
+      }
+      &_clock {
+        background: url('../../images/icon/clock.svg') no-repeat center;
+      }
+    }
+
+
+
+    &-excerpt {
+      font-weight: 500;
+      font-size: 14px;
+      color: #787878;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    &-exp {
+      color: #212121;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    &-city {
+      display: flex;
+
+      & > div {
+        &:first-child {
+          margin-right: 4px;
+        }
+      }
+    }
+
+    &-wf {
+
+    }
+
+    &-hot {
+      position: absolute;
+      top: @sp;
+      right: @sp;
+      background: url('../../img/tinder.svg') no-repeat center;
+      //background-size: contain;
+      width: 12px;
+      height: 14px;
+    }
+
+    &-industry {
+      position: absolute;
+      bottom: @sp;
+      right: @sp;
+      background: @green;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+  }
+  &__hot-icon {
+    background: url('../../img/tinder.svg') no-repeat center;
+    width: 12px;
+    height: 14px;
+    margin-right: 8px;
+  }
+  &__btns {
+    margin-top: 72px;
+    &-reset {
+      font-weight: bold;
+      font-size: 16px;
+      background: #FAFAFA;
+      color: #212121;
+      border-radius: 8px;
+      padding: 0 16px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      box-shadow: none;
+      transition: all 0.2s;
+      &:hover {
+        background: @green;
+        color: white;
+      }
+    }
+  }
+  &__search {
+    margin-bottom: 24px;
+    &-input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 20px;
+      border: 1px solid #E0E0E0;
+      border-radius: 8px;
+    }
   }
 }
+
+@media (max-width: 1440px) {
+  .filter {
+    max-width: 1208px;
+  }
+}
+
+@media (max-width: 1240px) {
+  .filter {
+    max-width: 992px;
+  }
+}
+
+@media (max-width: 992px) {
+  .filter {
+    max-width: 720px;
+  }
+}
+

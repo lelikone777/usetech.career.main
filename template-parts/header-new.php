@@ -13,7 +13,7 @@
            <div class="header-new__wrap-menu">
                <?php
                wp_nav_menu( [
-                   'menu'            => 'Main_menu',
+                   'menu'            => 'newMenu',
                    'menu_class'      => 'header-new__menu',
                    'container'       => 'none',
                    'depth'           => 0,

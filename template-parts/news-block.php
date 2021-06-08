@@ -1,5 +1,5 @@
 <section class="development">
-    <div class="development__container">
+<!--    <div class="site__container">-->
         <h2 class="development__title">Новости</h2>
         <div class="development__content">
             <div class="development__left">
@@ -194,6 +194,6 @@
                class="development__left-button development__left-button--mobile">Посмотреть все новости</a>
         </div>
         <!-- /.development__content -->
-    </div>
+<!--    </div>-->
     <!-- /.container -->
 </section>

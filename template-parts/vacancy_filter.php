@@ -8,7 +8,7 @@
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/less.js" type="text/javascript"></script>
 
 
-<div class="development__container">
+<div class="site__container">
     <div class="home-filter">
 
         <div class="home-filter__box">

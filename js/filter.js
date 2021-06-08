@@ -1,5 +1,7 @@
-const listBox = document.querySelector('.filter__right');
+const listBox = document.querySelector('.filter__right-result');
 const filterBox = document.querySelector('.filter__left');
+const btnReset = document.querySelector('.filter__btns-reset');
+const searchInput = document.querySelector('.filter__search-input');
 let allCbox = null;
 
 
@@ -51,7 +53,7 @@ resetChListNum();
 
 // получаем посты
 let getPosition = {
-    "url": "https://career.usetech.ru//wp-json/wp/v2/posts?categories=3&per_page=100&_fields=acf,link,title, categories",
+    "url": "https://career.usetech.ru//wp-json/wp/v2/posts?categories=3&per_page=100&_fields=acf,link,title,categories,excerpt",
     "method": "GET",
     "timeout": 0,
 };
@@ -106,19 +108,35 @@ const setCboxList = (list, box) => {
 const setItemList = (list) => {
     listBox.innerHTML = ''; // очищаем блок
     if (list.length) {
+        const hotList = list.filter(item => item.acf.hot);
+        const coldList = list.filter(item => !item.acf.hot);
+        list = [...hotList, ...coldList];
+
         list.forEach((xx, index) => {
             let item = document.createElement('div');
             item.classList.add('filter__item');
+
+            const city = !xx.acf.work_remote ? `<div>${xx.acf.city},</div>` : '<div>Любой город,</div>';
+            const work_format = !xx.acf.work_remote ? `<div> ${xx.acf.work_format}</div>` : `<div> удаленно</div>`;
+            const industry = xx.acf.industry ? `<div class="filter__item-industry">${xx.acf.industry}</div>` : '';
+            const excerpt = xx.acf.short_description ? `<div class="filter__item-excerpt">${xx.acf.short_description}</div>` : '';
+
+
+
             item.innerHTML = `
-               <div style="font-weight: bold; margin-bottom: 5px;">${xx.title.rendered} --- ${index + 1}</div>
-               <div>Город -> ${xx.acf.city}</div>
-               <div>Занятость -> ${xx.acf.employment}</div>
-               <div>удаленная работа -> ${xx.acf.work_remote}</div>
-               <div>Опыт -> ${xx.acf.experience}</div>
-               <div>Отрасль -> ${xx.acf.industry}</div>
-               <div>График -> ${xx.acf.work_format}</div>
-               <div>Профиль -> ${xx.cat}</div>
-               ${xx.acf.hot ? '<div>горячая вакансии</div>' : ''} 
+               ${industry}
+               ${xx.acf.hot ? '<div class="filter__item-hot"></div>' : ''}
+               <div class="filter__item-title">${xx.title.rendered}</div>
+               ${excerpt}
+               <div class="filter__item-info"> 
+                   <div class="filter__item-str">
+                        <i class="filter__item-icon filter__item-icon_calendar"></i><span>Опыт:</span> <bold>${xx.acf.experience}</bold></div>
+                   <div class="filter__item-str">
+                        <i class="filter__item-icon filter__item-icon_pin"></i><div class="filter__item-city">${city}${work_format}</div>
+                   </div>
+                   <div class="filter__item-str">
+                        <i class="filter__item-icon filter__item-icon_clock"></i>${xx.acf.employment}</div>
+               </div>
             `
             listBox.appendChild(item);
         })
@@ -229,7 +247,7 @@ const getFilteredList = () => {
 
         if (checkedList.work.includes('Удаленная работа')) {
             let res = [];
-            const target = newVacList.filter(item => {
+            let target = newVacList.filter(item => {
                 return item.acf.work_remote;
             });
             res = [...res, ...target]
@@ -267,7 +285,6 @@ const getFilteredList = () => {
         });
         newVacList = res;
     }
-
     setItemList(newVacList);
 }
 
@@ -308,7 +325,7 @@ const getUrlQuery = () => {
             const valueList = target[1].split(',');
             const tt = [...allCbox].filter(ff => { // чекбоксы в групаах
                 const atr = ff.getAttribute('data-id');
-                 return atr === target[0];
+                return atr === target[0];
             });
             valueList.forEach(cc => {
                 tt[cc].checked = true;
@@ -317,3 +334,41 @@ const getUrlQuery = () => {
     });
     startFilter();
 }
+
+
+// сброс фильтра
+btnReset.onclick = () => {
+    let checkboxes = document.querySelectorAll('.filter__left-cbox');
+    checkboxes.forEach(item => item.checked = false);
+    startFilter();
+}
+searchInput.addEventListener("oninput", (event) => {
+    console.log(event.target.value);
+});
+
+
+// живой поиск
+let timer = null;
+
+searchInput.oninput = () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+        if (searchInput.value.length > 2) {
+            console.log(searchInput.value);
+
+            let newVacList = [];
+
+            newVacList = allVacList.filter(item => item.title.rendered.indexOf(searchInput.value) !== -1);
+            console.log(allVacList[0].title.rendered);
+            // console.log(allVacList);
+            setItemList(newVacList);
+            console.log(newVacList)
+
+
+
+
+
+        }
+    }, 500);
+};
+
