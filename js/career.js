@@ -244,7 +244,7 @@ $(window).on('load', function () {
                         <div class="short-city">
                             <div class="vacancy-exp">
                                 <strong>Опыт:</strong>
-                                ${xx.acf.experience}
+                                ${xx.acf.experience.label}
                             </div>
                             ${city}
                             ${hot}

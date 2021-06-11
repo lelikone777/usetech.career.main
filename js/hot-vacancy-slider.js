@@ -7,7 +7,7 @@ $(window).on('load', function () {
 
 
     let slidersQuery = {
-        "url": "https://career.usetech.ru//wp-json/wp/v2/posts?categories=4&_fields=acf, title",
+        "url": "https://career.usetech.ru//wp-json/wp/v2/posts?categories=4&_fields=acf, title, link, city",
         "method": "GET",
         "timeout": 0,
     };
@@ -20,16 +20,38 @@ $(window).on('load', function () {
     const getSliderCard = (slide) => {
         let slideBox = [];
         slide.forEach(xx => {
+            if (xx.acf.industry) {
+                $industry = `<div class="hot-vacancy-slider__slide-card_offer">` + xx.acf.industry + `</div>`
+            } else {
+                $industry = '';
+            }
+            if (xx.acf.city) {
+                $city = xx.acf.city + `,`;
+            } else {
+                $city = '';
+            }
+            if (xx.acf.work_format) {
+                $workFormat = xx.acf.work_format;
+            } else {
+                $workFormat = '';
+            }
             let card = `
-                <div>${xx.title.rendered}</div>
-                <div>${xx.acf.employment}</div>
-                <div>---</div>
+                 <a href="${xx.link}" class="hot-vacancy-slider__slide-card">
+                 <div class="hot-vacancy-slider__slide-card_top">
+                    <h4 class="hot-vacancy-slider__slide-card_position"> ${xx.title.rendered}</h4>
+                    <div class="hot-vacancy-slider__slide-card_logo"></div>
+                </div>
+                <div class="hot-vacancy-slider__slide-card_exp">Опыт: <span>${xx.acf.experience.label}</span></div>
+                <div class="hot-vacancy-slider__slide-card_bottom">
+                    <div class="hot-vacancy-slider__slide-card_location">${$city} <span> ${$workFormat} </span></div>
+                    ${$industry}
+                </div>
+                </a>
             `
             slideBox = slideBox + card;
         });
 
         slideBox = String(slideBox);
-        console.log(slideBox)
         return slideBox;
     }
 
@@ -42,11 +64,12 @@ $(window).on('load', function () {
 
         slidesList.forEach((item, index) => {
             let slide = document.createElement('div');
-            slide.innerHTML = `<div>${getSliderCard(item)}</div>`
+            slide.classList.add('hot-vacancy-slider__slide');
+            slide.innerHTML = `${getSliderCard(item)}`
             hvSlider.appendChild(slide);
             arrowBox = document.querySelector('.hot-vacancy-slider__title-buttons');
         });
-
+        console.log(slidesList);
         initHvsSlider();
         preloader && preloader.remove();
         setTimeout(() => {
@@ -63,4 +86,5 @@ $(window).on('load', function () {
             appendDots: arrowBox,
         });
     }
+
 });
