@@ -5,7 +5,8 @@ $countcat = get_category($catID, false); ?>
     <div class="hot-vacancy-slider__title">
         <div class="hot-vacancy-slider__title-wrap">
             <div class="hot-vacancy-slider__title-img"></div>
-            <h3 class="hot-vacancy-slider__title-title">Горящие вакансии <?php echo $countcat->count ?></h3>
+            <h3 class="hot-vacancy-slider__title-title">Горящие вакансии</h3>
+<!--            --><?php //echo $countcat->count ?>
         </div>
         <?php if ($countcat->count >= 4) { ?>
             <div class="hot-vacancy-slider__title-buttons"></div>

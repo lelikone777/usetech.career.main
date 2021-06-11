@@ -7,7 +7,7 @@ $(window).on('load', function () {
 
 
     let slidersQuery = {
-        "url": "https://career.usetech.ru//wp-json/wp/v2/posts?categories=4&_fields=acf, title, link, city",
+        "url": "https://career.usetech.ru//wp-json/wp/v2/posts?categories=3&_fields=acf, title, link, city",
         "method": "GET",
         "timeout": 0,
     };
@@ -20,21 +20,24 @@ $(window).on('load', function () {
     const getSliderCard = (slide) => {
         let slideBox = [];
         slide.forEach(xx => {
+
+            $workFormat = xx.acf.work_format;
+            $city = xx.acf.city;
+
+            if(xx.acf.work_remote) {
+                $city === "Любой город, ";
+                $workFormat === "Удалённо"
+            } else {
+                $city = $city + `, `
+            }
+
             if (xx.acf.industry) {
                 $industry = `<div class="hot-vacancy-slider__slide-card_offer">` + xx.acf.industry + `</div>`
             } else {
                 $industry = '';
             }
-            if (xx.acf.city) {
-                $city = xx.acf.city + `,`;
-            } else {
-                $city = '';
-            }
-            if (xx.acf.work_format) {
-                $workFormat = xx.acf.work_format;
-            } else {
-                $workFormat = '';
-            }
+
+
             let card = `
                  <a href="${xx.link}" class="hot-vacancy-slider__slide-card">
                  <div class="hot-vacancy-slider__slide-card_top">
@@ -56,6 +59,13 @@ $(window).on('load', function () {
     }
 
     const setCboxList = (list) => {
+        list = list.filter(xx => xx.acf.hot)
+        if (list.length === 0) {
+            let text = document.createElement('div');
+            text.classList.add('hot-vacancy-slider__empty');
+            text.innerHTML = `<div>Пока горячих вакансий нет, посмотрите наши <a href="https://career.usetech.ru/vacancy/">другие вакансии</a></div>`
+            hvSlider.appendChild(text);
+        } else {
         let size = 3;
         let slidesList = [];
         for (let i = 0; i < Math.ceil(list.length / size); i++) {
@@ -69,15 +79,16 @@ $(window).on('load', function () {
             hvSlider.appendChild(slide);
             arrowBox = document.querySelector('.hot-vacancy-slider__title-buttons');
         });
-        console.log(slidesList);
+        }
+        // console.log(slidesList);
         initHvsSlider();
         preloader && preloader.remove();
         setTimeout(() => {
             sliderWrap.classList.add('visible');
             boxArrow.classList.add('visible');
         }, 100);
-    }
 
+}
     const initHvsSlider = () => {
         $(`.hot-vacancy-slider__slider`).slick({
             infinite: true,
@@ -88,3 +99,4 @@ $(window).on('load', function () {
     }
 
 });
+// list = list.filter(xx => xx.acf.work_format === "Офис");
