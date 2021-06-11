@@ -1,0 +1,260 @@
+.home-filter {
+  //.slick-track, .slick-slide {
+  //  min-width: 400px;
+  //}
+  //
+  //
+  //.slick-track {
+  //  display: flex !important;
+  //}
+  //.slick-track .slick-slide {
+  //  display: flex !important;
+  //  height: auto !important;
+  //}
+
+
+  .slider-wrap {
+    opacity: 0;
+    transition: all 1s;
+    &.visible {
+      opacity: 1;
+    }
+  }
+  .hot-vacancy-slider {
+    width: 100%;
+    min-height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    padding: 31px 28px 28px 24px;
+    transition: all 0.3s;
+    position: relative;
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      &-wrap {
+        display: flex;
+        align-items: center;
+      }
+      &-img {
+        background-image: url("../../img/tinder.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 11px;
+        height: 13px;
+        z-index: 9;
+        margin-right: 11px;
+      }
+      &-title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+      }
+
+      &-buttons {
+        margin-left: auto;
+        min-width: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        transition: all 1s;
+        opacity: 0;
+        &.visible {
+          opacity: 1;
+        }
+
+        .slick-arrow {
+          background: url("../../img/arrow-down-black.svg") no-repeat center;
+          width: 30px;
+          height: 30px;
+          display: block;
+          transition: all 0.3s;
+          font-size: 0;
+          opacity: 0;
+
+
+          &:hover, &:active, &:focus {
+            opacity: 0.5;
+          }
+        }
+
+        .slick-prev {
+          order: 1;
+          border: none;
+          transform: rotate(90deg);
+        }
+
+        .slick-next {
+          order: 3;
+          border: none;
+          transform: rotate(270deg);
+        }
+
+        .slick-dots {
+          display: flex !important;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 0;
+          list-style: none;
+          order: 2;
+
+          li {
+            font-size: 0;
+            display: flex;
+            margin: 3px 0;
+
+            &:not(:last-child) {
+              margin-right: 8px;
+            }
+
+            button {
+              border: none;
+              background-color: #E0E0E0;
+              border-radius: 50%;
+              width: 12px;
+              height: 12px;
+            }
+          }
+
+          .slick-active {
+            button {
+              background-color: #92B700;
+            }
+          }
+        }
+      }
+    }
+
+
+    &__slider {
+      width: 100%;
+      white-space: nowrap;
+      background-color: green;
+    }
+
+    &__slide {
+      width: 100%;
+
+      &-card {
+        width: 100%;
+        display: block;
+        height: min-content;
+        background-color: #FAFAFA;
+        //border: 2px solid #FAFAFA;
+        border-radius: 8px;
+        padding: 16px 19px 16px 16px;
+        color: #212121 !important;
+        cursor: pointer;
+
+        a {
+          padding: 0;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        &:hover, &:active, &:focus, &:visited {
+          outline: none;
+          text-decoration: none;
+          color: #92B700;
+          border-color: #E0E0E0;
+        }
+
+        &_top {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        &_position {
+          font-family: Raleway, sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 28px;
+        }
+
+        &_logo {
+          background-image: url("../../img/tinder.svg");
+          align-self: flex-start;
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 11px;
+          height: 13px;
+          z-index: 11;
+        }
+
+        &_bottom {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        &_location {
+
+        }
+
+        &_offer {
+          color: #fff;
+          font-family: Raleway, sans-serif;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 11px;
+          line-height: 16px;
+          text-transform: uppercase;
+          padding: 4px 8px;
+          background: #92B700;
+          border-radius: 4px;
+        }
+      }
+
+      &-exp {
+        span {
+          font-family: Raleway, sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @xxl) {
+  .hot-vacancy-slider {
+    &__title-title {
+      font-size: 19px;
+    }
+  }
+}
+
+@media (max-width: @xl) {
+  .hot-vacancy-slider {
+    &__title-title {
+      font-size: 19px;
+    }
+  }
+}
+
+
+@media (max-width: @sm) {
+
+    .hot-vacancy-slider {
+      &__title {
+        flex-direction: column;
+        &-title {
+          margin: 0;
+        }
+        &-wrap {
+          margin-bottom: @sp;
+        }
+        &-buttons {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+

@@ -116,7 +116,7 @@
                                         <li>
                                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/vacancy/calendar.svg"
                                                  alt="">
-                                            <?php echo get_field('experience'); ?>
+                                            <?php echo get_field('experience')[label]; ?>
                                         </li>
                                     <?php }
                                     ?>

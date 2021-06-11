@@ -75,7 +75,7 @@
                                                 <strong>Опыт:</strong>
                                                 <?php
                                                 if(get_field('experience')){
-                                                    echo get_field('experience');
+                                                    echo get_field('experience')[label];
                                                 }
                                                 ?>
                                             </div>

@@ -11,13 +11,28 @@
     position: relative;
     z-index: 1;
     animation: vis 1.5s forwards;
+
+    //  расширили selects
+    //> .row {
+    //  display: flex;
+    //  justify-content: space-between;
+    //  > div.col-lg-3, > div.col-lg-4 {
+    //    width: 50%;
+    //    margin-bottom: 0;
+    //  }
+    //}
   }
+
+
+
   &__label {
     font-weight: normal;
     font-size: 16px;
     color: #333333;
   }
 }
+
+
 @media (max-width: 1200px) {
   .clareer-filter {
     .row {
@@ -28,4 +43,17 @@
   }
 }
 
+
+// _____________
+//@media (max-width: 992px) {
+//  .clareer-filter {
+//    > .row {
+//      flex-direction: column;
+//      > div.col-lg-3, > div.col-lg-4 {
+//        width: 100% !important;
+//        margin-bottom: 24px !important;
+//      }
+//    }
+//  }
+//}
 

@@ -3,6 +3,10 @@
 .header-new {
   font-family: 'Raleway', sans-serif;
   padding: 34px 0;
+  z-index: 101;
+  &__flop {
+    display: none;
+  }
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -91,6 +95,7 @@
             flex-direction: column;
             align-items: flex-start;
             animation: menu .3s forwards;
+            z-index: 1;
             .current-menu-parent a, .current-menu-item a {
               background-color: transparent;
               color: inherit !important;
@@ -219,7 +224,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 1000011;
     padding: 16px 0;
     &:before {
       content: '';
@@ -229,6 +234,10 @@
       width: 100%;
       height: 100%;
       background-color: @white;
+    }
+    &__flop {
+      display: block;
+      height: 68px;
     }
     &__wrapper {
       position: relative;

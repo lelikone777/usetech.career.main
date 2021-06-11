@@ -59,27 +59,29 @@
 
                             <div class="row">
 
-                                <div class="col-lg-3">
+<!--                                <div class="col-lg-3">-->
+                                    <div class="col-lg-4 col-md-6">
                                     <label class="clareer-filter__label" for="">Город вакансии:</label>
                                     <select id="select">
                                         <option value="all">Все города</option>
                                     </select>
                                 </div>
 
-                                <div class="col-lg-4">
+<!--                                <div class="col-lg-4">-->
+                                    <div class="col-lg-4 col-md-6">
                                     <label class="clareer-filter__label" for="">Профиль вакансии:</label>
                                     <select id="select2">
                                         <option value="all">Все профили</option>
                                     </select>
                                 </div>
-                                <div class="col-lg-5">
-                                    <div class="search-box">
-                                        <label class="clareer-filter__label" for="">Поиск вакансии:</label>
-                                        <?php if (function_exists('cherry_get_search_form')) {
-                                            cherry_get_search_form();
-                                        } ?>
-                                    </div>
-                                </div>
+<!--                                <div class="col-lg-5">-->
+<!--                                    <div class="search-box">-->
+<!--                                        <label class="clareer-filter__label" for="">Поиск вакансии:</label>-->
+<!--                                        --><?php //if (function_exists('cherry_get_search_form')) {
+//                                            cherry_get_search_form();
+//                                        } ?>
+<!--                                    </div>-->
+<!--                                </div>-->
 
                             </div>
                         </div>

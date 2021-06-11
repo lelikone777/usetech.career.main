@@ -1,19 +1,23 @@
+
+
 const listBox = document.querySelector('.filter__right-result');
 const filterBox = document.querySelector('.filter__left');
 const btnReset = document.querySelector('.filter__btns-reset');
 const searchInput = document.querySelector('.filter__search-input');
+const resetSearch = document.querySelector('.filter__search-input-close');
+const btnResetWrap = document.querySelector('.filter__btns');
 let allCbox = null;
 
 
 const locationBox = document.getElementById('location'); // box локация
-const profileBox = document.getElementById('profile'); // box профиль
+const profileAcfBox = document.getElementById('profile'); // box профиль acf
 const experienceBox = document.getElementById('exp'); // box профиль
 const employmentBox = document.getElementById('emp'); // box график
 const industryBox = document.getElementById('industry'); // box тип занятости
 const workFormatBox = document.getElementById('work'); // box график
 
 
-let vacancyProfileList = []; //профиль вакансии (дизайн, разработка)
+let vacancyProfileAcfList = []; //профиль вакансии (дизайн, разработка) acf
 let cityList = []; // список городов
 let experienceList = []; // список опыта
 let typeEmploymentList = []; // список типа занятости
@@ -53,38 +57,28 @@ resetChListNum();
 
 // получаем посты
 let getPosition = {
-    "url": "https://career.usetech.ru//wp-json/wp/v2/posts?categories=3&per_page=100&_fields=acf,link,title,categories,excerpt",
+    "url": "https://career.usetech.ru//wp-json/wp/v2/posts?categories=3&per_page=100&_fields=acf,link,title,categories",
     "method": "GET",
     "timeout": 0,
 };
 
-// получаем профили вакансии
-let getCategory = {
-    "url": "https://career.usetech.ru//wp-json/wp/v2/categories?parent=3&_fields=id,name",
-    "method": "GET",
-    "timeout": 0,
-};
-
-$.ajax(getCategory).done((rest2) => { // получаем профиль вакансии (дизайнер, строитель)
-    vacancyProfileList = rest2;
-    setCboxList(vacancyProfileList.map(item => item.name), profileBox);
-});
 
 $.ajax(getPosition).done((rest) => {  // получаем все списки
     allVacList = rest;
     rest.forEach(xx => {
-        xx.acf.city && (cityList = [...new Set([...cityList, xx.acf.city])]);
-        xx.acf.experience && (experienceList = [...new Set([...experienceList, xx.acf.experience])]);
+        xx.acf.city && (cityList = uniq([...cityList, xx.acf.city]));
+        xx.acf.experience && (experienceList = sortExp([...new Set([...experienceList, xx.acf.experience])]));
         xx.acf.employment && (typeEmploymentList = [...new Set([...typeEmploymentList, xx.acf.employment])]);
         xx.acf.work_format && (workFormatList = [...new Set([...workFormatList, xx.acf.work_format])]);
         xx.acf.industry && (industryList = [...new Set([...industryList, xx.acf.industry])]);
-        xx.cat = vacancyProfileList.find(dd => dd.id === xx.categories[1]).name;
+        xx.acf.profile && (vacancyProfileAcfList = uniq([...vacancyProfileAcfList, xx.acf.profile]));
     });
 
     setCboxList(cityList, locationBox);
-    setCboxList(experienceList, experienceBox);
+    setExpCboxList(experienceList, experienceBox);
     setCboxList(typeEmploymentList, employmentBox);
     setCboxList(workFormatList, workFormatBox);
+    setExpCboxList(vacancyProfileAcfList, profileAcfBox);
     setCboxList(industryList, industryBox);
 
     setItemList(allVacList); // рендерим плашки вакансий
@@ -105,6 +99,20 @@ const setCboxList = (list, box) => {
     });
 }
 
+const setExpCboxList = (list, box) => {
+    list.forEach((ff, index) => {
+        let itemSelect = document.createElement('div');
+        itemSelect.innerHTML = `
+            <div class="filter__left-cbox-wrap"> 
+                <input class="filter__left-cbox" data-id="${box.id}" id="${box.id}_${index}" type="checkbox"  value="${ff.label}">
+                <label class="filter__left-label" for="${box.id}_${index}">${ff.label}</label>  
+            </div>  
+        `;
+        box.lastElementChild.appendChild(itemSelect)
+    });
+}
+
+
 const setItemList = (list) => {
     listBox.innerHTML = ''; // очищаем блок
     if (list.length) {
@@ -122,21 +130,22 @@ const setItemList = (list) => {
             const excerpt = xx.acf.short_description ? `<div class="filter__item-excerpt">${xx.acf.short_description}</div>` : '';
 
 
-
             item.innerHTML = `
-               ${industry}
-               ${xx.acf.hot ? '<div class="filter__item-hot"></div>' : ''}
-               <div class="filter__item-title">${xx.title.rendered}</div>
-               ${excerpt}
-               <div class="filter__item-info"> 
-                   <div class="filter__item-str">
-                        <i class="filter__item-icon filter__item-icon_calendar"></i><span>Опыт:</span> <bold>${xx.acf.experience}</bold></div>
-                   <div class="filter__item-str">
-                        <i class="filter__item-icon filter__item-icon_pin"></i><div class="filter__item-city">${city}${work_format}</div>
+               <a href="${xx.link}" class="filter__item-link">
+                   ${industry}
+                   ${xx.acf.hot ? '<div class="filter__item-hot"></div>' : ''}
+                   <div class="filter__item-title">${xx.title.rendered}</div>
+                   ${excerpt}
+                   <div class="filter__item-info"> 
+                       <div class="filter__item-str">
+                            <i class="filter__item-icon filter__item-icon_calendar"></i><span>Опыт:</span> <bold>${xx.acf.experience.label}</bold></div>
+                       <div class="filter__item-str">
+                            <i class="filter__item-icon filter__item-icon_pin"></i><div class="filter__item-city">${city}${work_format}</div>
+                       </div>
+                       <div class="filter__item-str">
+                            <i class="filter__item-icon filter__item-icon_clock"></i>${xx.acf.employment}</div>
                    </div>
-                   <div class="filter__item-str">
-                        <i class="filter__item-icon filter__item-icon_clock"></i>${xx.acf.employment}</div>
-               </div>
+               </a>
             `
             listBox.appendChild(item);
         })
@@ -156,7 +165,9 @@ filterBox.addEventListener("click", (event) => {
 });
 
 const startFilter = () => {
+    btnVisible();
     resetCheckedList();
+
     allCbox.forEach(xx => {
         const category = xx.getAttribute('data-id');
         if (xx.checked) {
@@ -188,8 +199,9 @@ const startFilter = () => {
         });
     }
     if (checkedList.emp.length === 0 && checkedList.location.length === 0 &&
-        checkedList.profile.length === 0 && checkedList.industry.length === 0 &&
-        checkedList.exp.length === 0 && checkedList.work.length === 0 && checkedList.hot.length === 0
+        checkedList.industry.length === 0 &&
+        checkedList.exp.length === 0 && checkedList.work.length === 0 &&
+        checkedList.hot.length === 0 && checkedList.profile.length == 0
     ) {
         setItemList(allVacList); // показываем все вакансии
         history.pushState({}, '', ' ');
@@ -269,7 +281,7 @@ const getFilteredList = () => {
         let res = [];
         checkedList.exp.forEach(xx => {
             const target = newVacList.filter(item => {
-                return item.acf.experience === xx;
+                return item.acf.experience.label === xx;
             });
             res = [...res, ...target]
         });
@@ -279,12 +291,13 @@ const getFilteredList = () => {
         let res = [];
         checkedList.profile.forEach(xx => {
             const target = newVacList.filter(item => {
-                return item.cat === xx;
+                return item.acf.profile.label === xx;
             });
             res = [...res, ...target]
         });
         newVacList = res;
     }
+
     setItemList(newVacList);
 }
 
@@ -342,9 +355,6 @@ btnReset.onclick = () => {
     checkboxes.forEach(item => item.checked = false);
     startFilter();
 }
-searchInput.addEventListener("oninput", (event) => {
-    console.log(event.target.value);
-});
 
 
 // живой поиск
@@ -352,23 +362,47 @@ let timer = null;
 
 searchInput.oninput = () => {
     clearTimeout(timer);
+    if (searchInput.value.length > 0) {
+        resetSearch.classList.add('visible')
+    } else {
+        resetSearch.classList.remove('visible');
+    }
     timer = setTimeout(() => {
         if (searchInput.value.length > 2) {
-            console.log(searchInput.value);
-
             let newVacList = [];
-
-            newVacList = allVacList.filter(item => item.title.rendered.indexOf(searchInput.value) !== -1);
-            console.log(allVacList[0].title.rendered);
-            // console.log(allVacList);
+            newVacList = allVacList.filter(item => item.title.rendered.toUpperCase().indexOf(searchInput.value.toUpperCase()) !== -1);
+            // сбрасываем чекбосы
+            let checkboxes = document.querySelectorAll('.filter__left-cbox');
+            checkboxes.forEach(item => item.checked = false);
+            startFilter();
             setItemList(newVacList);
-            console.log(newVacList)
-
-
-
-
-
+        } else if (searchInput.value.length === 0) {
+            setItemList(allVacList);
         }
-    }, 500);
+    }, 300);
 };
 
+
+resetSearch.onclick = () => {
+    setItemList(allVacList);
+    searchInput.value = '';
+}
+
+const sortExp = (list) => {
+    let unique = Array.from(new Set(list.map(JSON.stringify))).map(JSON.parse);
+    unique.sort(function (a, b) {
+        return (+a.value) - (+b.value);
+    });
+    return unique;
+}
+
+// только уникальные значения
+const uniq = (list) => {
+    return Array.from(new Set(list.map(JSON.stringify))).map(JSON.parse);
+}
+
+// поазваем кнопку очистить
+const btnVisible = () => {
+    const target = [...allCbox].find(xx => xx.checked);
+    target ? btnResetWrap.classList.add('active') : btnResetWrap.classList.remove('active')
+}
