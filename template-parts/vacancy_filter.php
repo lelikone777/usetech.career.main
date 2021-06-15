@@ -1,9 +1,6 @@
 <div class="site__container">
     <div class="home-filter">
-
         <div class="home-filter__box">
-
-
             <div class="home-filter__wrap">
                 <div class="home-filter__left">
                     <h2>Поиск вакансий</h2>
@@ -53,9 +50,6 @@
                 </div>
             </div>
             <!-- /.home-filter__wrap -->
-
-
-
         </div>
     </div>
 </div>

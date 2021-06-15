@@ -222,10 +222,10 @@
                                                 ?>
                                                 <i class="fa fa-cog"></i>
                                                 <?php
-                                                if (get_field('experience')) {
-                                                    echo get_field('experience');
-                                                }
-                                                ?>
+                                                    // Переменные
+                                                    $color = get_field('experience');
+                                                    ?>
+                                                <?php echo $color['label']; ?>
                                             </div>
                                         </a>
                                     </div>

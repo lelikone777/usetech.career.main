@@ -332,21 +332,88 @@
   }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: @xxl) {
   .filter {
-    max-width: 1208px;
   }
 }
 
-@media (max-width: 1240px) {
+@media (max-width: @xl) {
   .filter {
-    max-width: 992px;
+
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: @lg) {
   .filter {
-    max-width: 720px;
+    flex-direction: column;
+    margin: 40px auto;
+    &__left {
+      width: 100%;
+      min-width: auto;
+      max-width: none;
+      margin-right: 0;
+      margin-bottom: @sp;
+      &-scroll {
+        display: flex;
+        flex-wrap: wrap;
+        #hot {
+          order: 7;
+        }
+        #work {
+          order: 3;
+        }
+        #location {
+          order: 2;
+        }
+        #profile {
+          order: 6;
+        }
+        #industry {
+          order: 5;
+        }
+        #exp {
+          order: 4;
+        }
+        #emp {
+          order: 1;
+        }
+      }
+      &-block {
+        width: 33.33%;
+      }
+    }
+    &__right {
+      flex: auto;
+    }
   }
 }
 
+@media (max-width: @md) {
+  .filter {
+    flex-direction: column;
+    &__left {
+      &-block {
+        width: 50%;
+      }
+    }
+    &__right {
+      .filter {
+        &__item {
+          &-info {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @sm) {
+  .filter {
+    &__left {
+      &-block {
+        width: 100%;
+      }
+    }
+  }
+}
