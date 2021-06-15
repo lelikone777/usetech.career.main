@@ -59,7 +59,7 @@ $(window).on('load', function () {
     }
 
     const setCboxList = (list) => {
-        list = list.filter(xx => xx.acf.hot)
+        // list = list.filter(xx => xx.acf.hot)
         if (list.length === 0) {
             let text = document.createElement('div');
             text.classList.add('hot-vacancy-slider__empty');

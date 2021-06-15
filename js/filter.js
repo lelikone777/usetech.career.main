@@ -1,4 +1,6 @@
-
+let filterModalButton = document.querySelector('.filter__modal-button');
+let acceptButton = document.querySelector('.filter__btns-accept');
+let listLength = document.querySelector('#list-length')
 
 const listBox = document.querySelector('.filter__right-result');
 const filterBox = document.querySelector('.filter__left');
@@ -115,7 +117,10 @@ const setExpCboxList = (list, box) => {
 
 const setItemList = (list) => {
     listBox.innerHTML = ''; // очищаем блок
+
+
     if (list.length) {
+
         const hotList = list.filter(item => item.acf.hot);
         const coldList = list.filter(item => !item.acf.hot);
         list = [...hotList, ...coldList];
@@ -156,6 +161,8 @@ const setItemList = (list) => {
     }
 
 }
+
+
 
 // слушаем клики по чекбоксам
 filterBox.addEventListener("click", (event) => {
@@ -406,3 +413,30 @@ const btnVisible = () => {
     const target = [...allCbox].find(xx => xx.checked);
     target ? btnResetWrap.classList.add('active') : btnResetWrap.classList.remove('active')
 }
+
+// Открываем - закрываем модальное окно
+filterModalButton.addEventListener('click', function () {
+    if (!filterModalButton.classList.contains("active")) {
+        filterModalButton.classList.add("active");
+        filterBox.classList.add("active");
+        document.body.classList.add("lock");
+        acceptButton.classList.remove("active");
+    } else {
+        filterModalButton.classList.remove("active");
+        filterBox.classList.remove("active");
+        document.body.classList.remove("lock");
+
+    }
+});
+
+// Закрываем модальное окно при нажатии на кнопку "Применить"
+acceptButton.addEventListener('click', function () {
+    if (!acceptButton.classList.contains("active")) {
+        acceptButton.classList.add("active");
+        filterModalButton.classList.remove("active");
+        filterBox.classList.remove("active");
+        document.body.classList.remove("lock");
+    } else {
+        acceptButton.classList.remove("active");
+    }
+});
