@@ -5,7 +5,8 @@ const btnList = document.querySelectorAll('.menu-item-has-children'),
     socials = document.querySelector(".header-new__socials"),
     feedback = document.querySelector(".header-new__feedback"),
     menuItem = document.querySelector(".menu-item"),
-    menuButton = document.querySelector(".header-new__button");
+    menuButton = document.querySelector(".header-new__button"),
+    layout = document.querySelector('.header-new__layout');
 
 btnList.forEach((item, index) => {
     item.onclick = () => {
@@ -14,6 +15,7 @@ btnList.forEach((item, index) => {
         item.firstElementChild.removeAttribute("href");
         item.firstElementChild.classList.toggle('active');
         item.lastElementChild.classList.toggle('active');
+        layout.classList.toggle('active');
     }
 });
 const removeClassActive = (indexItem) => {
@@ -22,9 +24,13 @@ const removeClassActive = (indexItem) => {
             item.classList.remove('active');
             item.firstElementChild.classList.remove('active');
             item.lastElementChild.classList.remove('active');
+            layout.classList.remove('active');
         }
     });
 };
+layout.onclick = () => {
+    removeClassActive();
+}
 
 menuButton.addEventListener("click", function () {
     if (!menuButton.classList.contains("active")) {
@@ -48,3 +54,6 @@ menuButton.addEventListener("click", function () {
         document.body.classList.remove("lock");
     }
 });
+
+
+

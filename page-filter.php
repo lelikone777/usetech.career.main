@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
     <link rel="stylesheet/less" type="text/css"
-          href="<?php echo get_stylesheet_directory_uri(); ?>/css/filter/all.less"/>
+          href="<?php echo get_stylesheet_directory_uri(); ?>/css/career_less/all.less"/>
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/less.js" type="text/javascript"></script>
 
 <div class="filter__modal-button">

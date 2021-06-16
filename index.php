@@ -32,7 +32,7 @@
 <!--</section>-->
 
 
-<?php include 'top_slider.php'?>
+<?php include 'template-parts/top_slider.php'?>
 
 
 

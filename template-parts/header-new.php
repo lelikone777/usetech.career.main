@@ -5,6 +5,7 @@
       href="<?php echo get_stylesheet_directory_uri(); ?>/css/career_less/all.less"/>
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/less.js" type="text/javascript"></script>
+<div class="header-new__layout"></div>
 <div class="header-new__flop" ></div>
 <div class="header-new" >
     <div class="header-new__container site__container">
