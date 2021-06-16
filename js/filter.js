@@ -1,6 +1,7 @@
 let filterModalButton = document.querySelector('.filter__modal-button');
 let acceptButton = document.querySelector('.filter__btns-accept');
-let listLength = document.querySelector('#list-length')
+let listLength = document.querySelector('#list-length');
+let vacancyWord = document.querySelector('#vacancy-word');
 
 const listBox = document.querySelector('.filter__right-result');
 const filterBox = document.querySelector('.filter__left');
@@ -124,7 +125,6 @@ const setItemList = (list) => {
         const hotList = list.filter(item => item.acf.hot);
         const coldList = list.filter(item => !item.acf.hot);
         list = [...hotList, ...coldList];
-
         list.forEach((xx, index) => {
             let item = document.createElement('div');
             item.classList.add('filter__item');
@@ -153,15 +153,19 @@ const setItemList = (list) => {
                </a>
             `
             listBox.appendChild(item);
+            listLength.innerHTML = listBox.childElementCount;
         })
     } else {
         let item = document.createElement('div');
-        item.innerHTML = `<div>По вашему запросу ничего не найдено, посмотрите <a href="#">другие вакансии</a></div>`;
+        item.classList.add('filter__right-result_wrap')
+        item.innerHTML =
+            `<div class="filter__right-result_img"></div>
+            <div class="filter__right-result_text">По вашему запросу ничего не найдено, </br> посмотрите 
+            <a class="filter__right-result_others" href="https://career.usetech.ru/vacancy/" target="_blank">другие вакансии</a> из профиля <a class="filter__right-result_design" href="https://career.usetech.ru/vacancy/#vac=1" target="_blank"> Дизайн</a></div>`;
         listBox.appendChild(item);
+        listLength.innerHTML = 0;
     }
-
 }
-
 
 
 // слушаем клики по чекбоксам
@@ -304,9 +308,9 @@ const getFilteredList = () => {
         });
         newVacList = res;
     }
-
     setItemList(newVacList);
 }
+
 
 const getChList = () => {
     allCbox.forEach(xx => {
@@ -440,3 +444,5 @@ acceptButton.addEventListener('click', function () {
         acceptButton.classList.remove("active");
     }
 });
+
+

@@ -1,0 +1,45 @@
+@xs: 420px;
+@sm: 576px;
+@md: 768px;
+@lg: 992px;
+@xl: 1240px;
+@xxl: 1440px;
+
+@green: #92B700;
+@light-green: #A8C533;
+@black: #333;
+@text: #212121;
+@bg-grey: #FAFAFA;
+@light-grey: rgba(33, 33, 33, 0.6);
+@white: #ffffff;
+@sp: 16px;
+@path: "../../img";
+@path-icons: "../../images/icon";
+
+@mainfz: 1.6rem;
+@smallfz: 1.4rem;
+@mainlh: 2.4rem;
+@ls: 0.1px;
+
+.site__container {
+  max-width: 1312px;
+  margin: 0 auto;
+  @media (max-width: @xxl) {
+    max-width: 1208px;
+  }
+  @media (max-width: @xl) {
+    max-width: 992px;
+  }
+  @media (max-width: @lg) {
+    max-width: 720px;
+  }
+  @media (max-width: @md) {
+    max-width: 90%;
+  }
+  @media (max-width: @sm) {
+    max-width: 90%;
+  }
+  @media (max-width: @xs) {
+    max-width: 90%;
+  }
+}

@@ -56,8 +56,10 @@
                     </div>
                 </div>
                 <div class="filter__btns">
-                    <div class="filter__btns-accept">Применить</div>
-                    <div class="filter__btns-reset">Сбросить фильтр</div>
+                    <div class="filter__btns-wrap">
+                        <div class="filter__btns-accept">Применить</div>
+                        <div class="filter__btns-reset">Сбросить фильтр</div>
+                    </div>
                 </div>
             </div>
             <!--            <div class="filter__left-space"></div>-->
@@ -68,7 +70,7 @@
                     <div class="filter__search-input-close"></div>
                 </div>
                 <div class="filter__search-subtitle">При ручном поиске настройки фильтрации будут игнорироваться</div>
-                <h3 class="filter__right-title">Найдено: <span id="list-length"> <?php echo 34 ?> </span> вакансии</h3>
+                <h3 class="filter__right-title">Найдено: <span id="list-length"></span> вакансии</h3>
                 <div class="filter__right-result"></div>
             </div>
         </div>
