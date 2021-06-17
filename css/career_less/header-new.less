@@ -1,9 +1,7 @@
-@import "settings";
-
 .header-new {
-  font-family: 'Raleway', sans-serif;
+  font-family: @font;
   padding: 34px 0;
-  z-index: 101;
+  z-index: 10;
 
   &__layout {
     display: none;
@@ -67,10 +65,10 @@
         font-weight: 500;
         cursor: pointer;
         padding: 8px 16px;
-        border-radius: 4px;
+        border-radius: @br / 2;
         &:hover {
           background-color: @bg-grey;
-          border-radius: 4px;
+          border-radius: @br / 2;
           transition: all 0.3s;
         }
       }
@@ -108,7 +106,7 @@
             background: @white;
             padding: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            border-radius: @br;
             flex-direction: column;
             align-items: flex-start;
             animation: menu .3s forwards;
@@ -132,7 +130,7 @@
                 background-color: transparent;
                 &:hover {
                   background-color: @bg-grey !important;
-                  border-radius: 4px;
+                  border-radius: @br / 2;
                   transition: all 0.3s;
                 }
               }
@@ -153,46 +151,38 @@
       justify-content: space-between;
       align-items: center;
       margin-top: 5px;
-      .icon-facebook {
+      .icon {
         color: #212121;
+        transition: all 0.3s;
+      }
+      .icon-facebook {
         &:hover {
           color: #3B5998;
-          transition: all 0.3s;
         }
       }
       .icon-instagram {
-        color: #212121;
         &:hover {
           color: #C13584;
-          transition: all 0.3s;
         }
       }
       .icon-linkedin {
-        color: #212121;
         &:hover {
           color: #2867B2;
-          transition: all 0.3s;
         }
       }
       .icon-twitter {
-        color: #212121;
         &:hover {
           color: #1DA1F2;
-          transition: all 0.3s;
         }
       }
       .icon-youtube {
-        color: #212121;
         &:hover {
           color: #FF0000;
-          transition: all 0.3s;
         }
       }
       .icon-vk {
-        color: #212121;
         &:hover {
           color: #2787F5;
-          transition: all 0.3s;
         }
       }
     }
@@ -241,7 +231,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000011;
+    z-index: 10;
     padding: 16px 0;
     &:before {
       content: '';
@@ -310,11 +300,11 @@
           padding: 17px 40px 17px 8px;
           width: 100%;
           position: relative;
-          border-radius: 8px;
+          border-radius: @br;
           font-size: 18px;
           &:hover {
             background-color: @bg-grey !important;
-            border-radius: 8px;
+            border-radius: @br;
           }
         }
         &-has-children {
@@ -388,7 +378,7 @@
       padding: 9px 10px;
       background-color: transparent;
       border: 1px solid transparent;
-      border-radius: 4px;
+      border-radius: @br / 2;
       cursor: pointer;
       transition: all ease 0.3s 0s;
       &-line {

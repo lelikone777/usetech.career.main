@@ -498,21 +498,21 @@
         </section>
     </div>
 
-    <section class="instagram">
-        <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h2>Наш Instagram</h2>
-                <p>Для наших сотрудников Usetech - это не просто работа. Они приходят в большую семью, дружный коллектив и команду профессионалов, где готовы поделиться не только знаниями, но и интересами. Посмотрите, чем мы занимаемся в нерабочее время.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <?php echo do_shortcode('[instagram-feed]'); ?>
-            </div>
-        </div>
-        </div>
-    </section>
+<!--    <section class="instagram">-->
+<!--        <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
+<!--                <h2>Наш Instagram</h2>-->
+<!--                <p>Для наших сотрудников Usetech - это не просто работа. Они приходят в большую семью, дружный коллектив и команду профессионалов, где готовы поделиться не только знаниями, но и интересами. Посмотрите, чем мы занимаемся в нерабочее время.</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--            <div class="col-lg-12">-->
+<!--                --><?php //echo do_shortcode('[instagram-feed]'); ?>
+<!--            </div>-->
+<!--        </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
 <section class="news">
     <div class="container">
