@@ -14,7 +14,7 @@
                         </div>
                     </div>
                     <div class="news-item">
-                        <div class="row">
+                        <div class="row wrap">
                         <?php if ( have_posts() ) while ( have_posts() ) : the_post(); // Начало цикла ?>
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                 <a href="<?php the_permalink(); ?>">
