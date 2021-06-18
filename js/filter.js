@@ -1,5 +1,6 @@
 let filterModalButton = document.querySelector('.filter__modal-button');
 let acceptButton = document.querySelector('.filter__btns-accept');
+let crossButton = document.querySelector('.filter__left-top_btn');
 let listLength = document.querySelector('#list-length');
 let vacancyWord = document.querySelector('#vacancy-word');
 
@@ -9,6 +10,7 @@ const btnReset = document.querySelector('.filter__btns-reset');
 const searchInput = document.querySelector('.filter__search-input');
 const resetSearch = document.querySelector('.filter__search-input-close');
 const btnResetWrap = document.querySelector('.filter__btns');
+const filterScroll = document.querySelector('.filter__left-scroll');
 let allCbox = null;
 
 
@@ -137,7 +139,6 @@ const setItemList = (list) => {
 
             item.innerHTML = `
                <a href="${xx.link}" class="filter__item-link">
-                   ${industry}
                    ${xx.acf.hot ? '<div class="filter__item-hot"></div>' : ''}
                    <div class="filter__item-title">${xx.title.rendered}</div>
                    ${excerpt}
@@ -148,12 +149,19 @@ const setItemList = (list) => {
                             <i class="filter__item-icon filter__item-icon_pin"></i><div class="filter__item-city">${city}${work_format}</div>
                        </div>
                        <div class="filter__item-str">
-                            <i class="filter__item-icon filter__item-icon_clock"></i>${xx.acf.employment}</div>
+                            <i class="filter__item-icon filter__item-icon_clock"></i>${xx.acf.employment}
+                       </div>
                    </div>
+                    ${industry}
                </a>
             `
             listBox.appendChild(item);
             listLength.innerHTML = listBox.childElementCount;
+            function declOfNum(number, words) {
+                return words[(number % 100 > 4 && number % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(number % 10 < 5) ? number % 10 : 5]];
+            }
+            vacancyWord.innerHTML = declOfNum(listLength.innerHTML, ['вакансия', 'вакансии', 'вакансий']);
+
         })
     } else {
         let item = document.createElement('div');
@@ -164,6 +172,7 @@ const setItemList = (list) => {
             <a class="filter__right-result_others" href="https://career.usetech.ru/vacancy/" target="_blank">другие вакансии</a> из профиля <a class="filter__right-result_design" href="https://career.usetech.ru/vacancy/#vac=1" target="_blank"> Дизайн</a></div>`;
         listBox.appendChild(item);
         listLength.innerHTML = 0;
+        vacancyWord.innerHTML = 'вакансий';
     }
 }
 
@@ -412,23 +421,34 @@ const uniq = (list) => {
     return Array.from(new Set(list.map(JSON.stringify))).map(JSON.parse);
 }
 
-// поазваем кнопку очистить
+// показываем кнопку очистить
 const btnVisible = () => {
     const target = [...allCbox].find(xx => xx.checked);
-    target ? btnResetWrap.classList.add('active') : btnResetWrap.classList.remove('active')
+    // target ? btnResetWrap.classList.add('active') : btnResetWrap.classList.remove('active')
+    if (target) {
+        btnResetWrap.classList.add('active');
+        filterModalButton.classList.add('dotted');
+        filterScroll.classList.add('filter__left-scroll_withBtn');
+    } else {
+        btnResetWrap.classList.remove('active')
+        filterModalButton.classList.remove('dotted');
+        filterScroll.classList.remove('filter__left-scroll_withBtn');
+    }
 }
 
 // Открываем - закрываем модальное окно
 filterModalButton.addEventListener('click', function () {
     if (!filterModalButton.classList.contains("active")) {
+        // document.body.classList.add("lock");
+        document.body.style.overflow = 'hidden';
         filterModalButton.classList.add("active");
         filterBox.classList.add("active");
-        document.body.classList.add("lock");
         acceptButton.classList.remove("active");
     } else {
+        // document.body.classList.remove("lock");
+        document.body.style.overflow = 'auto';
         filterModalButton.classList.remove("active");
         filterBox.classList.remove("active");
-        document.body.classList.remove("lock");
 
     }
 });
@@ -436,13 +456,21 @@ filterModalButton.addEventListener('click', function () {
 // Закрываем модальное окно при нажатии на кнопку "Применить"
 acceptButton.addEventListener('click', function () {
     if (!acceptButton.classList.contains("active")) {
+        // document.body.classList.remove("lock");
+        document.body.style.overflow = 'auto';
         acceptButton.classList.add("active");
         filterModalButton.classList.remove("active");
         filterBox.classList.remove("active");
-        document.body.classList.remove("lock");
     } else {
         acceptButton.classList.remove("active");
     }
 });
 
+// Закрываем модалку при нажатии на крестик
+crossButton.addEventListener('click', function () {
+    // document.body.classList.remove("lock");
+    document.body.style.overflow = 'auto';
+    filterModalButton.classList.remove("active");
+    filterBox.classList.remove("active");
+})
 

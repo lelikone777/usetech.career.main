@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
     <link rel="stylesheet/less" type="text/css"
-          href="<?php echo get_stylesheet_directory_uri(); ?>/css/filter/all.less"/>
+          href="<?php echo get_stylesheet_directory_uri(); ?>/css/career_less/all.less"/>
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/less.js" type="text/javascript"></script>
 
 <div class="filter__modal-button">
@@ -11,6 +11,16 @@
 <div  class="site__container">
         <div class="filter">
             <div class="filter__left">
+                <div class="filter__left-top">
+                    <div class="filter__left-top_wrap">
+                        <h3 class="filter__left-top_title">Фильтр вакансий</h3>
+                        <div class="filter__left-top_btn">
+                            <div class="filter__left-top_btn-line filter__left-top_btn-line_top"></div>
+                            <div class="filter__left-top_btn-line filter__left-top_btn-line_middle"></div>
+                            <div class="filter__left-top_btn-line filter__left-top_btn-line_bottom"></div>
+                        </div>
+                    </div>
+                </div>
                 <div class="filter__left-scroll">
                     <div class="filter__left-block" id="hot">
                         <div class="filter__left-list">
@@ -70,7 +80,7 @@
                     <div class="filter__search-input-close"></div>
                 </div>
                 <div class="filter__search-subtitle">При ручном поиске настройки фильтрации будут игнорироваться</div>
-                <h3 class="filter__right-title">Найдено: <span id="list-length"></span> вакансии</h3>
+                <h3 class="filter__right-title">Найдено: <span id="list-length"></span> <span id="vacancy-word"></span></h3>
                 <div class="filter__right-result"></div>
             </div>
         </div>
