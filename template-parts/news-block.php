@@ -1,8 +1,8 @@
-<section class="development">
+<section class="news-block">
     <div class="site__container">
-        <h2 class="development__title">Новости</h2>
-        <div class="development__content">
-            <div class="development__left">
+        <h2 class="news-block__title">Новости</h2>
+        <div class="news-block__content">
+            <div class="news-block__left">
                 <?php global $post;
 
                 $query = new WP_Query([
@@ -15,17 +15,17 @@
                         $query->the_post();
                         ?>
 
-                        <a href="<?php the_permalink() ?>" class="development__left-top">
-                            <div class="development__left-top_wrap">
-                                <div class="development__left-top_image"
+                        <a href="<?php the_permalink() ?>" class="news-block__left-top">
+                            <div class="news-block__left-top_wrap">
+                                <div class="news-block__left-top_image"
                                      style="background-image: url(<?php echo first_post_image() ?>)"></div>
                             </div>
 
-                            <h3 class="development__left-top_text">
+                            <h3 class="news-block__left-top_text">
 
                                 <?php trim_title_chars(100,'...') ?>
                             </h3>
-                            <h3 class="development__left-top_text--mobile">
+                            <h3 class="news-block__left-top_text--mobile">
                                 <?php trim_title_chars(100,'...') ?>
                             </h3>
                         </a>
@@ -40,7 +40,7 @@
                 ?>
 
 
-                <div class="development__left-bottom">
+                <div class="news-block__left-bottom">
 
 
                     <?php
@@ -60,18 +60,18 @@
                             ?>
 
 
-                            <a href="<?php the_permalink() ?>" class="development__left-card">
+                            <a href="<?php the_permalink() ?>" class="news-block__left-card">
 
-                                <div class="development__left-card_wrap">
-                                    <div class="development__left-card_image"
+                                <div class="news-block__left-card_wrap">
+                                    <div class="news-block__left-card_image"
                                          style="background-image: url(<?php echo first_post_image() ?>)"></div>
                                 </div>
 
-                                <h3 class="development__left-card_text">
+                                <h3 class="news-block__left-card_text">
                                     <?php trim_title_chars(100,'...') ?>
                                 </h3>
                             </a>
-                            <!-- /.development__left-card -->
+                            <!-- /.news-block__left-card -->
                             <?php
                         }
                     } else {
@@ -80,17 +80,17 @@
                     wp_reset_postdata(); // Сбрасываем $post
                     ?>
                 </div>
-                <!-- /.development__left-bottom -->
-                <a href="https://career.usetech.ru/blog/news/" class="development__left-button">Посмотреть все
+                <!-- /.news-block__left-bottom -->
+                <a href="https://career.usetech.ru/blog/news/" class="news-block__left-button">Посмотреть все
                     новости</a>
             </div>
-            <!-- /.development__left -->
+            <!-- /.news-block__left -->
 
 
-            <div class="development__right">
-                <h3 class="development__right-title development__right-title_top">Cтатьи и выступления</h3>
+            <div class="news-block__right">
+                <h3 class="news-block__right-title news-block__right-title_top">Cтатьи и выступления</h3>
 
-                <div class="development__right-list">
+                <div class="news-block__right-list">
                     <?php
                     global $post;
 
@@ -104,19 +104,19 @@
                             $authors = get_field('speaker');
                             $place = get_field('publication_place')[0];
                             ?>
-                            <a href="<?php the_permalink() ?>" class="development__right-post">
+                            <a href="<?php the_permalink() ?>" class="news-block__right-post">
 
 
                                 <?php if ($place) { ?>
-                                    <span class="development__right-label">
+                                    <span class="news-block__right-label">
                                         <?php echo  get_fields($place)[place_name]; ?>
                                     </span>
                                 <?php }
                                 ?>
 
 
-                                <h4 class="development__right-title">
-                                <span class="development__right-title_link"
+                                <h4 class="news-block__right-title">
+                                <span class="news-block__right-title_link"
                                 > <?php trim_title_chars(100,'...') ?></span>
                                 </h4>
 
@@ -126,13 +126,13 @@
                                 if ($authorLength > 2) {
                                     ?>
 
-                                    <div class="development__right-info">
-                                        <div class="development__right-info_avatar">
-                                            <div class="development__right-info_avatar--3"></div>
+                                    <div class="news-block__right-info">
+                                        <div class="news-block__right-info_avatar">
+                                            <div class="news-block__right-info_avatar--3"></div>
                                         </div>
-                                        <div class="development__right-info_wrap">
-                                            <div class="development__right-info_name">Разные спикеры</div>
-                                            <div class="development__right-info_position">
+                                        <div class="news-block__right-info_wrap">
+                                            <div class="news-block__right-info_name">Разные спикеры</div>
+                                            <div class="news-block__right-info_position">
                                                 Ведущие разработчики Usetech
                                             </div>
                                         </div>
@@ -153,19 +153,19 @@
                                         ?>
 
 
-                                        <div class="development__right-info">
+                                        <div class="news-block__right-info">
                                             <?php
 
 
                                             if ($thumbnail) {
                                                 ?>
-                                                <div class="development__right-info_avatar" style="background-image: url(<?php echo $thumbnail ?>)"> </div>
+                                                <div class="news-block__right-info_avatar" style="background-image: url(<?php echo $thumbnail ?>)"> </div>
                                             <?php } ?>
 
-                                            <div class="development__right-info_wrap">
+                                            <div class="news-block__right-info_wrap">
 
-                                                <div class="development__right-info_name"><?php echo $name_author ?></div>
-                                                <div class="development__right-info_position"><?php echo $role ?></div>
+                                                <div class="news-block__right-info_name"><?php echo $name_author ?></div>
+                                                <div class="news-block__right-info_position"><?php echo $role ?></div>
                                             </div>
                                         </div>
 
@@ -175,7 +175,7 @@
                                 ?>
 
                             </a>
-                            <!-- /.development__right-post -->
+                            <!-- /.news-block__right-post -->
 
 
                             <?php
@@ -189,11 +189,11 @@
 
                 </div>
             </div>
-            <!-- /.development__right -->
+            <!-- /.news-block__right -->
             <a href="https://career.usetech.ru/blog/news/"
-               class="development__left-button development__left-button--mobile">Посмотреть все новости</a>
+               class="news-block__left-button news-block__left-button--mobile">Посмотреть все новости</a>
         </div>
-        <!-- /.development__content -->
+        <!-- /.news-block__content -->
     </div>
     <!-- /.container -->
 </section>

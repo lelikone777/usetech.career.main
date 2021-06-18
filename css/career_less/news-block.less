@@ -1,4 +1,4 @@
-.development {
+.news-block {
   min-height: 1312px;
   padding: 56px 0 56px;
   &__title {
@@ -35,7 +35,7 @@
       &_image {
         width: 752px;
         height: 471px;
-        background-image: url("../../img/development_news-main.jpg");
+        background-image: url("../../img/news-block_news-main.jpg");
         background-size: cover;
         background-position-x: center;
         transition: all 0.3s;
@@ -172,10 +172,9 @@
   }
   &__right {
     width: 520px;
-    height: min-content;
+    height: fit-content;
     border-radius: 8px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-    //padding: 32px 24px;
     padding-top: 32px;
     padding-bottom: 16px;
     transition: all 0.3s;
@@ -345,7 +344,7 @@
 
 
 @media (max-width: @xxl) {
-  .development {
+  .news-block {
     &__left {
       width: 696px;
       &-top {
@@ -368,13 +367,12 @@
     }
     &__right {
       width: 480px;
-      height: auto;
     }
   }
 }
 
 @media (max-width: @xl) {
-  .development {
+  .news-block {
     &__left {
       width: 600px;
       &-top {
@@ -433,7 +431,7 @@
 }
 
 @media (max-width: @lg) {
-  .development {
+  .news-block {
     &__left {
       width: 410px;
       &-top {
@@ -473,7 +471,7 @@
   }
 }
 @media (max-width: @md) {
-  .development {
+  .news-block {
     &__content {
       flex-direction: column;
       align-items: center;
@@ -530,7 +528,7 @@
 }
 
 @media (max-width: @sm) {
-  .development {
+  .news-block {
     &__left {
       &-top {
         &_wrap {

@@ -21,34 +21,29 @@ $(window).on('load', function () {
         let slideBox = [];
         slide.forEach(xx => {
 
-            $workFormat = xx.acf.work_format;
-            $city = xx.acf.city;
+            xx.acf.work_remote ? (
+                $location = `<div class="hot-vacancy-slider__slide-card_location">Любой город, <span>удалённо</span></div>`
+            ) : (
+                $location = `<div class="hot-vacancy-slider__slide-card_location">` + xx.acf.city + `, <span>` + xx.acf.work_format + `</span></div>`
+                );
 
-            if(xx.acf.work_remote) {
-                $city === "Любой город, ";
-                $workFormat === "Удалённо"
-            } else {
-                $city = $city + `, `
-            }
-
-            if (xx.acf.industry) {
+            xx.acf.industry ? (
                 $industry = `<div class="hot-vacancy-slider__slide-card_offer">` + xx.acf.industry + `</div>`
-            } else {
-                $industry = '';
-            }
-
+            ) : (
+                $industry === ''
+                );
 
             let card = `
                  <a href="${xx.link}" class="hot-vacancy-slider__slide-card">
-                 <div class="hot-vacancy-slider__slide-card_top">
-                    <h4 class="hot-vacancy-slider__slide-card_position"> ${xx.title.rendered}</h4>
-                    <div class="hot-vacancy-slider__slide-card_logo"></div>
-                </div>
-                <div class="hot-vacancy-slider__slide-card_exp">Опыт: <span>${xx.acf.experience.label}</span></div>
-                <div class="hot-vacancy-slider__slide-card_bottom">
-                    <div class="hot-vacancy-slider__slide-card_location">${$city} <span> ${$workFormat} </span></div>
-                    ${$industry}
-                </div>
+                     <div class="hot-vacancy-slider__slide-card_top">
+                        <h4 class="hot-vacancy-slider__slide-card_position"> ${xx.title.rendered}</h4>
+                        <div class="hot-vacancy-slider__slide-card_logo"></div>
+                    </div>
+                    <div class="hot-vacancy-slider__slide-card_exp">Опыт: <span>${xx.acf.experience.label}</span></div>
+                    <div class="hot-vacancy-slider__slide-card_bottom">
+                        ${$location}
+                        ${$industry}
+                    </div>
                 </a>
             `
             slideBox = slideBox + card;
@@ -63,7 +58,7 @@ $(window).on('load', function () {
         if (list.length === 0) {
             let text = document.createElement('div');
             text.classList.add('hot-vacancy-slider__empty');
-            text.innerHTML = `<div>Пока горячих вакансий нет, посмотрите наши <a href="https://career.usetech.ru/vacancy/">другие вакансии</a></div>`
+            text.innerHTML = `<div class="hot-vacancy-slider__empty-text"> Пока горячих вакансий нет, посмотрите наши <a href="https://career.usetech.ru/vacancy/">другие вакансии</a></div>`
             hvSlider.appendChild(text);
         } else {
         let size = 3;

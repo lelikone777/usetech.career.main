@@ -1,4 +1,5 @@
 'use strict';
+let browsersync = require("browser-sync").create();
 
 global.$ = {
   package: require('./package.json'),
@@ -7,16 +8,36 @@ global.$ = {
     task: require('./gulp/tasks.js')
   },
   gulp: require('gulp'),
-  gp: require('gulp-load-plugins')()
+  gp: require('gulp-load-plugins')(),
 };
 
-$.path.task.forEach(function(taskPath) {
-  require(taskPath)();
-});
+function browserSync() {
+    browsersync.init({
+        server: {
+            baseDir: "project",
+        },
+        port: 3000,
+        notify: false,
+    });
+}
 
-$.gulp.task('default', $.gulp.series( 'browsersync',
-	$.gulp.parallel(
-		'less',
-		//'rename'
-	)
+
+$.path.task.forEach(function(taskPath) {
+
+    require(taskPath)();
+});
+$.gulp.task('default', $.gulp.series(
+    $.gulp.parallel(
+        'less',
+        //'rename',
+        watchFiles,
+        browserSync,
+    )
 ));
+
+
+
+
+
+exports.watch = watch;
+exports.default = watch;

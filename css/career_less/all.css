@@ -1,6 +1,7 @@
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  text-decoration: none;
 }
 html,
 body {
@@ -2114,9 +2115,6 @@ button {
 }
 .home-filter .slider-wrap.visible {
   opacity: 1;
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  order: 1;
 }
 .home-filter .hot-vacancy-slider {
   width: 100%;
@@ -2378,6 +2376,13 @@ button {
   }
   .hot-vacancy-slider__title-buttons {
     margin-left: 0 !important;
+  }
+  .hot-vacancy-slider__slide-card_location {
+    padding-bottom: 8px;
+  }
+  .hot-vacancy-slider__slide-card_bottom {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 .filter {
@@ -3092,7 +3097,6 @@ button {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  text-decoration: none;
 }
 .vacancy-item.active {
   -webkit-animation: vis 1.5s forwards;
