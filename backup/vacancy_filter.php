@@ -1,7 +1,7 @@
 <link rel="stylesheet/less" type="text/css"
       href="<?php echo get_stylesheet_directory_uri(); ?>/css/career_less/all.less"/>
 <link rel="stylesheet/less" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/new_less/all.less"/>
-<link rel="stylesheet/less" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/rt_less/all.less"/>
+<link rel="stylesheet/less" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/career_less/rt_less/all.less"/>
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
 

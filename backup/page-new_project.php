@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.9.97/css/materialdesignicons.min.css">
 
     <link rel="stylesheet/less" type="text/css"
-          href="<?php echo get_stylesheet_directory_uri(); ?>/css/rt_less/all.less"/>
+          href="<?php echo get_stylesheet_directory_uri(); ?>/css/career_less/rt_less/all.less"/>
 
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/less.js" type="text/javascript"></script>
 </head>

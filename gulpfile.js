@@ -7,27 +7,30 @@ let fs = require("fs");
 let path = {
     build: {
         html: project_folder + "/",
-        css: project_folder + "/css/",
-        js: project_folder + "/js/",
+        css: "./css/career_css/",
+        js: "/.js/main.js",
         img: project_folder + "/img/",
         fonts: project_folder + "/fonts/",
     },
     src: {
         html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
         sass: source_folder + "/sass/style.sass",
-        less: source_folder + "/less/style.less",
-        js: source_folder + "/js/script.js",
+        less: "./css/career_less/all.less",
+        js: "./js/all.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
         fonts: source_folder + "/fonts/*.ttf",
     },
     watch: {
         html: source_folder + "/**/*.html",
         sass: source_folder + "/sass/**/*.sass",
-        less: source_folder + "/less/**/*.less",
-        js: source_folder + "/js/**/*.js",
+        less: "./css/career_less/*.less",
+        js:  "./js/all.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     },
     clean: "./" + project_folder + "/",
+
+
+
 };
 
 let { src, dest } = require("gulp"),
@@ -54,7 +57,8 @@ let { src, dest } = require("gulp"),
 function browserSync() {
     browsersync.init({
         server: {
-            baseDir: "./" + project_folder + "/",
+            // baseDir: "./" + project_folder + "/",
+            baseDir: "./",
         },
         port: 3000,
         notify: false,
@@ -74,6 +78,7 @@ function sassCompilar() {
         .pipe(
             sass({
                 outputStyle: "expanded",
+                allowEmpty: true,
             })
         )
         .pipe(group_media())
@@ -246,11 +251,11 @@ function fontsStyleLess(cb) {
     cb();
 }
 function watchFiles() {
-    gulp.watch([path.watch.html], html);
-    gulp.watch([path.watch.sass], sassCompilar);
+    // gulp.watch([path.watch.html], html);
+    // gulp.watch([path.watch.sass], sassCompilar);
     gulp.watch([path.watch.less], lessCompilar);
-    gulp.watch([path.watch.js], js);
-    gulp.watch([path.watch.img], images);
+    // gulp.watch([path.watch.js], js);
+    // gulp.watch([path.watch.img], images);
 }
 
 
@@ -259,21 +264,27 @@ function clean() {
 }
 
 let build = gulp.series(
-    clean,
-    gulp.parallel(js, sassCompilar, lessCompilar, html, images, fonts),
-    fontsStyleSass,
-    fontsStyleLess
+    // clean,
+    gulp.parallel(
+        // js,
+        lessCompilar,
+        // html,
+        // images,
+        // fonts
+    ),
+    // fontsStyleSass,
+    // fontsStyleLess
 );
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
-exports.fontsStyleSass = fontsStyleSass;
-exports.fontsStyleLess = fontsStyleLess;
-exports.fonts = fonts;
-exports.images = images;
-exports.js = js;
-exports.sass = sassCompilar;
+// exports.fontsStyleSass = fontsStyleSass;
+// exports.fontsStyleLess = fontsStyleLess;
+// exports.fonts = fonts;
+// exports.images = images;
+// exports.js = js;
+// exports.sass = sassCompilar;
 exports.less = lessCompilar;
-exports.html = html;
+// exports.html = html;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;
