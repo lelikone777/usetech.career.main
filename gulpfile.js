@@ -124,7 +124,7 @@ function lessCompilar() {
             })
         )
         .pipe(dest(path.build.css))
-        .pipe(browsersync.stream());
+        // .pipe(browsersync.stream());
 }
 
 function js() {
@@ -275,7 +275,10 @@ let build = gulp.series(
     // fontsStyleSass,
     // fontsStyleLess
 );
-let watch = gulp.parallel(build, watchFiles, browserSync);
+let watch = gulp.parallel(build,
+    watchFiles,
+    // browserSync
+);
 
 // exports.fontsStyleSass = fontsStyleSass;
 // exports.fontsStyleLess = fontsStyleLess;

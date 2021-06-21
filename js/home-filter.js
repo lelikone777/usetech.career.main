@@ -12,46 +12,44 @@ $(window).on('load', function () {
     let experienceList = []; // список опыта
     let typeEmploymentList = []; // список типа занятости
 
+    const preloader = document.getElementById('home-filter-preloader');
+    const contentBox = document.querySelector('.home-filter__left-box');
 
-// получаем посты
+
+    // получаем посты
     let getPosition = {
         "url": "https://career.usetech.ru//wp-json/wp/v2/posts?categories=3&per_page=100&_fields=acf,link,title, categories",
         "method": "GET",
         "timeout": 0,
     };
 
-// получаем профили вакансии
-    let getCategory = {
-        "url": "https://career.usetech.ru//wp-json/wp/v2/categories?parent=3&_fields=id,name",
-        "method": "GET",
-        "timeout": 0,
-    };
+
 
     $.ajax(getPosition).done((rest) => {  // получаем профиль вакансии
+        console.log(rest)
         getListForSelect(rest);
         setSelect('#selectCity', cityList, selectCity);
         setSelect('#selectExperience', experienceList, selectExperience);
         setSelect('#selectTypeEmployment', typeEmploymentList, selectTypeEmployment);
+        setSelect('#selectProfile', vacancyProfileList, selectProfile);
+        setTimeout(() => {
+            preloader.classList.remove('visible'); // скрыаем прелоадер
+            contentBox.classList.add('visible');
+        }, 500)
+
 
     });
-    $.ajax(getCategory).done((resp) => { // получаем профиль вакансии
-        vacancyProfileList = resp;
-        vacancyProfileList.forEach((ff, index) => {
-            let itemSelect = document.createElement('option');
-            itemSelect.value = index;
-            itemSelect.innerHTML = `${ff.name}`;
-            selectProfile.appendChild(itemSelect);
-        });
-        $('#selectProfile').selectric(); // инициируем селект
-    });
+
 
     const getListForSelect = (list) => {
         list.forEach(xx => {
             cityList = [...new Set([...cityList, xx.acf.city])];
             cityList = [...cityList].filter(xx => xx !== undefined);
             cityList = [...cityList].filter(xx => xx !== '');
-            experienceList = [...new Set([...experienceList, xx.acf.experience])];
+            experienceList = [...new Set([...experienceList, xx.acf.experience.label])];
             typeEmploymentList = [...new Set([...typeEmploymentList, xx.acf.employment])];
+            vacancyProfileList = [...new Set([...vacancyProfileList, xx.acf.profile.label])];
+
         });
     }
     const setSelect = (idName, list, select) => {
@@ -93,22 +91,4 @@ $(window).on('load', function () {
         selectExperience.value = 'all';
         selectTypeEmployment.value = 'all';
     }
-
-// ------------------------         home filter slider
-    let arrowWrap = document.querySelector('.home-filter__right-title_buttons');
-    const hfs = $(`.home-filter__slider`);
-
-    const initHfsSlider = () => {
-        hfs.slick({
-            infinite: true,
-            dots: true,
-            appendArrows: arrowWrap,
-            appendDots: arrowWrap
-        });
-    }
-
-    setTimeout(() => {
-        initHfsSlider();
-    }, 1000);
-
 });

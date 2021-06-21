@@ -5,6 +5,7 @@
                 <div class="home-filter__left">
                     <h2>Поиск вакансий</h2>
                     <p>Наши сотрудники работают на проектах по всему миру, <br> присоединяйся к нам!</p>
+                    <div id="home-filter-preloader" class="visible">Данные загружаются</div>
                     <div class="home-filter__left-box">
                         <div class="home-filter__left-left">
                             <div class="home-filter__line">
