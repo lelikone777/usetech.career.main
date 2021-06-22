@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <div class="vacancy-boxes vacancy-boxes-news">
     <section class="vacancy">
-        <div class="container">
+        <div class="site__container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row">

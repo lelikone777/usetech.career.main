@@ -97,7 +97,7 @@
 
 
     <div class="xs-top visible-xs">
-        <div class="container">
+        <div class="site__container">
             <div class="row">
                 <div class="col-xs-7">
                     <a href="tel:+74956605048" class="top-phone">+ 7 (495) 660-50-48</a>
@@ -130,7 +130,7 @@
 
 
     <div class="menu__wrap">
-        <div class="container">
+        <div class="site__container">
             <section class="top">
                 <div class="row hidden-xs">
                     <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs">

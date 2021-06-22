@@ -4,9 +4,9 @@
 <!--Вывод хлебных крошек-->
 <?php get_template_part('template-parts/breadcrumbs');?>
 
-<div class="container">
+<div class="site__container">
     <section class="page-404">
-        <div class="container">
+        <div class="site__container">
             <div class="col-lg-12 text-center">
                 <div class="page-404-bg">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/404.svg" alt="Страница не найдена" title="Страница не найдена">

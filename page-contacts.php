@@ -1,4 +1,8 @@
+
 <?php get_header(); ?>
+
+<meta name="yandex-verification" content="fd4bb99f16c8692d"/>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 
     <!--Вывод хлебных крошек-->
 <?php get_template_part('template-parts/breadcrumbs');?>
@@ -25,7 +29,7 @@
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<div class="post" id="post-<?php the_ID(); ?>">
 		<section class="contacts-feedback"  id="feedback-form">
-    <div class="container">
+    <div class="site__container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h1><?php the_title(); ?></h1>
@@ -33,7 +37,7 @@
         </div>
     </div>
     <section class="feedback-form">
-       <div class="container">
+       <div class="site__container">
        <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h3>Форма обратной связи</h3>

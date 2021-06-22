@@ -32,38 +32,26 @@
                             </div>
                         </div>
                     </div>
-                    <div class="filter__left-block" id="profile">
-                        <div class="filter__left-title">Профиль</div>
-                        <div class="filter__left-list"></div>
-                    </div>
                     <div class="filter__left-block" id="work">
                         <div class="filter__left-title">График</div>
                         <div class="filter__left-list">
                             <div>
                                 <div class="filter__left-cbox-wrap">
-                                        <input class="filter__left-radio" checked  name="gr" type="radio" id="gr_all" value="Все">
-                                        <label class="filter__left-label_radio" for="gr_all">Любой график</label>
-                                </div>
-                                </div>
-                            <div>
-                                <div class="filter__left-cbox-wrap">
-                                        <input class="filter__left-radio" name="gr" type="radio" id="gr_home" value="Удаленная работа">
-                                        <label class="filter__left-label_radio" for="gr_home">Полностью удаленный график</label>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="filter__left-cbox-wrap">
-                                        <input class="filter__left-radio" name="gr" type="radio" id="gr_office" value="Офис">
-                                         <label class="filter__left-label_radio" for="gr_office">Офис / гибридный формат</label>
+                                    <input class="filter__left-cbox" data-id="work" type="checkbox" id="distant_work" value="Удаленная работа">
+                                    <label class="filter__left-label" for="distant_work">Удаленная работа</label>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="filter__left-block" id="location" style='display: none'>
+                    <div class="filter__left-block" id="location">
                         <div class="filter__left-title">Локация</div>
                         <div class="filter__left-list"></div>
                     </div>
 
+                    <div class="filter__left-block" id="profile">
+                        <div class="filter__left-title">Профиль</div>
+                        <div class="filter__left-list"></div>
+                    </div>
                     <div class="filter__left-block" id="industry">
                         <div class="filter__left-title">Отрасль</div>
                         <div class="filter__left-list"></div>
@@ -72,7 +60,7 @@
                         <div class="filter__left-title">Опыт работы</div>
                         <div class="filter__left-list"></div>
                     </div>
-                    <div class="filter__left-block" id="emp" style='display: none'>
+                    <div class="filter__left-block" id="emp">
                         <div class="filter__left-title">Тип занятости</div>
                         <div class="filter__left-list"></div>
                     </div>

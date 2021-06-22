@@ -1,0 +1,346 @@
+@wide-block: 165px;
+@middle-block: 225px;
+@narrow-block: 280px;
+
+.comand {
+  margin: 0 0 70px 0;
+
+  .h2 {
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 26px;
+    text-align: center;
+    color: #333;
+
+    &__text {
+      text-align: center;
+      font-size: 18px;
+      color: #242424;
+      letter-spacing: normal;
+      line-height: 1.3;
+    }
+  }
+
+  &__content {
+    min-height: 300px;
+    margin-top: 20px;
+    padding-top: 20px;
+    background-size: auto;
+    background-position: center 0;
+    background: url("@{path}/cofee-1.png") no-repeat;
+    background-size: 346px 411px;
+    background-position: center 60px;
+
+
+    &-string {
+      display: flex;
+      height: 100px;
+      display: flex;
+      align-items: center;
+    }
+
+    &-left {
+      padding-right: 185px;
+      flex: 1;
+      text-align: right;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      &_center {
+        padding-right: 245px;
+      }
+
+      &_middle {
+        padding-right: 300px;
+      }
+    }
+
+    &-text {
+      display: block;
+
+      &_22 {
+        span {
+          display: block;
+          text-align: left;
+          margin-top: 8px;
+          font-size: 14px;
+          line-height: 1.2;
+        }
+      }
+
+      &_11 {
+        span {
+          display: block;
+          text-align: right;
+          margin-top: 8px;
+          font-size: 14px;
+          line-height: 1.2;
+        }
+      }
+
+      &-icon {
+        height: 54px;
+        width: 54px;
+        min-width: 54px;
+        background-size: 55px auto;
+
+        &-left {
+          padding-right: 185px;
+          flex: 1;
+          text-align: right;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          &_center {
+            padding-right: 245px;
+          }
+
+          &_middle {
+            padding-right: 300px;
+          }
+        }
+
+        width: 54px;
+        min-width: 54px;
+        background-size: 55px auto;
+
+        &_1 {
+          background-image: url("@{path}/MapPin.svg");
+        }
+
+        &_2 {
+          background-image: url("@{path}/InstagramLogo.svg");
+        }
+
+        &_4 {
+          background-image: url("@{path}/Ball.svg");
+        }
+
+        &_5 {
+          background-image: url("@{path}/ChalkboardTeacher.svg");
+        }
+
+        &_6 {
+          background-image: url("@{path}/Dollar.svg");
+        }
+
+        &_7 {
+          background-image: url("@{path}/Heartbeat.svg");
+        }
+
+        &_10 {
+          background-image: url("@{path}/Medal1.svg");
+        }
+
+        &_12 {
+          background-image: url("@{path}/GraduationCap.svg");
+        }
+
+        &_11 {
+          background-image: url("@{path}/rocket.svg");
+        }
+
+        &_22 {
+          background-image: url("@{path}/percent-new.svg");
+        }
+      }
+    }
+
+    &-right {
+      padding-left: 185px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+
+      &_center {
+        padding-left: 245px;
+      }
+
+      &_middle {
+        padding-left: 300px;
+      }
+
+      .comand__content-text {
+        margin-right: 0;
+        margin-left: @sp;
+      }
+    }
+
+    &-text {
+      color: #616161;
+      font-weight: bold;
+      font-size: 18px;
+      margin-right: @sp;
+
+      &-icon {
+        height: 64px;
+        width: 64px;
+        min-width: 64px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+  }
+
+  &__footer {
+    text-align: center;
+    margin: 50px 0 50px 0;
+    color: #616161;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+  }
+  .add {
+    text-align: center;
+  }
+}
+
+
+
+
+@media (max-width: @xl) {
+  .comand__content {
+    background: none;
+    width: 100%;
+    margin: 0 auto;
+    &-left {
+      padding-right: 20px;
+    }
+    &-right {
+      padding-left: 20px;
+    }
+  }
+}
+
+@media (max-width: @lg) {
+  .comand {
+    .h2 {
+      font-size: 22px !important;
+      &__text {
+        br {
+          display: none;
+        }
+      }
+    }
+
+    &__content {
+      background: none;
+      &-left {
+        text-align: left;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+        padding-right: 20px;
+        &_center {
+          padding-right: 20px;
+        }
+      }
+      &-text {
+        margin-right: 0;
+        margin-left: 16px;
+        flex: 1;
+        br {
+          display: none;
+        }
+      }
+      &-right {
+        padding-left: 0px;
+        .comand__content-text {
+          margin-right: 0;
+          margin-left: 16px;
+        }
+        &_center {
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+
+  .comand__content-text_11 {
+    span {
+      text-align: left;
+    }
+  }
+}
+
+@media (max-width: @md) {
+  .header-rt {
+    &__tell {
+      text-align: center;
+    }
+    &__infoblock {
+      justify-content: center;
+    }
+  }
+
+
+
+  .comand {
+    margin-top: @sp;
+    &__content {
+
+      &-text {
+        margin-right: 0;
+        margin-left: 0 !important;
+
+        &-icon {
+          margin-right: @sp;
+          min-width: 64px;
+          background-position: center;
+        }
+
+      }
+
+      &-string {
+        display: block;
+        height: auto;
+      }
+
+      &-left {
+        flex-direction: row-reverse;
+        padding: 0;
+        margin-bottom: @sp;
+      }
+
+      &-right {
+        padding: 0;
+        margin-bottom: @sp;
+      }
+
+      &-text {
+        &_11 {
+          span {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @xs) {
+  .comand {
+    margin-top: 50px;
+
+    &__content {
+      width: 100%;
+      padding-top: 30px;
+
+      &-text {
+        font-size: 14px;
+        font-weight: normal;
+
+        &-icon {
+          background-size: 45px auto;
+          height: 50px;
+          width: 45px;
+          min-width: 45px;
+        }
+      }
+    }
+  }
+}

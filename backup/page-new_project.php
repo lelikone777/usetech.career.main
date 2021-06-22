@@ -14,12 +14,61 @@
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.9.97/css/materialdesignicons.min.css">
 
     <link rel="stylesheet/less" type="text/css"
-          href="<?php echo get_stylesheet_directory_uri(); ?>/css/career_less/rt_less/all.less"/>
+          href="<?php echo get_stylesheet_directory_uri(); ?>/css/rt_less/all.less"/>
 
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/less.js" type="text/javascript"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJMTCP8FD3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-QJMTCP8FD3');
+    </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(79441294, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/79441294" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '276797793219490');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=276797793219490&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <script type="text/javascript">
+        !function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?169",t.onload=function(){VK.Retargeting.Init("VK-RTRG-976431-8Jiyh"),VK.Retargeting.Hit()},document.head.appendChild(t)}();
+    </script>
+    <noscript><img src="https://vk.com/rtrg?p=VK-RTRG-976431-8Jiyh" style="position:fixed; left:-999px;" alt=""/></noscript>
 </head>
 <body>
-<div class="wrapper qqq">
+<div class="wrapper">
     <div class="header-rt">
         <div class="header-rt__add" data-toggle="modal" data-target="#offer">
             Откликнуться на вакансию
@@ -234,6 +283,7 @@
                         <div data-toggle="modal" data-target="#offer"
                              class="location__item-btn location__item-btn_offer">Отправить резюме</div>
                     </div>
+
                 </div>
 
                 <div class="location__wrap">
@@ -366,7 +416,7 @@
                         <div class="location__item-text">
                             Вашей основной задачей будет являться создание доступного, кросс-браузерного и адаптивного
                             пользовательского интерфейса. На проекте используются одни из последних версий популярных
-                            библиотек, фреймворков и технологий
+                            библиотек, фреймворков и технологий.
                         </div>
                         <div class="location__item-stack">
                             <div class="location__item-stack-item">JavaScript</div>
@@ -484,7 +534,7 @@
                         </div>
                         <div class="location__item-text">
                             Вам предстоит разрабатывать приложение для мобильных устройств в составе команды,
-                            участвовать в процессе архитектурного проектирования проектов
+                            участвовать в процессе архитектурного проектирования проектов.
                         </div>
                         <div class="location__item-stack">
                             <div class="location__item-stack-item">iOS</div>
@@ -497,7 +547,7 @@
                     <!-- 999 -->
 
                     <a
-                            href="https://career.usetech.ru/devops-engineer/"
+                            href="https://career.usetech.ru/team-lead-qa/"
                             target="_blank"
                             class="location__item location__item_btns"
                     >
@@ -513,7 +563,7 @@
                         <div class="location__item-text">
                             Вас ожидает управление сильной QA командой, анализ и валидация требований, подготовка
                             отчетов и поддержка тестовой документации и, конечно же, интеграционное, системное и
-                            регрессионное тестирования
+                            регрессионное тестирования.
                         </div>
 
                         <div class="location__item-stack">
@@ -764,7 +814,7 @@
             </div>
             <div class="modal-body" style="margin-bottom: 0;">
                 <div class="modal-form form-mini">
-                    <?php echo do_shortcode('[contact-form-7 id="865" title="Форма из вакансии"]'); ?>
+                    <?php echo do_shortcode('[contact-form-7 id="4763" title="ВакансияРТ"]'); ?>
                 </div>
             </div>
 

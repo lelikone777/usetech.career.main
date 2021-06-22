@@ -1,17 +1,21 @@
 <?php get_header(); ?>
 
-    <link rel="stylesheet/less" type="text/css"
-          href="<?php echo get_stylesheet_directory_uri(); ?>/css/career_less/all.less"/>
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/less.js" type="text/javascript"></script>
+<!--    <link rel="stylesheet/less" type="text/css"-->
+<!--          href="--><?php //echo get_stylesheet_directory_uri(); ?><!--/css/career_less/all.less"/>-->
+<link rel="stylesheet/less" type="text/css"
+      href="<?php echo get_stylesheet_directory_uri(); ?>/css/career_сss/all.min.сss"/>
+<!--    <script src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/js/less.js" type="text/javascript"></script>-->
 
 
     <!--Вывод хлебных крошек-->
-<?php get_template_part('template-parts/breadcrumbs'); ?>
 
+<div class="site__container">
+    <?php get_template_part('template-parts/breadcrumbs'); ?>
+</div>
 
     <div class="vacancy-boxes">
         <section class="vacancy">
-            <div class="container">
+            <div class="site__container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row">

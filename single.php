@@ -27,7 +27,7 @@
             if (!is_single($arExclude)) { ?>
 
 
-            <div class="container">
+            <div class="site__container">
                 <section class="fullstory">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -99,7 +99,7 @@
             </div>
 
             <section class="fullstory vacancy-text">
-                <div class="container">
+                <div class="site__container">
                     <div class="row">
                         <div class="col-lg-4 col-xs-12 col-lg-push-8">
                             <div class="vacancy-right-info">
@@ -178,7 +178,7 @@
 
 
     <section class="vacancy mb-180">
-        <div class="container">
+        <div class="site__container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="row">

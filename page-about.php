@@ -58,7 +58,7 @@
     <section class="about-company">
         <section class="timeline__header">
             <div class="timeline__header-block">
-                <div class="container">
+                <div class="site__container">
                     <h1>О компании</h1>
                     <!--            <div class="timeline__header-block-title">-->
                     <!--                О компании-->
@@ -98,7 +98,7 @@
 
 
     <section class="history">
-    <div class="container">
+    <div class="site__container">
         <h2>История и достижения</h2>
         <p>Мы стремимся вверх, заботимся о наших сотрудниках и стремительно развиваемся во вне. За все время работы мы зарекомендовали себя как надежные партнеры и компания.</p>
     </div>
@@ -490,58 +490,59 @@
 
 
     
-    <div class="container">
-    <section class="company">
-            <h2>Компания = команда</h2>
-            <p>Наши офисы - цифровые лаборатории. Наши клиенты - крупнейшие мировые бренды. Мы постоянно ищем талантливых сотрудников. Вы готовы стать частью нашей команды? </p>
-            <div class="infographics">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-4 text-right">
-                        <div class="company-item">
-                            <span>Удобное расположение офисов</span> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/001.svg" alt="">
-                        </div>
-                        <div class="company-item">
-                            <span>Свободный стиль одежды</span> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/002.svg" alt="">
-                        </div>
-                        <div class="company-item">
-                            <span>Удаленная работа</span> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/003.svg" alt="">
-                        </div>
-                        <div class="company-item">
-                            <span>Корпоративное такси</span> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/008.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 relative hidden-xs">
-                        <section class="company-pic">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/coffee.png" alt="" class="">
-                        </section>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4">
-                        <div class="company-item">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/006.svg" alt=""> <span>Гибкий график работы </span>
-                        </div>
-                        <div class="company-item">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/005.svg" alt=""> <span>Обучение и сертификация </span>
-                        </div>
-                        <div class="company-item">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/004.svg" alt=""> <span>Турниры на PlayStation </span>
-                        </div>
-                        <div class="company-item">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/007.svg" alt=""> <span>Корпоративный ДМС </span>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
-                        <div class="company-item company-item-xs"><span>
-                        Чай, кофе и печеньки идут в комплекте с рабочим оффером
-                    </span>
-                            <a href="/contacts/#feedback-form" class="button button-primary">Стать частью команды</a></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="site__container">
+        <?php include 'template-parts/command.php' ?>
+<!--    <section class="company">-->
+<!--            <h2>Компания = команда</h2>-->
+<!--            <p>Наши офисы - цифровые лаборатории. Наши клиенты - крупнейшие мировые бренды. Мы постоянно ищем талантливых сотрудников. Вы готовы стать частью нашей команды? </p>-->
+<!--            <div class="infographics">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-4 col-md-4 col-sm-4 text-right">-->
+<!--                        <div class="company-item">-->
+<!--                            <span>Удобное расположение офисов</span> <img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/001.svg" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="company-item">-->
+<!--                            <span>Свободный стиль одежды</span> <img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/002.svg" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="company-item">-->
+<!--                            <span>Удаленная работа</span> <img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/003.svg" alt="">-->
+<!--                        </div>-->
+<!--                        <div class="company-item">-->
+<!--                            <span>Корпоративное такси</span> <img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/008.svg" alt="">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-4 col-md-4 col-sm-4 relative hidden-xs">-->
+<!--                        <section class="company-pic">-->
+<!--                            <img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/coffee.png" alt="" class="">-->
+<!--                        </section>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-4 col-md-4 col-sm-4">-->
+<!--                        <div class="company-item">-->
+<!--                            <img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/006.svg" alt=""> <span>Гибкий график работы </span>-->
+<!--                        </div>-->
+<!--                        <div class="company-item">-->
+<!--                            <img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/005.svg" alt=""> <span>Обучение и сертификация </span>-->
+<!--                        </div>-->
+<!--                        <div class="company-item">-->
+<!--                            <img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/004.svg" alt=""> <span>Турниры на PlayStation </span>-->
+<!--                        </div>-->
+<!--                        <div class="company-item">-->
+<!--                            <img src="--><?php //echo get_stylesheet_directory_uri(); ?><!--/images/007.svg" alt=""> <span>Корпоративный ДМС </span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!---->
+<!---->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">-->
+<!--                        <div class="company-item company-item-xs"><span>-->
+<!--                        Чай, кофе и печеньки идут в комплекте с рабочим оффером-->
+<!--                    </span>-->
+<!--                            <a href="/contacts/#feedback-form" class="button button-primary">Стать частью команды</a></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
         </div>
     </section>
 

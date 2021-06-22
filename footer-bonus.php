@@ -59,7 +59,7 @@
 
 
     <section class="foot">
-        <div class="container">
+        <div class="site__container">
             <div class="foot__contact-box">
                 <a href="/" class="foot__logo"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/usetech_dark_logo.svg" alt=""></a>
                 <div class="row">

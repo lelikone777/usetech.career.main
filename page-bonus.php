@@ -3,7 +3,7 @@
 
 <section class="referral">
 <section class="referral__slide">
-    <div class="container">
+    <div class="site__container">
         <div class="row">
             <div class="col-lg-5 hidden-lg hidden-md hidden-sm">
                 <div class="referral__image">
@@ -23,7 +23,7 @@
 </section>
 
 <section class="referral__about">
-    <div class="container">
+    <div class="site__container">
         <h2>Рекомендуй друга</h2>
         <div class="row">
             <div class="col-lg-9">
@@ -50,7 +50,7 @@
     </div>
 </section>
     <section class="referral__size">
-        <div class="container">
+        <div class="site__container">
             <h2>Размер бонуса за рекомендацию</h2>
             <div class="row">
                 <div class="col-lg-9">
@@ -140,7 +140,7 @@
         </div>
     </section>
     <section class="referral__faq">
-        <div class="container">
+        <div class="site__container">
             <h2>Часто задаваемые вопросы</h2>
             <div class="row">
                 <div class="col-lg-6">
@@ -175,7 +175,7 @@
         </div>
     </section>
     <section class="referral__send-form" id="send-form">
-        <div class="container">
+        <div class="site__container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>Рекомендуйте друга</h2>

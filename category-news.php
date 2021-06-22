@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <div class="vacancy-boxes vacancy-boxes-news">
     <section class="vacancy">
-        <div class="container">
+        <div class="site__container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row">
@@ -14,7 +14,7 @@
                         </div>
                     </div>
                     <div class="news-item">
-                        <div class="row">
+                        <div class="row flex">
                         <?php if ( have_posts() ) while ( have_posts() ) : the_post(); // Начало цикла ?>
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                 <a href="<?php the_permalink(); ?>">

@@ -58,7 +58,7 @@
     <section class="about-company">
         <section class="timeline__header">
             <div class="timeline__header-block">
-                <div class="container">
+                <div class="site__container">
                     <h1>О компании</h1>
                     <!--            <div class="timeline__header-block-title">-->
                     <!--                О компании-->
@@ -98,7 +98,7 @@
 
 
     <section class="history">
-    <div class="container">
+    <div class="site__container">
         <h2>История и достижения</h2>
         <p>Мы стремимся вверх, заботимся о наших сотрудниках и стремительно развиваемся во вне. За все время работы мы зарекомендовали себя как надежные партнеры и компания.</p>
     </div>
@@ -260,7 +260,7 @@
 
 
     
-    <div class="container">
+    <div class="site__container">
     <section class="company">
             <h2>Компания = команда</h2>
             <p>Наши офисы - цифровые лаборатории. Наши клиенты - крупнейшие мировые бренды. Мы постоянно ищем талантливых сотрудников. Вы готовы стать частью нашей команды? </p>

@@ -11,7 +11,7 @@
 
     <link rel="icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.png"/>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/new/style/style.css">
-    <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.9.97/css/materialdesignicons.min.css">
+<!--    <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.9.97/css/materialdesignicons.min.css">-->
 
     <link rel="stylesheet/less" type="text/css"
           href="<?php echo get_stylesheet_directory_uri(); ?>/css/rt_less/all.less"/>

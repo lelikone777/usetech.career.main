@@ -1,7 +1,7 @@
 .header-new {
   font-family: @font;
   padding: 34px 0;
-  z-index: 10;
+  z-index: 10001;
 
   &__layout {
     display: none;
@@ -65,10 +65,10 @@
         font-weight: 500;
         cursor: pointer;
         padding: 8px 16px;
-        border-radius: @br / 2;
+        border-radius: 4px;
         &:hover {
           background-color: @bg-grey;
-          border-radius: @br / 2;
+          border-radius: 4px;
           transition: all 0.3s;
         }
       }
@@ -130,7 +130,7 @@
                 background-color: transparent;
                 &:hover {
                   background-color: @bg-grey !important;
-                  border-radius: @br / 2;
+                  border-radius: 4px;
                   transition: all 0.3s;
                 }
               }
@@ -231,7 +231,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 10001;
     padding: 16px 0;
     &:before {
       content: '';
@@ -256,7 +256,7 @@
     }
     &__wrap {
       display: none;
-      z-index: 100;
+      z-index: 10001;
       &.active {
         display: flex;
         flex-direction: column;
@@ -268,6 +268,7 @@
         left: 0;
         background-color: @white;
         transition: all ease 0.3s;
+        z-index: 10002;
         //animation: menu .3s forwards;
         margin-top: -5px;
         .header-new__wrap-menu {
@@ -309,6 +310,7 @@
         }
         &-has-children {
           padding-right: 0;
+
           > a {
             &::before {
               right: 10px;
@@ -378,7 +380,7 @@
       padding: 9px 10px;
       background-color: transparent;
       border: 1px solid transparent;
-      border-radius: @br / 2;
+      border-radius: 4px;
       cursor: pointer;
       transition: all ease 0.3s 0s;
       &-line {
