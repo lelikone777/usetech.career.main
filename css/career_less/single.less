@@ -22,9 +22,6 @@
     position: sticky;
     top: 16px;
     right: 16px;
-    &--mobile {
-      display: none;
-    }
     &-card {
       height: fit-content;
       padding: 24px;
@@ -32,6 +29,9 @@
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
       margin-bottom: 24px;
+      &--mobile {
+        display: none;
+      }
       &_top {
         display: flex;
         justify-content: space-between;
@@ -135,6 +135,14 @@
           height: 15px;
         }
       }
+      &-button {
+        margin-top: 24px;
+        min-width: 174px;
+        height: 48px;
+        &--mobile {
+          display: none;
+        }
+      }
     }
     &-frame {
       min-height: 80px;
@@ -208,11 +216,13 @@
     }
   }
   &__callback {
-
     margin-top: 48px;
     padding: 24px;
     background-color: @bg-grey;
     border-radius: @br;
+    &--mobile {
+      display: none;
+    }
     &-text {
       margin-bottom: @sp;
       max-width: 554px;
@@ -290,6 +300,15 @@
         line-height: 140%;
         color: @text;
       }
+      &_excerpt {
+        margin-bottom: @sp;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 171%;
+        color: rgba(33, 33, 33, 0.6);
+      }
+      &_city {}
       &_bottom {
         display: flex;
         justify-content: space-between;
@@ -313,14 +332,75 @@
 
 
 @media  (max-width: @lg){
-  .single-post {
-    .vacancy {
-      &__side {
-        //min-width: auto;
-        //flex: 100%;
-        &-card {
+  .vacancy {
+    &__side {
+      display: none;
+      position: static;
+      &-card {
+        &--mobile {
+          display: block;
+          background-color: @bg-grey;
+          margin-bottom: 24px;
+          .vacancy__side-card {
+            padding: 24px 0 24px;
+            max-width: 720px;
+            margin: auto;
+            background-color: transparent;
+            box-shadow: none;
+            border-radius: 0;
+          }
+          &_btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            position: fixed;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            min-height: 80px;
+            background-color: @white;
+            box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.1);
+          }
+        }
+        &-button {
+          display: none;
+          &--mobile {
+            display: block;
+            margin-top: 0;
+            width: 90%;
+            text-align: center;
+          }
+        }
+      }
+    }
+    &__callback {
+      &--mobile {
+        display: block;
+        margin-bottom: 48px;
+      }
+    }
+    &__others-card {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: @md) {
+  .vacancy {
+    &__side {
+      &-card {
+        max-width: 90% !important;
+        &_top {
+          flex-direction: row-reverse;
+        }
+        &_hot {
+          &-text {
+            display: none;
+          }
         }
       }
     }
   }
- }
+}
+

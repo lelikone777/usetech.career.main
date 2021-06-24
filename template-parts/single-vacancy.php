@@ -8,19 +8,31 @@
     ?>
 </div>
 <section class="vacancy">
+
+    <div class="vacancy__side-card--mobile_btn">
+        <a href="#" data-toggle="modal" data-target="#offer" class="btn-green vacancy__side-card-button vacancy__side-card-button--mobile">Откликнуться
+            на вакансию</a>
+    </div>
     <div class="site__container">
         <h1 class="vacancy__title"><?php the_title(); ?></h1>
+    </div>
+        <div class="vacancy__side-card--mobile">
+            <?php include 'vacancy-side-card.php'?>
+        </div>
+    <div class="site__container">
         <div class="vacancy__wrap">
             <div class="vacancy__side">
                 <?php include 'vacancy-side-card.php'?>
+                <?php include 'vacancy-callback-card.php'?>
             </div>
             <div class="vacancy__main">
                 <?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
             </div>
-            <div class="vacancy__side vacancy__side--mobile">
-                <?php include 'vacancy-side-card.php'?>
-            </div>
         </div>
+        <div class="vacancy__callback--mobile">
+            <?php include 'vacancy-callback-card.php'?>
+        </div>
+    </div>
         <div class="vacancy__others">
             <div class="site__container">
                 <h2 class="vacancy__others-title" >Похожие вакансии:</h2>
@@ -40,7 +52,9 @@
                                 <div class="vacancy__others-card_title">
                                     <?php trim_title_chars(100, '...'); ?>
                                 </div>
-
+                                <div class="vacancy__others-card_excerpt">
+                                    <?php echo wp_trim_words(get_field('short_description'), 30); ?>
+                                </div>
                                 <!--                            //проверяем на "город" -->
                                 <?php if (get_field('city')) { ?>
                                     <div class="vacancy__side-card_city vacancy__others-card_city">
@@ -53,7 +67,6 @@
                                         <div class="vacancy__side-card_city-subtext vacancy__others-card_city-subtext">но можно работать и в офисе: Москва, Ростов-на-Дону, Томск, Барнаул</div>
                                     </div>
                                 <?php }?>
-
 
                                 <div class="vacancy__others-card_bottom">
                                     <!--                            //проверяем на "опыт"  -->
