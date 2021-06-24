@@ -8,7 +8,8 @@
 <body>
     <?php include 'template-parts/header-new.php'?>
     <?php include 'template-parts/vacancy_filter.php'?>
-    <?php include 'template-parts/news-block.php'?>
+    <?php include 'template-parts/single-vacancy.php'?>
+
 </body>
 
 

@@ -23,7 +23,7 @@
 <!--                                        <img src="--><?php //echo first_post_image() ?><!--" alt="--><?php //the_title(); ?><!--" />-->
                                         <h3><?php trim_title_chars(50, '...'); ?></h3>
                                         <?php the_excerpt(); ?>
-                                        <span class="button button-primary">Читать далее</span>
+                                        <span id="boots-button" class="button button-primary">Читать далее</span>
                                     </div>
                                 </a>
                             </div>

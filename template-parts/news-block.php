@@ -11,30 +11,24 @@
                     'post__in'  => get_option( 'sticky_posts' )
                 ]);
                 if ($query->have_posts()) {
-                    $count = 0;
                     while ($query->have_posts()) {
                         $query->the_post();
-                        $count++;
-                        switch ($count) {
-                            case '1':
-                                ?>
-                                <a href="<?php the_permalink() ?>" class="news-block__left-top">
-                                            <div class="news-block__left-top_wrap">
-                                                <div class="news-block__left-top_image"
-                                                     style="background-image: url(<?php echo first_post_image() ?>)"></div>
-                                            </div>
-
-                                            <h3 class="news-block__left-top_text"><?php trim_title_chars(100,'...') ?>
-                                    </h3>
-                                    <h3 class="news-block__left-top_text--mobile">
-                                        <?php trim_title_chars(100,'...') ?>
-                                    </h3>
-                                </a>
-                               <?php
-                        }
                         ?>
 
+                        <a href="<?php the_permalink() ?>" class="news-block__left-top">
+                            <div class="news-block__left-top_wrap">
+                                <div class="news-block__left-top_image"
+                                     style="background-image: url(<?php echo first_post_image() ?>)"></div>
+                            </div>
 
+                            <h3 class="news-block__left-top_text">
+
+                                <?php trim_title_chars(100,'...') ?>
+                            </h3>
+                            <h3 class="news-block__left-top_text--mobile">
+                                <?php trim_title_chars(100,'...') ?>
+                            </h3>
+                        </a>
 
 
                         <?php
@@ -53,10 +47,9 @@
                     global $post;
 
                     $query = new WP_Query([
-                        'offset' => 1,
                         'posts_per_page' => 4,
                         'category_name' => 'news',
-                       'post__not_in' => get_option( 'sticky_posts' ),
+                        'post__not_in' => get_option( 'sticky_posts' ),
 
 
                     ]);
