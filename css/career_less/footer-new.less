@@ -1,0 +1,82 @@
+.footer-new {
+  background-color: @bg-grey;
+  &__logo {
+    display: block;
+    margin-bottom: 32px;
+    background-image: url("@{path}/usetech-logo-header.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 36px;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  .foot__contact-box {
+    padding-top: 32px;
+  }
+  .header-new__socials-wrap {
+    max-width: 226px;
+    margin: 0;
+    background-color: @bg-grey;
+  }
+  .foot__link li:first-child a.blank:after {
+    content: '';
+  }
+  .arrow-link {
+    position: relative;
+    &::after {
+      content: url("@{path}/ArrowUpRight.svg") !important;
+      position: absolute;
+      right: -15px;
+      top: -8px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+  .foot__copyright {
+    padding-bottom: 32px;
+  }
+}
+
+@media (max-width: @lg) {
+  .footer-new {
+    padding-bottom: 64px;
+    .foot__contact, .foot__link {
+      max-width: 40%;
+    }
+  }
+}
+
+@media (max-width: @md) {
+  .footer-new {
+    margin-top: 80px;
+    .footer-new__wrap {
+      flex-direction: column;
+      .foot__contact, .foot__link {
+        max-width: 100%;
+      }
+      .header-new__socials {
+        margin-bottom: 36px;
+      }
+      .arrow-link_last {
+        margin-top: 32px;
+      }
+    }
+    .foot__copyright {
+      flex-direction: column;
+      .agreement {
+        max-width: 180px;
+        margin-bottom: 24px;
+      }
+      .recaptcha {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 145%;
+        color: #000000;
+      }
+    }
+  }
+}

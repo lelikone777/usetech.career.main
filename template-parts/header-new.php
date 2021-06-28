@@ -5,7 +5,7 @@
 <div class="header-new__layout"></div>
 <div class="header-new__flop" ></div>
 <div class="header-new" >
-    <div class="site__container">
+    <div class="header-new__container site__container">
         <div class="header-new__wrapper">
             <a href="https://career.usetech.ru/" class="header-new__logo"></a>
             <!-- /.header-new__logo -->

@@ -1,10 +1,14 @@
 <!--5574-->
 <!--2206-->
 <!--4417-->
+<!--2001-->
 
 <div class="div">
     <?php
-    $post = get_post( 4417);
+        $postId = 4417;
+        $post = get_post($postId);
+        $profile =  get_field('profile')[value];
+
     ?>
 </div>
 <section class="vacancy">
@@ -16,37 +20,62 @@
     <div class="site__container">
         <h1 class="vacancy__title"><?php the_title(); ?></h1>
     </div>
-        <div class="vacancy__side-card--mobile">
-            <?php include 'vacancy-side-card.php'?>
-        </div>
+
+    <div class="vacancy__side-card--mobile">
+        <?php include 'vacancy-side-card.php'?>
+    </div>
+
     <div class="site__container">
         <div class="vacancy__wrap">
-            <div class="vacancy__side">
-                <?php include 'vacancy-side-card.php'?>
-                <?php include 'vacancy-callback-card.php'?>
+            <div class="vacancy__wrap-top">
+                <div class="vacancy__side">
+                    <?php include 'vacancy-side-card.php'?>
+                    <?php include 'vacancy-callback-card.php'?>
+                </div>
+                <div class="vacancy__main">
+                    <?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
+                </div>
             </div>
-            <div class="vacancy__main">
-                <?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
-            </div>
-        </div>
-        <div class="vacancy__callback--mobile">
-            <?php include 'vacancy-callback-card.php'?>
         </div>
     </div>
+        <div class="vacancy__callback--mobile">
+            <div class="site__container">
+                <?php include 'vacancy-callback-card.php'?>
+            </div>
+        </div>
+
         <div class="vacancy__others">
             <div class="site__container">
                 <h2 class="vacancy__others-title" >Похожие вакансии:</h2>
                 <div class="vacancy__others-wrap">
-                    <?php
+
+                <?php
                     $args = array(
-                    'category__in' => 3, //из какой категории вывести (удалите эту строку, если хотите, чтобы показовало последние материалы из всех рубрик сразу)
-                    'showposts' => 3, //сколько показать статей
-                    'orderby' => rand, //сортировка по дате
-                    'caller_get_posts' => 1);
-                    $my_query = new wp_query($args);
-                    if ($my_query->have_posts()) {
-                        while ($my_query->have_posts()) {
-                            $my_query->the_post(); ?>
+                        'category__in' => 3, //из какой категории вывести (удалите эту строку, если хотите, чтобы показовало последние материалы из всех рубрик сразу)
+                        'showposts' => 3, //сколько показать статей
+                        'post__not_in' => [$postId], // исключаем текущий пост
+                        'meta_query'	=> array(
+                            array(
+                                'key'		=> 'profile', // ищем по ключу профиль
+                                'compare'	=> '=',
+                                'value' => $profile, // подставляем значения для ключа из текущего поста
+                            ),
+                        )
+
+                    );
+
+
+                    // запрос
+                    $query = new WP_Query( $args );
+
+                    ?>
+                    <?php if ( $query->have_posts() ) : ?>
+
+                        <!-- пагинация -->
+
+                        <!-- цикл -->
+                        <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+
                             <a class="vacancy__others-card" href="<?php the_permalink(); ?>">
 
                                 <div class="vacancy__others-card_title">
@@ -89,9 +118,19 @@
 
                             </a>
 
-                             <?php }
-                             }
-                             wp_reset_query(); ?>
+
+
+                        <?php endwhile; ?>
+                        <!-- конец цикла -->
+
+                        <!-- пагинация -->
+
+                        <?php wp_reset_postdata(); ?>
+
+                    <?php else : ?>
+                        <p><?php esc_html_e( 'Нет постов по вашим критериям.' ); ?></p>
+                    <?php endif; ?>
+
              </div>
     </div>
 </section>

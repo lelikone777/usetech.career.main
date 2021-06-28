@@ -91,6 +91,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="vacancy__main">
                         <?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
                         <div class="vacancy__callback">
